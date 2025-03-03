@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import DarkModeToggle from "./components/DarkModeToggle";
+import YouTubeEmbed from "./components/YouTubeEmbed";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,29 +28,53 @@ function App() {
 
   return (
     <div className="min-h-screen bg-parchment-100 dark:bg-dark-box transition-colors duration-100">
-      <div className="mx-auto">
-        <div className="w-full flex flex-col items-center justify-center">
-          <HotBox shade="200">
+      <div className="mx-auto py-4">
+        <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center">
+          <div className="flex items-center justify-between w-full py-4">
+            <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-dark-text">
+              Subtle
+            </h1>
             <DarkModeToggle
               darkMode={darkMode}
               toggleDarkMode={toggleDarkMode}
             />
-          </HotBox>
+          </div>
 
-          <HotBox shade="50">
-            <h1 className="text-3xl font-bold text-center">Subtle</h1>
+          <HotBox>
+            <div className="w-full">
+              <p className="mb-4">
+                <b>Subtle</b> is a project based on these observations:
+              </p>
+              <ul className="list-disc list-inside mb-4 space-y-2">
+                <li>Language models will commoditize knowledge work.</li>
+                <li>
+                  Resourceful, inspired individuals will increasingly outperform
+                  teams.
+                </li>
+                <li>
+                  The supply of software will grow by an order of magnitude at
+                  least.
+                </li>
+              </ul>
+              <p className="mb-4">
+                We flesh out these ideas, highlight products that exemplify
+                them, and announce our own products in Subtle Research, our
+                newsletter.
+              </p>
+            </div>
           </HotBox>
 
           <HotBox>
-            <h2 className="text-lg font-medium">HotBox 1</h2>
+            <iframe
+              src="https://subtleresearch.substack.com/embed"
+              height="150"
+              className="bg-parchment-50 dark:bg-dark-box border-2 border-gray-300 rounded-lg w-full"
+              frameborder="0"
+            ></iframe>
           </HotBox>
 
           <HotBox>
-            <h2 className="text-lg font-medium">HotBox 2</h2>
-          </HotBox>
-
-          <HotBox>
-            <h2 className="text-lg font-medium">HotBox 3</h2>
+            <YouTubeEmbed videoId="JTdl3yFCHY4" />
           </HotBox>
         </div>
       </div>
@@ -64,7 +89,7 @@ const HotBox = ({ children, className = "", shade }) => {
 
   return (
     <div
-      className={`w-full max-w-md mx-auto p-4 bg-parchment-${boxShade} dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200 ${className}`}
+      className={`w-full flex items-center justify-center mx-auto py-4 bg-parchment-${boxShade} dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200 ${className}`}
     >
       {children}
     </div>
