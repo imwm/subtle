@@ -2,13 +2,119 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React + Tailwind App</title>
-    <base href="/subtle/">
+    <title>Subtle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind configuration
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              parchment: {
+                10: '#fcfdf9',
+                20: '#f9fcf7',
+                30: '#f7faf5',
+                40: '#f5f9f3',
+                50: '#f3f8f1',
+                // ... (other shades)
+                500: '#c1dfbf',
+              },
+            },
+            backgroundColor: {
+              'dark-box': '#2a2c28',
+            },
+            textColor: {
+              'dark-text': '#e0e7dd',
+            },
+          },
+        },
+      }
+
+      // Simple dark mode toggle
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
+      }
+    </script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="bg-parchment-100 dark:bg-dark-box transition-colors duration-100">
+    <div class="mx-auto py-4">
+      <div class="w-full max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <!-- Header with Dark Mode Toggle -->
+        <div class="flex items-center justify-between w-full py-4">
+          <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-dark-text">
+            Subtle
+          </h1>
+          <!-- Dark Mode Toggle -->
+          <div class="flex justify-center items-center">
+            <div class="flex items-center">
+              <!-- Sun Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                class="h-6 w-6 text-yellow-500 dark:text-gray-400" 
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="12" cy="12" r="5" stroke-width="2"/>
+                <path stroke-linecap="round" stroke-width="2" 
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+
+              <!-- Toggle Switch -->
+              <button onclick="toggleDarkMode()"
+                class="relative mx-4 inline-flex h-6 w-12 items-center rounded-full transition-colors duration-200 focus:outline-none">
+                <span class="inline-block h-6 w-6 transform rounded-full border border-gray-300 shadow-md transition-transform duration-200 ease-in-out z-10 bg-yellow-300 dark:bg-blue-200 dark:translate-x-6"></span>
+                <span class="absolute inset-0 rounded-full border-2 border-parchment-400 dark:border-gray-500 shadow-inner transition-colors duration-200 bg-parchment-300 dark:bg-gray-600"></span>
+              </button>
+
+              <!-- Moon Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                class="h-6 w-6 text-gray-400 dark:text-blue-200" 
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-full p-4 bg-parchment-20 dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200">
+          <div class="w-full">
+            <p class="mb-4">
+              <b>Subtle</b> is a project based on these observations:
+            </p>
+            <ul class="list-disc list-inside mb-4 space-y-2">
+              <li>Language models will commoditize knowledge work.</li>
+              <li>Resourceful, inspired individuals will increasingly outperform teams.</li>
+              <li>The supply of software will grow by an order of magnitude at least.</li>
+            </ul>
+            <p class="mb-4">
+              We flesh out these ideas, highlight products that exemplify them, and announce our own products in Subtle Research, our newsletter.
+            </p>
+          </div>
+        </div>
+
+        <!-- Newsletter Embed -->
+        <div class="w-full p-4 bg-parchment-30 dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200">
+          <iframe src="https://subtleresearch.substack.com/embed" 
+            height="150" 
+            class="bg-parchment-50 dark:bg-dark-box border-2 border-gray-300 rounded-lg w-full"
+            frameborder="0">
+          </iframe>
+        </div>
+
+        <!-- YouTube Video -->
+        <div class="w-full p-4 bg-parchment-40 dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200">
+          <div class="aspect-w-16 aspect-h-9 w-full">
+            <iframe src="https://www.youtube.com/embed/JTdl3yFCHY4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="w-full h-64">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
