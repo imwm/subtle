@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subtle</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Noise texture - very subtle and performant */
+      .noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+      }
+      
+      .dark .noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      }
+    </style>
     <script>
-      // Tailwind configuration
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -18,41 +34,42 @@
                 30: "#f7faf5",
                 40: "#f5f9f3",
                 50: "#f3f8f1",
-                // ... (other shades)
                 500: "#c1dfbf",
+                700: "#e1ffcf"
               },
             },
             backgroundColor: {
-              "dark-box": "#2a2c28",
+              "dark-box": "#1a1c19",
+              "dark-surface": "#1c1e1b",
+              "dark-deeper": "#161815",
             },
             textColor: {
               "dark-text": "#e0e7dd",
             },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
           },
         },
       };
 
-      // Simple dark mode toggle
       function toggleDarkMode() {
         document.documentElement.classList.toggle("dark");
       }
     </script>
   </head>
-  <body
-    class="bg-parchment-100 dark:bg-dark-box transition-colors duration-100"
-  >
-    <div class="mx-auto py-4">
-      <div
-        class="w-full max-w-3xl mx-auto flex flex-col items-center justify-center"
-      >
-        <!-- Header with Dark Mode Toggle -->
-        <div class="flex items-center justify-between w-full py-4">
+  <body class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100">
+    <div class="mx-auto">
+      <div class="w-full mx-auto flex flex-col items-center justify-center">
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between w-full p-6 border-b border-gray-600 border-dashed"
+        >
           <h1
             class="text-3xl font-bold text-center text-gray-800 dark:text-dark-text"
           >
             Subtle
           </h1>
-          <!-- Dark Mode Toggle -->
           <div class="flex justify-center items-center">
             <div class="flex items-center">
               <!-- Sun Icon -->
@@ -103,61 +120,52 @@
           </div>
         </div>
 
-        <!-- Main Content -->
+        <!-- Intro text -->
         <div
-          class="w-full p-4 bg-parchment-20 dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200"
+          class="w-full border-b border-gray-600 border-dashed p-6 text-gray-800 dark:text-dark-text transition-colors duration-200"
         >
-          <div class="w-full">
+          <div class="w-full max-w-2xl">
             <p class="mb-4">
               <b>Subtle</b> is a project based on these observations:
             </p>
             <ul class="list-disc list-inside mb-4 space-y-2">
               <li>Language models will commoditize knowledge work.</li>
               <li>
+                The supply of software will grow by an order of magnitude.
+              </li>
+              <li>
                 Resourceful, inspired individuals will increasingly outperform
                 teams.
               </li>
-              <li>
-                The supply of software will grow by an order of magnitude at
-                least.
-              </li>
             </ul>
-            <p class="mb-4">
+            <p>
               We flesh out these ideas, highlight products that exemplify them,
-              and announce our own products in Subtle Research, our newsletter.
+              and announce our own products in
+              <a
+                href="https://subtleresearch.substack.com/"
+                target="_blank"
+                class="font-bold hover:opacity-75"
+                >Subtle Research</a
+              >, our newsletter.
             </p>
           </div>
         </div>
 
-        <!-- Newsletter Embed -->
-        <div
-          class="w-full p-4 bg-parchment-30 dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200"
-        >
-          <iframe
-            src="https://subtleresearch.substack.com/embed"
-            class="w-full h-64"
-            frameborder="0"
-            scrolling="no"
-          />
-        </div>
-
-        <!-- YouTube Video -->
-        <div
-          class="w-full p-4 bg-parchment-40 dark:bg-dark-box text-gray-800 dark:text-dark-text transition-colors duration-200"
-        >
-          <div class="aspect-w-16 aspect-h-9 w-full">
-            <iframe
-              src="https://www.youtube.com/embed/JTdl3yFCHY4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="w-full h-64"
-            >
-            </iframe>
+        <!-- Hello world -->
+        <div class="w-full border-b border-gray-600 border-dashed p-6 text-gray-800 dark:text-dark-text transition-colors duration-200">
+          <div class="w-full max-w-2xl"> 
+            <p class="text-xs mb-2 opacity-75">March 3, 2025</p>
+            <p>Hello world</p>
           </div>
         </div>
-      </div>
+
+        <!-- new post boiler plate
+        <div class="w-full border-b border-gray-600 border-dashed p-6 bg-parchment-50 text-gray-800 dark:text-dark-text transition-colors duration-200">
+          <div class="w-full max-w-2xl"> 
+            // content here
+          </div>
+        </div>
+        -->
     </div>
   </body>
 </html>
