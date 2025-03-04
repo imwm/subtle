@@ -58,8 +58,8 @@
       }
     </script>
   </head>
-  <body class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100">
-    <div class="mx-auto">
+  <body class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100 relative">
+    <div class="mx-auto pb-20">
       <div class="w-full mx-auto flex flex-col items-center justify-center">
         <!-- Header -->
         <div
@@ -168,5 +168,12 @@
         </div>
         -->
     </div>
+
+    <!-- Footer -->
+    <footer class="absolute bottom-0 w-full border-t border-gray-600 border-dashed p-6 text-gray-800 dark:text-dark-text transition-colors duration-200">
+      <div class="text-xs opacity-75">
+        Copyright © <script>document.write(new Date().getFullYear())</script> Subtle • <a href="mailto:hi@subtle.so" target="_blank" class="hover:underline">Contact</a>
+      </div>
+    </footer>
   </body>
 </html>
