@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Commoditized intelligence will lead to ephemeral coworkers - Subtle
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full mx-auto flex-1 flex flex-col items-center justify-start pb-20"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 text-gray-800 dark:text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75">March 5, 2025</div>
+                <h1 class="font-bold">
+                  Commoditized intelligence will lead to ephemeral coworkers
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-white/50 dark:bg-dark-surface border border-gray-400 dark:border-gray-600 hover:border-gray-600 dark:hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose dark:prose-invert">
+              <p>
+                Azeem Azhar recently summarized the before/after of commoditized
+                intelligence (<a
+                  href="https://archive.is/dsMyG"
+                  target="_blank"
+                  class="opacity-75 hover:underline"
+                  >Bloomberg</a
+                >):
+              </p>
+              <blockquote>
+                For most of history, hiring a dozen PhDs meant a massive budget
+                and months of lead time. Today, a few keystrokes in a chatbot
+                summon that brainpower in seconds.
+              </blockquote>
+              <p>
+                In light of this sudden appearance of free intelligence, Azhar
+                continues, there's an important question:
+              </p>
+              <blockquote>
+                The question facing individuals and organizations alike is: What
+                will you do when intelligence itself is suddenly ubiquitous and
+                practically free?
+              </blockquote>
+              <p>
+                The way I think about this is that the traditional company is
+                being unbundled.
+              </p>
+              <p>
+                You can think of company personnel as agglomerations of
+                intelligence, domain expertise, and productivity.
+              </p>
+              <p>
+                Historically, it was much more efficient for people to hire
+                people full-time than to contract out every task big or small.
+                Economist Ronald Coase won the Nobel prize in part for proving
+                this.
+              </p>
+              <p>
+                However, that fundamental premise of company formation no longer
+                holds.
+              </p>
+              <p>
+                As Azhar mentioned, PhD level expertise in virtually any domain
+                is now available on-demand.
+              </p>
+              <p>
+                The high cumulative transaction costs of contracting people for
+                any and every task are now dropping to zero.
+              </p>
+              <p>
+                This is why we believe inspired, resourceful individuals will
+                increasingly outperform teams.
+              </p>
+              <p>
+                You can think of the "company" of the future as a solo operator
+                working with a team of ephemeral "coworkers."
+              </p>
+              <p>
+                Each ephemeral coworker is spun up tailor-made for the task at
+                hand, with the right expertise, the right context, and the right
+                incentives.
+              </p>
+              <p>
+                With this structure, the solo operator should be able to
+                outperform traditional companies, because their overhead is
+                vastly lower and their performance may actually be better.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Include footer -->
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <!-- Include component loader -->
+    <script>
+      async function includeHTML() {
+        const elements = document.getElementsByTagName("*");
+        for (const el of elements) {
+          const file = el.getAttribute("include-html");
+          if (file) {
+            try {
+              const response = await fetch(file);
+              const html = await response.text();
+              el.innerHTML = html;
+              el.removeAttribute("include-html");
+            } catch (error) {
+              console.error(`Error loading ${file}:`, error);
+            }
+          }
+        }
+      }
+      includeHTML();
+    </script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/emailForm.js"></script>
+  </body>
+</html>

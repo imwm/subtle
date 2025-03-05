@@ -29,19 +29,17 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.800'),
-            maxWidth: 'none',
+            color: theme("colors.gray.800"),
+            maxWidth: "none",
           },
         },
         invert: {
           css: {
-            color: theme('colors.dark-text'),
+            color: theme("colors.dark-text"),
           },
         },
       }),
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-}; 
+  plugins: [require("@tailwindcss/typography")],
+};
