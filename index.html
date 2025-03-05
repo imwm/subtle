@@ -5,131 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subtle</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Noise texture - very subtle and performant */
-      .noise {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
-      }
-
-      .dark .noise {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      }
-    </style>
-    <script>
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        document.documentElement.classList.add("dark");
-      }
-
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              parchment: {
-                10: "#fcfdf9",
-                20: "#f9fcf7",
-                30: "#f7faf5",
-                40: "#f5f9f3",
-                50: "#e3e8e1",
-                500: "#c1dfbf",
-                700: "#e1ffcf",
-              },
-            },
-            backgroundColor: {
-              "dark-box": "#1a1c19",
-              "dark-surface": "#1c1e1b",
-              "dark-deeper": "#161815",
-            },
-            textColor: {
-              "dark-text": "#c0c7bd",
-            },
-            backgroundImage: {
-              "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-            },
-          },
-        },
-      };
-
-      function toggleDarkMode() {
-        document.documentElement.classList.toggle("dark");
-      }
-    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
   </head>
   <body
     class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100 relative"
   >
     <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
       <div
         class="w-full mx-auto flex-1 flex flex-col items-center justify-start pb-20"
       >
-        <!-- Header -->
-        <div
-          class="flex items-center justify-between w-full py-4 px-6 border-b border-gray-600 border-dashed"
-        >
-          <h1
-            class="text-xl font-bold text-center text-gray-800 dark:text-dark-text"
-          >
-            <a href="index.html">Subtle</a>
-          </h1>
-          <div class="flex justify-center items-center">
-            <div class="flex items-center">
-              <!-- Sun Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-yellow-500 dark:text-gray-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <circle cx="12" cy="12" r="5" stroke-width="2" />
-                <path
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
-                />
-              </svg>
-
-              <!-- Toggle Switch -->
-              <button
-                onclick="toggleDarkMode()"
-                class="relative mx-3 inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 focus:outline-none"
-              >
-                <span
-                  class="inline-block h-5 w-5 transform rounded-full border border-gray-300 shadow-md transition-transform duration-200 ease-in-out z-10 bg-yellow-300 dark:bg-blue-200 dark:translate-x-4"
-                ></span>
-                <span
-                  class="absolute inset-0 rounded-full border-2 border-parchment-400 dark:border-gray-500 shadow-inner transition-colors duration-200 bg-parchment-300 dark:bg-gray-600"
-                ></span>
-              </button>
-
-              <!-- Moon Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-gray-400 dark:text-blue-200"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-
         <!-- Intro text -->
         <div
           class="w-full border-b border-gray-600 border-dashed py-4 px-6 text-gray-800 dark:text-dark-text transition-colors duration-200"
         >
           <div class="w-full max-w-2xl">
-            <p class="text-xs mb-2 opacity-75">March 3, 2025 • Pinned 📌</p>
+            <p class="text-xs mb-1 opacity-75">March 3, 2025 • Pinned 📌</p>
             <p class="mb-4">
               <b>Subtle</b> is a project based on these observations:
             </p>
@@ -250,12 +145,21 @@
           </div>
         </div>
 
+        <!-- <div
+          class="w-full border-b border-gray-600 border-dashed py-4 px-6 text-gray-800 dark:text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <p class="text-xs mb-1 opacity-75">March 3, 2025 • Pinned 📌</p>
+            <b>What it really means for intelligence to be commoditized</b>
+          </div>
+        </div> -->
+
         <!-- Solo team reward function -->
         <div
           class="w-full border-b border-b-gray-600 border-dashed py-4 px-6 text-gray-800 dark:text-dark-text transition-colors duration-200"
         >
           <div class="w-full max-w-2xl">
-            <p class="text-xs mb-2 opacity-75">March 4, 2025</p>
+            <p class="text-xs mb-1 opacity-75">March 4, 2025</p>
             <p class="mb-4">
               <a
                 class="font-bold hover:underline"
@@ -309,20 +213,32 @@
         </div>
         -->
       </div>
-      <footer
-        class="w-full border-t border-gray-600 border-dashed py-4 px-6 text-gray-800 dark:text-dark-text transition-colors duration-200"
-      >
-        <div class="text-xs opacity-75">
-          Copyright ©
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Subtle •
-          <a href="mailto:hi@subtle.so" target="_blank" class="hover:underline"
-            >Contact</a
-          >
-        </div>
-      </footer>
+
+      <!-- Include footer -->
+      <div include-html="components/footer.html"></div>
     </div>
+
+    <!-- Include component loader -->
+    <script>
+      async function includeHTML() {
+        const elements = document.getElementsByTagName("*");
+        for (const el of elements) {
+          const file = el.getAttribute("include-html");
+          if (file) {
+            try {
+              const response = await fetch(file);
+              const html = await response.text();
+              el.innerHTML = html;
+              el.removeAttribute("include-html");
+            } catch (error) {
+              console.error(`Error loading ${file}:`, error);
+            }
+          }
+        }
+      }
+      includeHTML();
+    </script>
+    <script src="/scripts/emailForm.js"></script>
+    <script src="scripts/components.js"></script>
   </body>
 </html>

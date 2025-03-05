@@ -5,201 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The solo team reward function - Subtle</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Noise texture - very subtle and performant */
-      .noise {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
-      }
-      
-      .dark .noise {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      }
-
-      .toast {
-        visibility: hidden;
-        min-width: 200px;
-        margin-left: -100px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 12px;
-        position: fixed;
-        z-index: 1;
-        left: 50%;
-        bottom: 30px;
-        font-size: 14px;
-      }
-
-      .toast.show {
-        visibility: visible;
-        animation: fadein 0.5s, fadeout 0.5s 2s;
-      }
-
-      @keyframes fadein {
-        from {bottom: 0; opacity: 0;}
-        to {bottom: 30px; opacity: 1;}
-      }
-
-      @keyframes fadeout {
-        from {bottom: 30px; opacity: 1;}
-        to {bottom: 0; opacity: 0;}
-      }
-    </style>
-    <script>
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        document.documentElement.classList.add("dark");
-      }
-
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              parchment: {
-                10: "#fcfdf9",
-                20: "#f9fcf7",
-                30: "#f7faf5",
-                40: "#f5f9f3",
-                50: "#e3e8e1",
-                500: "#c1dfbf",
-                700: "#e1ffcf"
-              },
-            },
-            backgroundColor: {
-              "dark-box": "#1a1c19",
-              "dark-surface": "#1c1e1b",
-              "dark-deeper": "#161815",
-            },
-            textColor: {
-              "dark-text": "#c0c7bd",
-            },
-            backgroundImage: {
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            }
-          },
-        },
-      };
-
-      function toggleDarkMode() {
-        document.documentElement.classList.toggle("dark");
-      }
-
-      function showToast(message) {
-        const toast = document.getElementById('toast');
-        toast.textContent = message;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2500);
-      }
-
-      function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(
-          () => showToast('Copied to clipboard!'),
-          () => showToast('Failed to copy')
-        );
-      }
-    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
   </head>
-  <body class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100 relative">
+  <body
+    class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100 relative"
+  >
     <div id="toast" class="toast"></div>
-    <div class="mx-auto pb-20">
-      <div class="w-full mx-auto flex flex-col items-center justify-center">
-        <!-- Header -->
-        <div
-          class="flex items-center justify-between w-full px-6 py-4 border-b border-gray-600 border-dashed"
-        >
-          <h1
-            class="text-xl font-bold text-center text-gray-800 dark:text-dark-text"
-          >
-            <a href="index.html">Subtle</a>
-          </h1>
-          <div class="flex justify-center items-center">
-            <div class="flex items-center">
-              <!-- Sun Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-yellow-500 dark:text-gray-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <circle cx="12" cy="12" r="5" stroke-width="2" />
-                <path
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
-                />
-              </svg>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
 
-              <!-- Toggle Switch -->
-              <button
-                onclick="toggleDarkMode()"
-                class="relative mx-3 inline-flex h-5 w-9 items-center rounded-full transition-colors duration-200 focus:outline-none"
-              >
-                <span
-                  class="inline-block h-5 w-5 transform rounded-full border border-gray-300 shadow-md transition-transform duration-200 ease-in-out z-10 bg-yellow-300 dark:bg-blue-200 dark:translate-x-4"
-                ></span>
-                <span
-                  class="absolute inset-0 rounded-full border-2 border-parchment-400 dark:border-gray-500 shadow-inner transition-colors duration-200 bg-parchment-300 dark:bg-gray-600"
-                ></span>
-              </button>
-
-              <!-- Moon Icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-gray-400 dark:text-blue-200"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <!-- Solo team reward function -->
-        <div
-          class="w-full border-b border-gray-600 border-dashed px-6 py-4 text-gray-800 dark:text-dark-text transition-colors duration-200"
+      <div
+        class="w-full mx-auto flex-1 flex flex-col items-center justify-start pb-20"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed py-4 px-6 text-gray-800 dark:text-dark-text transition-colors duration-200"
         >
           <div class="w-full max-w-2xl">
-            <p class="text-xs mb-2 opacity-75 cursor-pointer" onclick="copyToClipboard('March 4, 2025')">March 4, 2025</p>
-            <div class="w-full flex items-center gap-x-2 mb-4">
-              <p><b>The solo team reward function</b></p>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <div class="flex flex-col items-start">
+                <p class="text-xs opacity-75">March 4, 2025</p>
+                <h1 class="font-bold">The solo team reward function</h1>
+              </div>
               <button
-                onclick="navigator.clipboard.writeText(window.location.href)"
-                class="text-sm px-2 py-1 rounded-full border border-gray-600 hover:bg-parchment-500/20 dark:hover:bg-gray-700/50 transition-colors duration-200"
-                title="Copy to clipboard"
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-white/50 dark:bg-dark-surface border border-gray-400 dark:border-gray-600 hover:border-gray-600 dark:hover:border-gray-400 transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
+                Copy link
               </button>
             </div>
-            
-            <p class="mb-4">When you're working for a company, your compensation is typically a salary and maybe a bonus and/or stock options.</p>
-            <p class="mb-4">From the perspective of naked self-interest, an employee in this position should optimize their performance for the arbiters of this compensation, namely the managers who run performance reviews.</p>
-            <p class="mb-4">Sometimes there is alignment between doing great work and the perspectives of company managers.</p>
-            <p class="mb-4">But often, companies develop many competing considerations and internal prerogatives that cloud managers' judgment when it comes to great work.</p>
-            <p class="mb-4">In one person teams, however, the only priority is customer service. Compensation in one person teams is exactly company revenue, and that revenue is entirely determined by customers.</p>
-            <p class="mb-4">Thus in one person teams, compensation is set by customers, rather than managers.</p>
-            <p>This creates a purer reward function for builders.</p>
+            <div class="prose dark:prose-invert">
+              <p class="mb-4">
+                When you're working for a company, your compensation is
+                typically a salary and maybe a bonus and/or stock options.
+              </p>
+              <p class="mb-4">
+                From the perspective of naked self-interest, an employee in this
+                position should optimize their performance for the arbiters of
+                this compensation, namely the managers who run performance
+                reviews.
+              </p>
+              <p class="mb-4">
+                Sometimes there is alignment between doing great work and the
+                perspectives of company managers.
+              </p>
+              <p class="mb-4">
+                But often, companies develop many competing considerations and
+                internal prerogatives that cloud managers' judgment when it
+                comes to great work.
+              </p>
+              <p class="mb-4">
+                In one person teams, however, the only priority is customer
+                service. Compensation in one person teams is exactly company
+                revenue, and that revenue is entirely determined by customers.
+              </p>
+              <p class="mb-4">
+                Thus in one person teams, compensation is set by customers,
+                rather than managers.
+              </p>
+              <p>
+                The solo team structure offers a purer reward function for
+                builders.
+              </p>
+            </div>
           </div>
-        </div>
+        </article>
+      </div>
+
+      <!-- Include footer -->
+      <div include-html="components/footer.html"></div>
     </div>
 
-    <!-- Footer -->
-    <footer class="absolute bottom-0 w-full border-t border-gray-600 border-dashed px-6 py-4 text-gray-800 dark:text-dark-text transition-colors duration-200">
-      <div class="text-xs opacity-75">
-        Copyright © <script>document.write(new Date().getFullYear())</script> Subtle • <a href="mailto:hi@subtle.so" target="_blank" class="hover:underline">Contact</a>
-      </div>
-    </footer>
+    <!-- Include component loader -->
+    <script>
+      async function includeHTML() {
+        const elements = document.getElementsByTagName("*");
+        for (const el of elements) {
+          const file = el.getAttribute("include-html");
+          if (file) {
+            try {
+              const response = await fetch(file);
+              const html = await response.text();
+              el.innerHTML = html;
+              el.removeAttribute("include-html");
+            } catch (error) {
+              console.error(`Error loading ${file}:`, error);
+            }
+          }
+        }
+      }
+      includeHTML();
+    </script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/emailForm.js"></script>
   </body>
 </html>
