@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TK - Subtle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full sm:border-x border-gray-600 border-dashed p-6 pb-2 text-gray-800 dark:text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75">March 6, 2025</div>
+                <h1 class="font-bold">
+                  A subtle approach to newsletter sponsorships
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-white/50 dark:bg-dark-surface border border-gray-400 dark:border-gray-600 hover:border-gray-600 dark:hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose dark:prose-invert">
+              <p>
+                A little newsletter called
+                <a
+                  href="https://flowstate.fm"
+                  class="underline hover:opacity-75"
+                  >flowstate.fm</a
+                >
+                asked us for help with their sponsorship business.
+              </p>
+              <p>
+                They wanted to make a website where people could book weekly
+                sponsorships directly. They also wanted some help with outbound
+                lead generation.
+              </p>
+              <p>
+                The result is
+                <a
+                  href="https://sponsor.flowstate.fm"
+                  class="underline hover:opacity-75"
+                  >sponsor.flowstate.fm</a
+                >
+                which we built in just a few hours. Here's how we did it:
+              </p>
+              <p>Cursor agent (chef's kiss):</p>
+              <ul class="list-disc list-inside mb-4 space-y-2">
+                <li>
+                  Used Claude 3.7, which is excellent at understanding the
+                  entire codebase, finding existing patterns, and applying them.
+                  It also seems to have better design sense than 3.5 (based on
+                  my experience using 3.5 with Replit).
+                </li>
+                <li>
+                  I was pressing "accept all" frequently, but then turned on
+                  "yolo mode" and only had to undo things about 3 times.
+                </li>
+                <li>
+                  The only time it got stuck was on weird errors. One happened
+                  when I was on Tailwind 4 and it couldn't understand that
+                  PostCSS was a different package. Another occurred when Vercel
+                  was inexplicably not installing its own analytics package
+                  (Cursor tried switching from TS to JS and directly importing –
+                  good attempts, but it should have taken a step back and done a
+                  reinstall rather than working around Vercel's weird problem).
+                </li>
+                <li>
+                  Eventually I reached the point where I wasn't using the IDE at
+                  all, just the agent and the terminal (mostly for git
+                  commands).
+                </li>
+              </ul>
+              <p>Other services we used:</p>
+              <ul class="list-disc list-inside mb-4 space-y-2">
+                <li>Stripe: No brainer.</li>
+                <li>
+                  Supabase: Shout out to Rick for recommending this. It's very
+                  nice and easy to use. Cursor knows how to use it too.
+                </li>
+                <li>
+                  Vercel: Cursor wanted to do a NextJS app and then deploy it on
+                  Vercel. I hadn't used Vercel before, but it was super easy:
+                  login with GitHub, pick the repo, hit deploy, fix a few build
+                  errors that Cursor identified, and then deploy. It
+                  auto-redeploys whenever `main` is updated.
+                </li>
+              </ul>
+              <p>
+                With
+                <a
+                  href="https://sponsor.flowstate.fm"
+                  class="underline hover:opacity-75"
+                  >sponsor.flowstate.fm</a
+                >
+                set up and taking bookings, we needed to generate leads. Here's
+                how we did that:
+              </p>
+              <ul class="list-disc list-inside mb-4 space-y-2">
+                <li>
+                  We asked ChatGPT where to find leads. It offered several
+                  suggestions, including using
+                  <a href="https://hunter.io" class="underline hover:opacity-75"
+                    >hunter.io</a
+                  >
+                  for finding emails.
+                </li>
+                <li>
+                  We signed up for
+                  <a href="https://hunter.io" class="underline hover:opacity-75"
+                    >hunter.io</a
+                  >, which let us (a) pick an industry, (b) pick companies, (c)
+                  pick departments (marketing), and (d) find emails. From about
+                  50 companies, we gathered 500 email addresses.
+                </li>
+                <li>
+                  We downloaded the CSV of 500 contacts with metadata (company,
+                  name, location), added columns for subject line and email
+                  body, and wrote those for the first contact.
+                </li>
+                <li>
+                  We uploaded the CSV to ChatGPT and asked GPT-4.5 to fill in
+                  the remaining subject lines and email bodies based on the
+                  first one. It completed this in about 5 seconds.
+                </li>
+                <li>
+                  From the 500 contacts and emails, we selected 50 to start with
+                  – maximum one per company, prioritizing the most senior
+                  marketing person. We've sent those out and hopefully we get at
+                  least one booking!
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Include footer -->
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <!-- Include component loader -->
+    <script>
+      async function includeHTML() {
+        const elements = document.getElementsByTagName("*");
+        for (const el of elements) {
+          const file = el.getAttribute("include-html");
+          if (file) {
+            try {
+              const response = await fetch(file);
+              const html = await response.text();
+              el.innerHTML = html;
+              el.removeAttribute("include-html");
+            } catch (error) {
+              console.error(`Error loading ${file}:`, error);
+            }
+          }
+        }
+      }
+      includeHTML();
+    </script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/emailForm.js"></script>
+  </body>
+</html>
