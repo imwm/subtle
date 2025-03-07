@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="styles/main.css" />
     <script src="styles/tailwind.js"></script>
     <script src="scripts/darkMode.js"></script>
+    <style>
+      #emailForm {
+        transition: height 200ms ease, opacity 200ms ease, margin 200ms ease,
+          padding 200ms ease;
+      }
+      #emailForm.collapsing {
+        will-change: height, opacity, margin, padding;
+        overflow: hidden;
+      }
+      #emailForm.collapsed {
+        height: 0 !important;
+        opacity: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+      }
+    </style>
   </head>
   <body
     class="min-h-screen noise bg-dark-box transition-colors duration-100 relative"
@@ -43,18 +60,24 @@
             </p>
 
             <!-- Email signup form -->
-            <form id="emailForm" class="flex gap-2 min-h-[38px] pb-4">
-              <div id="formInputs" class="flex gap-2 flex-1">
+            <form
+              id="emailForm"
+              class="flex gap-2 pb-4 transition-all duration-300 overflow-hidden"
+            >
+              <div
+                id="formInputs"
+                class="flex gap-2 flex-1 transition-opacity duration-200"
+              >
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter your email"
                   required
-                  class="flex-1 max-w-sm px-2 py-1.5 text-sm rounded-lg border border-gray-400 dark:border-gray-600 bg-white/50 dark:bg-dark-surface focus:outline-none focus:border-gray-600 dark:focus:border-gray-400 dark:text-dark-text"
+                  class="flex-1 max-w-sm px-2 py-2.5 text-sm rounded-lg border border-gray-400 dark:border-gray-600 bg-white/50 dark:bg-dark-surface focus:outline-none focus:border-gray-600 dark:focus:border-gray-400 dark:text-dark-text"
                 />
                 <button
                   type="submit"
-                  class="px-2 py-1.5 text-sm bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex items-center gap-2"
+                  class="px-2 py-2.5 text-sm bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex items-center gap-2"
                 >
                   <span>Sign up</span>
                   <svg
@@ -82,63 +105,9 @@
               </div>
               <div
                 id="submitMessage"
-                class="text-sm hidden flex-1 items-center text-green-600 dark:text-green-400"
+                class="text-sm hidden flex-1 items-center justify-center text-green-600 dark:text-green-400 h-[46px] transition-opacity duration-200"
               ></div>
             </form>
-
-            <script>
-              document
-                .getElementById("emailForm")
-                .addEventListener("submit", async (e) => {
-                  e.preventDefault();
-                  const email = e.target.email.value;
-                  const messageEl = document.getElementById("submitMessage");
-                  const formInputs = document.getElementById("formInputs");
-                  const spinner = document.getElementById("loadingSpinner");
-
-                  // Show spinner
-                  spinner.classList.remove("hidden");
-
-                  try {
-                    const response = await fetch(
-                      "https://formsubmit.co/ajax/hi@subtle.so",
-                      {
-                        method: "POST",
-                        headers: {
-                          "Content-Type": "application/json",
-                          Accept: "application/json",
-                        },
-                        body: JSON.stringify({
-                          email: email,
-                        }),
-                      }
-                    );
-
-                    if (response.ok) {
-                      messageEl.textContent = "✓ Thanks for subscribing!";
-                      formInputs.classList.add("hidden");
-                      messageEl.classList.remove("hidden");
-                      messageEl.classList.add("flex");
-                      e.target.reset();
-                    } else {
-                      throw new Error("Submission failed");
-                    }
-                  } catch (error) {
-                    messageEl.textContent =
-                      "Something went wrong. Please try again.";
-                    messageEl.classList.remove(
-                      "text-green-600",
-                      "dark:text-green-400"
-                    );
-                    messageEl.classList.add("text-red-500");
-                    formInputs.classList.add("hidden");
-                    messageEl.classList.remove("hidden");
-                    messageEl.classList.add("flex");
-                  } finally {
-                    spinner.classList.add("hidden");
-                  }
-                });
-            </script>
           </div>
         </div>
 
