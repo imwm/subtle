@@ -47,7 +47,7 @@
                   href="https://flowstate.fm"
                   class="underline hover:opacity-75"
                   target="_blank"
-                  >flowstate.fm</a
+                  ><strong>Flow State</strong></a
                 >
                 asked us for help with their sponsorship business.
               </p>
@@ -64,48 +64,53 @@
                   target="_blank"
                   >sponsor.flowstate.fm</a
                 >
-                which we built in just a few hours. Here's how we did it:
+                which we built in just a few hours. Here's how we did it.
               </p>
-              <p>Cursor agent (chef's kiss):</p>
-              <ul class="list-disc list-inside mb-4 space-y-2">
-                <li>
-                  Used Claude 3.7, which is excellent at understanding the
-                  entire codebase, finding existing patterns, and applying them.
-                  It also seems to have better design sense than 3.5 (based on
-                  my experience using 3.5 with Replit).
+              <p>tl;dr: <strong>Cursor</strong> is amazing.</p>
+              <ul class="list-disc mb-4 space-y-2">
+                <li class="ml-4">
+                  We used <strong>Cursor's</strong> agent to build a
+                  <strong>nextjs</strong> app. We used
+                  <strong>Claude 3.7</strong>, which is excellent at
+                  understanding the entire codebase, finding existing patterns,
+                  and applying them. It also seems to have better design sense
+                  than <strong>Claude 3.5</strong>.
                 </li>
-                <li>
-                  I was pressing "accept all" frequently, but then turned on
-                  "yolo mode" and only had to undo things about 3 times.
+                <li class="ml-4">
+                  By default, you have to manually accept every change that
+                  <strong>Cursor's</strong> agent proposed, but they recently
+                  introduced "yolo" mode which auto-accepts code changes.
                 </li>
-                <li>
-                  The only time it got stuck was on weird errors. One happened
-                  when I was on Tailwind 4 and it couldn't understand that
-                  PostCSS was a different package. Another occurred when Vercel
-                  was inexplicably not installing its own analytics package
-                  (Cursor tried switching from TS to JS and directly importing –
-                  good attempts, but it should have taken a step back and done a
-                  reinstall rather than working around Vercel's weird problem).
+                <li class="ml-4">
+                  The only time the agent got stuck was on weird errors. One
+                  happened when I was on <strong>Tailwind 4</strong> and it
+                  couldn't understand that <strong>PostCSS</strong> was a
+                  different package. Another occurred when
+                  <strong>Vercel</strong> inexplicably failed to install its own
+                  analytics package during build.
                 </li>
-                <li>
-                  Eventually I reached the point where I wasn't using the IDE at
-                  all, just the agent and the terminal (mostly for git
+                <li class="ml-4">
+                  Eventually I reached the point where I wasn't using the code
+                  editor at all, just the agent and the terminal (mostly for git
                   commands).
                 </li>
               </ul>
               <p>Other services we used:</p>
-              <ul class="list-disc list-inside mb-4 space-y-2">
-                <li>Stripe: No brainer.</li>
-                <li>
-                  Supabase: Shout out to Rick for recommending this. It's very
-                  nice and easy to use. Cursor knows how to use it too.
+              <ul class="list-disc mb-4 space-y-2">
+                <li class="ml-4"><strong>Stripe</strong>: No brainer.</li>
+                <li class="ml-4">
+                  <strong>Supabase</strong>: Shout out to for recommending this.
+                  It's very nice and easy to use. "What
+                  <strong>Firebase</strong> should have been," as they say.
                 </li>
-                <li>
-                  Vercel: Cursor wanted to do a NextJS app and then deploy it on
-                  Vercel. I hadn't used Vercel before, but it was super easy:
-                  login with GitHub, pick the repo, hit deploy, fix a few build
-                  errors that Cursor identified, and then deploy. It
-                  auto-redeploys whenever `main` is updated.
+                <li class="ml-4">
+                  <strong>Vercel</strong>: <strong>Cursor</strong> wanted to do
+                  a <strong>NextJS</strong> app and then deploy it on
+                  <strong>Vercel</strong>. I hadn't used
+                  <strong>Vercel</strong> before, but it was super easy: login
+                  with <strong>GitHub</strong>, pick the repo, hit deploy, fix a
+                  few build errors that <strong>Cursor</strong> identified, and
+                  then deploy. It auto-redeploys whenever `main` is updated.
                 </li>
               </ul>
               <p>
@@ -119,40 +124,41 @@
                 set up and taking bookings, we needed to generate leads. Here's
                 how we did that:
               </p>
-              <ul class="list-disc list-inside mb-4 space-y-2">
-                <li>
-                  We asked ChatGPT where to find leads. It offered several
-                  suggestions, including using
+              <ul class="list-disc mb-4 space-y-2">
+                <li class="ml-4">
+                  We asked <strong>ChatGPT</strong> where to find leads. It
+                  offered several suggestions, including using
                   <a
                     href="https://hunter.io"
                     class="underline hover:opacity-75"
                     target="_blank"
-                    >hunter.io</a
+                    ><strong>hunter.io</strong></a
                   >
                   for finding emails.
                 </li>
-                <li>
+                <li class="ml-4">
                   We signed up for
                   <a
                     href="https://hunter.io"
                     class="underline hover:opacity-75"
                     target="_blank"
-                    >hunter.io</a
+                    ><strong>hunter.io</strong></a
                   >, which let us (a) pick an industry, (b) pick companies, (c)
                   pick departments (marketing), and (d) find emails. From about
                   50 companies, we gathered 500 email addresses.
                 </li>
-                <li>
+                <li class="ml-4">
                   We downloaded the CSV of 500 contacts with metadata (company,
                   name, location), added columns for subject line and email
                   body, and wrote those for the first contact.
                 </li>
-                <li>
-                  We uploaded the CSV to ChatGPT and asked GPT-4.5 to fill in
-                  the remaining subject lines and email bodies based on the
-                  first one. It completed this in about 5 seconds.
+                <li class="ml-4">
+                  We uploaded the CSV to <strong>ChatGPT</strong> and asked
+                  <strong>GPT-4.5</strong> to fill in the remaining subject
+                  lines and email bodies based on the first one. It completed
+                  this in about 5 seconds.
                 </li>
-                <li>
+                <li class="ml-4">
                   From the 500 contacts and emails, we selected 50 to start with
                   – maximum one per company, prioritizing the most senior
                   marketing person. We've sent those out and hopefully we get at
@@ -166,9 +172,17 @@
                   href="https://getwaitlist.com"
                   class="underline hover:opacity-75"
                   target="_blank"
-                  >getwaitlist.com</a
+                  ><strong>getwaitlist.com</strong></a
                 >
-                to set up a simple waitlist for a product called "Bookdate"
+                to set up a simple waitlist for a product called
+                <strong
+                  ><a
+                    href="https://getwaitlist.com/waitlist/25963"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >Bookdate</a
+                  ></strong
+                >
                 which is linked to at the bottom of the website.
               </p>
             </div>
