@@ -1,0 +1,75 @@
+<!-- Intro text -->
+<div
+  class="w-full p-6 pb-2 text-gray-800 dark:text-dark-text transition-colors duration-200"
+>
+  <div class="w-full max-w-2xl">
+    <p><b>Subtle</b> is a project based on these observations:</p>
+    <ul class="list-disc list-inside mb-4 space-y-2">
+      <li>Language models will commoditize knowledge work.</li>
+      <li>The supply of software will grow by an order of magnitude.</li>
+      <li>
+        Resourceful, inspired individuals will increasingly outperform teams.
+      </li>
+    </ul>
+    <p>
+      On this website, we flesh out these ideas, highlight products that
+      exemplify them, and announce our own products. Sign up for updates or
+      <a
+        href="https://calendar.app.google/bQ2nByjDsBVizS6z6"
+        class="underline hover:opacity-75"
+        target="_blank"
+        >book time with us</a
+      >.
+    </p>
+
+    <!-- Email signup form -->
+    <form
+      id="emailForm"
+      class="flex gap-2 pb-4 transition-all duration-300 overflow-hidden"
+    >
+      <div
+        id="formInputs"
+        class="flex gap-2 flex-1 transition-opacity duration-200"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+          class="flex-1 max-w-sm px-2 py-2.5 text-sm rounded-lg border border-gray-400 dark:border-gray-600 bg-white/50 dark:bg-dark-surface focus:outline-none focus:border-gray-600 dark:focus:border-gray-400 dark:text-dark-text"
+        />
+        <button
+          type="submit"
+          class="px-2 py-2.5 text-sm bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex items-center gap-2"
+        >
+          <span>Sign up</span>
+          <svg
+            id="loadingSpinner"
+            class="animate-spin h-4 w-4 hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        id="submitMessage"
+        class="text-sm hidden flex-1 items-center justify-center text-green-600 dark:text-green-400 h-[46px] transition-opacity duration-200"
+      ></div>
+    </form>
+  </div>
+</div>
