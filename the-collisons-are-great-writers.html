@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>The Collisons are great writers - Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 7, 2025</div>
+                <h1 class="font-bold">The Collisons are great writers</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                Stripe just published their
+                <a
+                  href="https://stripe.com/annual-updates/2024"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >annual letter</a
+                >.
+              </p>
+              <p>
+                The main point I wanted to discuss is their defense of LLM
+                wrappers. But I couldn't help but admire the writing abilities
+                of co-founders Patrick and John Collison:
+              </p>
+              <blockquote>
+                For too long the crypto economy was an isolated atoll, with
+                vibrant native customs but few exports to the rest of the world.
+              </blockquote>
+              <blockquote>
+                Why care about stablecoins? Improvements to the basic usability
+                of money make economies more prosperous. Consider the
+                transitions from coins to banknotes, from the gold standard to
+                fiat currency, and from paper instruments to electronic
+                payments. Stablecoins are a new branch of the money tree.
+              </blockquote>
+              <blockquote>
+                GDPR alone is estimated to have reduced profits for small tech
+                firms in Europe by up to 12%. Those cookie banners hurt, whether
+                you accept them or not.
+              </blockquote>
+              <p>They can even make credit card fraud sound interesting.</p>
+              <blockquote>
+                Fraudulent actors today operate on an industrial scale, with
+                teams of engineers, managers, and data analysts. (We are yet to
+                verify whether they have HR departments. If you know, please
+                tell us so we can give them some peer feedback.) Fraudulent
+                actors generally target times when fraud teams are offline—we
+                see more fraud on Saturdays, Sundays, and Mondays—but we see
+                subtler patterns, too, like the fraudsters' own work schedules.
+                Fraudsters are particular about their lunch breaks.
+              </blockquote>
+              <p>
+                Clearly the Collisons write without LLMs. They raw dog the page
+                like Mark Twain. I would buy an ETF of well-written annual
+                reports by CEOs. The Collisons, Bezos, and Buffet all have this
+                in common.
+              </p>
+              <p>
+                Anyhow, the main point is addressing the Collisons' defense of
+                so-called "LLM wrappers." These are applications whose main
+                capability stems from the LLM that powers it.
+              </p>
+              <p>
+                Jasper was an early example of an LLM wrapper. Jasper's whole
+                appeal stemmed from its use of language models, and not from any
+                proprietary technology, underlying dataset, or breakthrough
+                capability. Jasper is probably now in trouble and I would bet it
+                gets sold for parts in the near future.
+              </p>
+              <p>Here's what the Collisons say:</p>
+              <blockquote>
+                Much as SaaS started horizontal and then went vertical (first
+                Salesforce and then Toast), we're seeing a similar dynamic
+                playing out in AI: we started with ChatGPT, but are now seeing a
+                proliferation of industry specific tools. Some people have
+                called these startups “LLM wrappers”; those people are missing
+                the point. The O ring model in economics shows that in a process
+                with interdependent tasks, the overall output or productivity is
+                limited by the least effective component, not just in terms of
+                cost but in the success of the entire system. In a similar vein,
+                we see these new industry specific AI tools as ensuring that
+                individual industries can properly realize the economic impact
+                of LLMs, and that the contextual, data, and workflow integration
+                will prove enduringly valuable.
+              </blockquote>
+              <p>
+                AI applications may verticalize as SaaS apps did. There's reason
+                to think, however, that the pattern won't apply again. (These
+                are rough thoughts so feel free to
+                <a
+                  href="https://github.com/imwm/subtle/blob/main/the-collisons-are-great-writers.html"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >weigh in on Github</a
+                >.)
+              </p>
+              <p>
+                Software-as-a-service (SaaS) applications were made possible by
+                cloud computing:
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Before, people had to buy software CDs, install software on
+                  their computers, and connect to on-premise databases.
+                </li>
+                <li>
+                  After, people could access software over the internet, and
+                  connect to cloud databases.
+                </li>
+              </ul>
+              <p>
+                This change made it a lot easier for people to develop, deploy,
+                and distribute software, leading to a huge increase in the
+                supply of software, including lots of specialty (i.e. vertical)
+                apps.
+              </p>
+              <p>
+                Despite this, there were two significant constraints on SaaS
+                products that left vertical opportunities available:
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  <b>Development cost:</b> It cost a lot of money and time to
+                  build out secure, reliable, and usable software. Building just
+                  the Salesforce app has cost them hundreds of millions of
+                  dollars if not billions over many years. They had to focus on
+                  their core product to be successful.
+                </li>
+                <li>
+                  <b>User expectations:</b> Salesforce's app was used by a lot
+                  of people every day. There had to be basic consistency to the
+                  product experience over time, otherwise users would be
+                  confused and switch to something else.
+                </li>
+              </ul>
+              <p>Both of these constraints go away with AI applications:</p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Development costs are going to zero with tools like Cursor.
+                </li>
+                <li>
+                  User expectations won't matter because agents will be doing
+                  the work on people's behalf.
+                </li>
+              </ul>
+              <p>
+                Taken together, this means that LLM-powered agents from
+                companies like OpenAI, Anthropic, Google, and more may not leave
+                as many vertical opportunities as SaaS horizontal winners did.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Include intro box -->
+        <div include-html="components/intro-box.html"></div>
+      </div>
+
+      <!-- Include footer -->
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <!-- Include component loader -->
+    <script>
+      async function includeHTML() {
+        const elements = document.getElementsByTagName("*");
+        for (const el of elements) {
+          const file = el.getAttribute("include-html");
+          if (file) {
+            try {
+              const response = await fetch(file);
+              const html = await response.text();
+              el.innerHTML = html;
+              el.removeAttribute("include-html");
+            } catch (error) {
+              console.error(`Error loading ${file}:`, error);
+            }
+          }
+        }
+      }
+    </script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/emailForm.js"></script>
+  </body>
+</html>
