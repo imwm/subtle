@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
     <script src="scripts/toast.js"></script>
   </head>
   <body
-    class="min-h-screen noise bg-parchment-50 dark:bg-dark-box transition-colors duration-100 relative"
+    class="min-h-screen noise bg-dark-box transition-colors duration-100 relative"
   >
     <div id="toast" class="toast"></div>
     <div class="min-h-screen flex flex-col">
@@ -23,7 +23,7 @@
       >
         <!-- Article content -->
         <article
-          class="w-full sm:border-x border-gray-600 border-dashed p-6 pb-2 text-gray-800 dark:text-dark-text transition-colors duration-200"
+          class="w-full sm:border-x border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
         >
           <div class="w-full max-w-2xl">
             <div class="flex items-center justify-between gap-4 mb-2">
@@ -35,12 +35,12 @@
               </div>
               <button
                 onclick="copyToClipboard(window.location.href)"
-                class="text-sm px-2 py-1 rounded-lg bg-white/50 dark:bg-dark-surface border border-gray-400 dark:border-gray-600 hover:border-gray-600 dark:hover:border-gray-400 transition-colors"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
               >
                 Copy link
               </button>
             </div>
-            <div class="prose dark:prose-invert">
+            <div class="prose prose-invert">
               <p>
                 A little newsletter called
                 <a
