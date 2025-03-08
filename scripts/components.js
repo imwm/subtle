@@ -1,3 +1,4 @@
+// Function to include HTML components
 async function includeHTML() {
   const elements = document.getElementsByTagName("*");
   for (const el of elements) {
@@ -13,5 +14,19 @@ async function includeHTML() {
       }
     }
   }
+
+  // After all components are loaded, remove loading class
+  setTimeout(() => {
+    document.body.classList.remove("loading");
+    document.body.classList.add("loaded");
+  }, 100);
 }
-includeHTML(); 
+
+// Initialize page on load
+document.addEventListener("DOMContentLoaded", () => {
+  // Add loading class to body
+  document.body.classList.add("loading");
+
+  // Start component loading
+  includeHTML();
+});

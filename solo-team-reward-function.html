@@ -14,6 +14,7 @@
     <script src="styles/tailwind.js"></script>
     <script src="scripts/darkMode.js"></script>
     <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
   </head>
   <body
     class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
@@ -88,27 +89,6 @@
       <div include-html="components/footer.html"></div>
     </div>
 
-    <!-- Include component loader -->
-    <script>
-      async function includeHTML() {
-        const elements = document.getElementsByTagName("*");
-        for (const el of elements) {
-          const file = el.getAttribute("include-html");
-          if (file) {
-            try {
-              const response = await fetch(file);
-              const html = await response.text();
-              el.innerHTML = html;
-              el.removeAttribute("include-html");
-            } catch (error) {
-              console.error(`Error loading ${file}:`, error);
-            }
-          }
-        }
-      }
-      includeHTML();
-    </script>
-    <script src="scripts/components.js"></script>
     <script src="scripts/emailForm.js"></script>
   </body>
 </html>

@@ -14,6 +14,7 @@
     <script src="styles/tailwind.js"></script>
     <script src="scripts/darkMode.js"></script>
     <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
   </head>
   <body
     class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
@@ -109,7 +110,7 @@
                 Salesforce and then Toast), we're seeing a similar dynamic
                 playing out in AI: we started with ChatGPT, but are now seeing a
                 proliferation of industry specific tools. Some people have
-                called these startups “LLM wrappers”; those people are missing
+                called these startups "LLM wrappers"; those people are missing
                 the point. The O ring model in economics shows that in a process
                 with interdependent tasks, the overall output or productivity is
                 limited by the least effective component, not just in terms of
@@ -196,26 +197,6 @@
       <div include-html="components/footer.html"></div>
     </div>
 
-    <!-- Include component loader -->
-    <script>
-      async function includeHTML() {
-        const elements = document.getElementsByTagName("*");
-        for (const el of elements) {
-          const file = el.getAttribute("include-html");
-          if (file) {
-            try {
-              const response = await fetch(file);
-              const html = await response.text();
-              el.innerHTML = html;
-              el.removeAttribute("include-html");
-            } catch (error) {
-              console.error(`Error loading ${file}:`, error);
-            }
-          }
-        }
-      }
-    </script>
-    <script src="scripts/components.js"></script>
     <script src="scripts/emailForm.js"></script>
   </body>
 </html>
