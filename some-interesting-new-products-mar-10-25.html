@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Some interesting new products</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 10, 2025</div>
+                <h1 class="font-bold">Some interesting new products</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                <a
+                  href="https://manus.im/"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >Manus</a
+                >
+                is another impressive Chinese LLM product, following DeepSeek.
+                It's similar to OpenAI's Operator product, in that it's an agent
+                that can be assigned a complex task and then autonomously,
+                iteratively complete it. Manus runs in the cloud so you can
+                initiate a task and close your computer.
+              </p>
+              <div>
+                <iframe
+                  class="w-full rounded-lg aspect-video mb-4"
+                  src="https://www.youtube.com/embed/K27diMbCsuw"
+                  title="Manus Demo Video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <p>
+                <a
+                  href="https://www.sesame.com/"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >Sesame</a
+                >
+                is an extremely impressive voice demo. I recommend the Fireship
+                video:
+              </p>
+              <div>
+                <iframe
+                  class="w-full rounded-lg aspect-video mb-4"
+                  src="https://www.youtube.com/embed/UIVADiGfwWc"
+                  title="Fireship Sesame Coverage"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <p>
+                <a
+                  href="https://www.seven39.com/"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >seven39</a
+                >
+                hit #1 on Hacker News Monday night. It's a social media app that
+                is only "open" from 7:39pm to 10:39pm EST
+              </p>
+
+              <p>
+                <a
+                  href="https://mastra.ai/"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >Mastra</a
+                >
+                is a Typescript framework for building AI agents. It recently
+                tied Langchain in Github stars:
+              </p>
+
+              <div>
+                <img
+                  src="public/mastra-langchain-stars.png"
+                  alt="Graph showing GitHub stars over time for Mastra and Langchain"
+                  class="w-full rounded-lg mb-4"
+                />
+              </div>
+
+              <p>
+                This isn't software but
+                <a
+                  href="https://x.com/conner_omalley/status/1897683135422165382"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >Conner O'Malley's "Pipe Rock Theory"</a
+                >
+                has been called the <i>Citizen Kane</i> of vertical video.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Include intro box -->
+        <div include-html="components/intro-box.html"></div>
+      </div>
+
+      <!-- Include footer -->
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <script src="scripts/emailForm.js"></script>
+  </body>
+</html>
