@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Simon Willison on using LLMs to write code</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 11, 2025</div>
+                <h1 class="font-bold">
+                  Simon Willison on using LLMs to write code
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                Simon, who created the popular Python framework
+                <strong>Django</strong>, published a long blog post about this
+                today (<a
+                  href="https://simonwillison.net/2025/Mar/11/using-llms-for-code/"
+                  class="underline hover:opacity-80"
+                  >here</a
+                >).
+              </p>
+              <p>
+                He's been using LLMs in his coding workflow for about two years
+                now.
+              </p>
+              <p>
+                The context available to the LLM is a major factor in its
+                effectiveness. A product design corollary to this is that LLM
+                context should be accessible to the user.
+              </p>
+              <blockquote>
+                One of the reasons I mostly work directly with the ChatGPT and
+                Claude web or app interfaces is that it makes it easier for me
+                to understand exactly what is going into the context. LLM tools
+                that obscure that context from me are less effective.
+              </blockquote>
+              <p>
+                Cursor, the code editor I use, automatically includes the entire
+                existing repo in its context. I've found that Cursor's agent,
+                using <strong>Claude 3.7 Sonnet</strong>, can navigate the repo
+                and find relevant context for a given task.
+              </p>
+              <p>LLMs are especially useful in the research phase:</p>
+              <blockquote>
+                Most of my projects start with some open questions: is the thing
+                I'm trying to do possible? What are the potential ways I could
+                implement it? Which of those options are the best? I use LLMs as
+                part of this initial research phase.
+              </blockquote>
+              <p>
+                I tend to use ChatGPT o1 for this. I ask a question like, "I'm
+                looking to build a software application that does X, Y, Z. Can
+                you suggest a few approaches to building this, ideally ranging
+                from extremely simple to complex?"
+              </p>
+              <p>
+                I may also include parameters such as "I'd like to use Node and
+                React for this" or "Let's use Supabase for this project."
+              </p>
+              <p>
+                Once you've identified your approach, then you micro-manage the
+                LLM:
+              </p>
+              <blockquote>
+                Once I've completed the initial research I change modes
+                dramatically. For production code my LLM usage is much more
+                authoritarian: I treat it like a digital intern, hired to type
+                code for me based on my detailed instructions.
+              </blockquote>
+              <p>
+                I've found Cursor's agent to be very good at handling open-ended
+                prompts like "Add a list of weeks that the user can multi-select
+                to book one or more sponsorships and include a checkout flow."
+                What I tend to have to be specific about is design details, such
+                as "A fixed footer should reflect the current spending total,
+                with the dollar tally on the left side and a primary color
+                'Proceed to Checkout' button on the right."
+              </p>
+              <blockquote>
+                If I don't like what an LLM has written, they'll never complain
+                at being told to refactor it! “Break that repetitive code out
+                into a function”, “use string manipulation methods rather than a
+                regular expression”, or even “write that better!”—the code an
+                LLM produces first time is rarely the final implementation, but
+                they can re-type it dozens of times for you without ever getting
+                frustrated or bored.
+              </blockquote>
+              <p>
+                In my experience there's a bit of a learning curve to this. You
+                get really impressed by the work that products like Cursor agent
+                and ChatGPT do very quickly, and there's a temptation to adopt a
+                mental model that you're talking to a highly capable software
+                engineer. So then when a mistake is made or the agent is going
+                down the wrong path, you want to gently give it constructive
+                feedback to change course or rollback. You sort of brace for a
+                difficult conversation but the immediate reply that appears is
+                chipper, almost like it's excited that there's more work to do.
+              </p>
+              <blockquote>
+                The best way to learn LLMs is to play with them. Throwing absurd
+                ideas at them and vibe-coding until they almost sort-of work is
+                a genuinely useful way to accelerate the rate at which you build
+                intuition for what works and what doesn't.
+              </blockquote>
+              <p>
+                Something I didn't know about until reading this piece is Simon
+                has an open source repo of over 80 mini apps ("tools") that he's
+                built using LLMs. Check it out on Github
+                <a
+                  href="https://github.com/simonw/tools"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >here</a
+                >. This is an early example of the discontinuous productivity
+                individuals now have because of LLMs.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <script>
+      // Dark mode toggle functionality
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.theme = "light";
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.theme = "dark";
+          }
+        });
+    </script>
+  </body>
+</html>
