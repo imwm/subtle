@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>stringme.dev | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 12, 2025</div>
+                <h1 class="font-bold">stringme.dev</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                Here's something new from us:
+                <strong
+                  ><a
+                    href="https://stringme.dev"
+                    target="_blank"
+                    class="underline hover:opacity-80"
+                    >stringme.dev</a
+                  ></strong
+                >.
+              </p>
+              <p>
+                This service takes a URL and generates a text string. Sounds
+                simple. Why does it matter?
+              </p>
+              <p>
+                I got the idea from an Andrej Karpathy
+                <a
+                  href="https://x.com/karpathy/status/1890208670732124372"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >tweet</a
+                >
+                back in February:
+              </p>
+              <blockquote>
+                I wish there was a service that takes a URL and returns a clean
+                text string of the content. I&#39;d pay for this. I&#39;m tired
+                of writing scrapers, dealing with JS, etc. just to get text. I
+                want to feed URLs into my LLMs but don&#39;t want to waste
+                tokens on HTML cruft.
+              </blockquote>
+
+              <p>
+                Relatedly, there's been a
+                <a
+                  href="https://llmstxt.org/"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >proposal</a
+                >
+                for <code>llms.txt</code>, where similar to
+                <code>robots.txt</code>, every website would make its contents
+                available to LLMs in the form of a simple text file.
+              </p>
+              <p>
+                These ideas got me thinking about the developer need for simple
+                text, an idea that I'd mentally labeled "textmaxing."
+              </p>
+              <p>
+                I think this is related to the recent
+                <a
+                  href="https://x.com/jeff_weinstein/status/1893040790214951007"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >hype</a
+                >
+                around Model Context Protocols (MCPs), which I may address in a
+                future post.
+              </p>
+              <p>
+                But recently I'd seen concrete examples of simple txt files
+                showing value, such as
+                <a
+                  href="https://uithub.com"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >uithub.com</a
+                >
+                (generates txt files of public Github repos).
+              </p>
+              <p>
+                Also, Karpathy reiterated his need for txt middleware between
+                webpages and LLMs
+                <a
+                  href="https://x.com/karpathy/status/1899888970206765270"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >again today</a
+                >.
+              </p>
+              <p>
+                So I figured I'd try to vibe code something with Cursor, using a
+                domain I'd previously registered based on the enthusiasm for
+                this general concept.
+              </p>
+              <p>
+                The result is
+                <a
+                  href="https://stringme.dev"
+                  class="underline hover:opacity-80"
+                  >stringme.dev</a
+                >.
+              </p>
+              <p>
+                Check it out and let me know if you have any feedback (<a
+                  href="/contact"
+                  class="underline hover:opacity-80"
+                  >contact</a
+                >).
+              </p>
+              <p>I'll do a full post on how I made this tomorrow.</p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <script>
+      // Dark mode toggle functionality
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.theme = "light";
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.theme = "dark";
+          }
+        });
+    </script>
+  </body>
+</html>
