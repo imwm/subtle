@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TK" />
+    <title>stringme.dev updates | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 13, 2025</div>
+                <h1 class="font-bold">stringme.dev updates</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                Spent today iterating on
+                <a
+                  href="https://stringme.dev"
+                  class="underline hover:opacity-80"
+                  >stringme.dev</a
+                >. Some updates:
+              </p>
+              <p>
+                I added quick URL buttons so you can instantly try the service
+                with example websites.
+              </p>
+              <p>
+                The copy across the site got a significant upgrade too. Clearer,
+                more concise, and hopefully a bit more engaging.
+              </p>
+              <p>
+                I implemented Mozilla's <strong>readabilityjs</strong> to strip
+                away all that extraneous filler text from webpages. You know,
+                the stuff that makes your eyes glaze over when you're just
+                trying to get to the content.
+              </p>
+              <p>
+                I've also improved the text optimization while stubbornly
+                refusing to use an LLM for this process itself. It's become
+                something of a personal challenge, though I will probably cave
+                at some point. (Google's new
+                <a
+                  href="https://blog.google/technology/developers/gemma-3/"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >Gemma 3</a
+                >
+                model seems promising.)
+              </p>
+              <p>
+                Navigation improved, with keyboard shortcuts and better handling
+                of back navigation from the generated plain text.
+                Quality-of-life improvements like this add up.
+              </p>
+              <p>
+                Behind the scenes, I consolidated the local and API text
+                formatting/optimization functions, which should make future
+                improvements more manageable. Plus, I made some subtle layout
+                tweaks that you probably won't notice but would definitely miss
+                if they weren't there.
+              </p>
+              <p>
+                Tomorrow I'll post a more comprehensive breakdown of how this
+                project came together from the beginning, along with some
+                lessons learned along the way.
+              </p>
+              <p>
+                Full disclosure, this post was like 7 dashed-off bullet points
+                that were rewritten by Claude 3.7 Sonnet within Cursor.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <script>
+      // Dark mode toggle functionality
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.theme = "light";
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.theme = "dark";
+          }
+        });
+    </script>
+  </body>
+</html>
