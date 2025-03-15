@@ -1,0 +1,18 @@
+{
+  "name": "subtle",
+  "version": "1.0.0",
+  "description": "Subtle website",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imwm/subtle.git"
+  },
+  "keywords": [
+    "subtle"
+  ],
+  "author": "",
+  "license": "MIT"
+}
