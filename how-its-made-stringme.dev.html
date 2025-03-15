@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>How it's made: stringme.dev | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 14, 2025</div>
+                <h1 class="font-bold">How it's made:stringme.dev</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                The main lesson from this, actually, was to try to identify the
+                languages, frameworks, and services you'll need to use up front.
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  We ran into problems when we told Cursor, mid-project, that we
+                  wanted to use Tailwind, that we wanted to deploy via Vercel,
+                  that we wanted to switch from TypeScript to JavaScript.
+                </li>
+                <li>
+                  These were all pretty painful, debug-time-consuming
+                  transitions, which could have been avoided by specifying these
+                  technologies up front.
+                </li>
+                <li>
+                  I think code gen tools can do a better job of recommending
+                  best practices up front before initializing the codebase. They
+                  seem to pretend to be naive about modern best practices and
+                  tacitly pin it on the user if they don't specify them.
+                  Ethically defensible but practically annoying.
+                </li>
+              </ul>
+
+              <p>
+                Anyhow, here's how we vibe-coded
+                <a
+                  href="https://stringme.dev"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >stringme.dev</a
+                >:
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  I chatted with ChatGPT about this concept (thread
+                  <a
+                    href="https://chatgpt.com/share/67d5503e-73f0-800f-a89d-2fb7c62c55cc"
+                    target="_blank"
+                    class="underline hover:opacity-80"
+                    >here</a
+                  >). ChatGPT validated the concept and then gave some
+                  instructions as how to to start implementing it.
+                </li>
+                <li>
+                  I asked ChatGPT to format the project proposal into a prompt
+                  for Cursor's agent to take and implement, which it did well
+                  enough...
+                </li>
+                <li>
+                  But the main thing that was missing was specification of the
+                  technologies to use. This was the main lesson. You gotta
+                  specify these up front.
+                </li>
+                <li>
+                  What ChatGPT did help with was techniques to optimize text
+                  extraction for LLMs, which currently includes a summary, key
+                  facts, and the main content.
+                </li>
+              </ul>
+
+              <p>
+                I initialized it, pivoted the design to be a Google-like
+                centered input box, dark mode only.
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Added the Karpathy tweet below the input field explaining the
+                  value prop. I kind of like that technique of having someone
+                  else established explain your product's value prop for you.
+                  Social proof.
+                </li>
+                <li>
+                  Originally, I added a getwalist.com email signup below to
+                  gauge interest in an API for generating these kinds of
+                  LLM-optimized strings programmatically. But then the lack of
+                  customization got to me and so I just created a Supabase table
+                  and had Cursor create a style-matching email signup field that
+                  writes to it. Easy enough.
+                </li>
+                <li>
+                  Sidenote: this is why indie hackers are probably not a good
+                  target customer. They have low willingness to pay, and they
+                  can build their own solution (or at least they think they
+                  can).
+                </li>
+              </ul>
+
+              <p>
+                I deployed, and it basically works. The optimizations I did
+                afterwards were around formatting the text output, getting the
+                Vercel functions to work the same way local functions did, and
+                small usability enhancements.
+              </p>
+
+              <p>Next up is:</p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Store each URL string in Supabase to (a) cache it and (b)
+                  create a kind of network effect around the use of this
+                  service.
+                </li>
+                <li>Handle file -> optimized txt conversion.</li>
+                <li>
+                  Introduce an API for programmatically generating these kinds
+                  of strings.
+                </li>
+              </ul>
+
+              <p>Open to other ideas too!</p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <script>
+      // Dark mode toggle functionality
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark");
+            localStorage.theme = "light";
+          } else {
+            document.documentElement.classList.add("dark");
+            localStorage.theme = "dark";
+          }
+        });
+    </script>
+  </body>
+</html>
