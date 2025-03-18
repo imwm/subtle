@@ -163,20 +163,5 @@
       </div>
       <div include-html="components/footer.html"></div>
     </div>
-
-    <script>
-      // Dark mode toggle functionality
-      document
-        .getElementById("darkModeToggle")
-        .addEventListener("click", function () {
-          if (document.documentElement.classList.contains("dark")) {
-            document.documentElement.classList.remove("dark");
-            localStorage.theme = "light";
-          } else {
-            document.documentElement.classList.add("dark");
-            localStorage.theme = "dark";
-          }
-        });
-    </script>
   </body>
 </html>
