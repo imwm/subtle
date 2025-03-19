@@ -1,75 +1,125 @@
-<!-- Intro text -->
-<div
-  class="w-full p-6 pb-2 text-gray-800 dark:text-dark-text transition-colors duration-200"
->
-  <div class="w-full max-w-2xl">
-    <p><b>Subtle</b> is a project based on these observations:</p>
-    <ul class="list-disc list-inside mb-4 space-y-2">
-      <li>Language models will commoditize knowledge work.</li>
-      <li>The supply of software will grow by an order of magnitude.</li>
-      <li>
-        Resourceful, inspired individuals will increasingly outperform teams.
-      </li>
-    </ul>
-    <p>
-      This website fleshes out these ideas, highlights products that exemplify
-      them, and announces new products. Sign up for updates or
-      <a
-        href="https://calendar.app.google/bQ2nByjDsBVizS6z6"
-        class="underline hover:opacity-75"
-        target="_blank"
-        >book time with us</a
-      >.
-    </p>
-
-    <!-- Email signup form -->
-    <form
-      id="emailForm"
-      class="flex gap-2 pb-4 transition-all duration-300 overflow-hidden"
-    >
-      <div
-        id="formInputs"
-        class="flex gap-2 flex-1 transition-opacity duration-200"
+<!-- Intro box container -->
+<div id="introBox" class="w-full transition-all duration-300 relative">
+  <!-- Expand/collapse header -->
+  <div
+    id="introBoxHeader"
+    class="hidden w-full flex-1 p-4 cursor-pointer hover:bg-white/5 opacity-0 transition-all duration-300"
+  >
+    <div class="w-full flex items-center justify-between">
+      <span class="text-white/50 text-sm">Show context & signup</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4 text-white/50"
+        viewBox="0 0 20 20"
+        fill="currentColor"
       >
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-          class="flex-1 max-w-sm px-2 py-2.5 text-sm rounded-lg border border-gray-400 dark:border-gray-600 bg-white/50 dark:bg-dark-surface focus:outline-none focus:border-gray-600 dark:focus:border-gray-400 dark:text-dark-text"
+        <path
+          fill-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          clip-rule="evenodd"
         />
-        <button
-          type="submit"
-          class="px-2 py-2.5 text-sm bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex items-center gap-2"
+      </svg>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div id="introBoxContent" class="w-full">
+    <!-- Close button -->
+    <div class="absolute top-2 right-2">
+      <button
+        id="closeIntroBox"
+        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
         >
-          <span>Sign up</span>
-          <svg
-            id="loadingSpinner"
-            class="animate-spin h-4 w-4 hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Intro text -->
+    <div
+      class="w-full p-6 pb-2 text-gray-800 dark:text-dark-text transition-colors duration-200"
+    >
+      <div class="w-full max-w-2xl">
+        <p><b>Subtle</b> is a project based on these observations:</p>
+        <ul class="list-disc list-inside mb-4 space-y-2">
+          <li>Language models will commoditize knowledge work.</li>
+          <li>The supply of software will grow by an order of magnitude.</li>
+          <li>
+            Resourceful, inspired individuals will increasingly outperform
+            teams.
+          </li>
+        </ul>
+        <p>
+          This website fleshes out these ideas, highlights products that
+          exemplify them, and announces new products. Sign up for updates or
+          <a
+            href="https://calendar.app.google/bQ2nByjDsBVizS6z6"
+            class="underline hover:opacity-75"
+            target="_blank"
+            >book time with us</a
+          >.
+        </p>
+
+        <!-- Email signup form -->
+        <form
+          id="emailForm"
+          class="flex gap-2 pb-4 transition-all duration-300 overflow-hidden"
+        >
+          <div
+            id="formInputs"
+            class="flex gap-2 flex-1 transition-opacity duration-200"
           >
-            <circle
-              class="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              stroke-width="4"
-            ></circle>
-            <path
-              class="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-            ></path>
-          </svg>
-        </button>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              class="flex-1 max-w-sm px-2 py-2.5 text-sm rounded-lg border border-gray-400 dark:border-gray-600 bg-white/50 dark:bg-dark-surface focus:outline-none focus:border-gray-600 dark:focus:border-gray-400 dark:text-dark-text"
+            />
+            <button
+              type="submit"
+              class="px-2 py-2.5 text-sm bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex items-center gap-2"
+            >
+              <span>Sign up</span>
+              <svg
+                id="loadingSpinner"
+                class="animate-spin h-4 w-4 hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            id="submitMessage"
+            class="text-sm hidden flex-1 items-center justify-center text-green-600 dark:text-green-400 h-[46px] transition-opacity duration-200"
+          ></div>
+        </form>
       </div>
-      <div
-        id="submitMessage"
-        class="text-sm hidden flex-1 items-center justify-center text-green-600 dark:text-green-400 h-[46px] transition-opacity duration-200"
-      ></div>
-    </form>
+    </div>
   </div>
 </div>
