@@ -17,6 +17,13 @@ async function includeHTML() {
 
   // After all components are loaded, initialize handlers and remove loading class
   initializeHandlers();
+
+  // Update the current year in the footer
+  const yearElement = document.getElementById("currentYear");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
   setTimeout(() => {
     document.body.classList.remove("loading");
     document.body.classList.add("loaded");
@@ -168,7 +175,6 @@ function initializeHandlers() {
       introBoxContent.style.display = "none";
       introBoxHeader.classList.remove("hidden");
       introBoxHeader.style.display = "flex";
-      introBoxHeader.classList.add("w-full");
       introBoxHeader.style.opacity = "1";
     }
   }
