@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Is Cursor a good business? | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 19, 2025</div>
+                <h1 class="font-bold">Is Cursor a good business?</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Sam Lessin offered an interesting, skeptical take on Cursor and
+                similar LLM wrappers on a
+                <a
+                  href="https://youtu.be/YcObLyRM15U?si=DRhbKiOrktKhIjR8&t=1544"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >podcast recently</a
+                >:
+              </p>
+              <blockquote>
+                I like [Cursor]. I use it as a product. I don't see it as a good
+                business.... The thing is, people are applying network thinking
+                to what's fundamentally just a technology. There's no
+                lock-in.... I think the whole point of AI is the switching costs
+                for all this stuff goes to zero.
+              </blockquote>
+              <p>
+                It's true that the switching cost of Cursor is close to zero. As
+                an example, Claire Vo of LaunchDarkly switched from Cursor to
+                Windsurf after a Cursor update caused issues with how code
+                updates worked:
+              </p>
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  I switched from Cursor to Windsurf after the last Cursor
+                  update. I was having issues with how code updates worked.
+                  I&#39;m a big fan of Windsurf so far. I&#39;m also a big fan
+                  of competition in this space. It&#39;s moving so fast.
+                </p>
+                &mdash; Claire Vo (@clairevo)
+                <a
+                  href="https://twitter.com/clairevo/status/1901105475997102104?ref_src=twsrc%5Etfw"
+                  >March 16, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+              <p>
+                Even though Cursor may be
+                <a
+                  href="https://sacra.com/research/cursor-at-100m-arr/"
+                  target="_blank"
+                  class="underline hover:opacity-80"
+                  >the fastest startup to $100M in ARR</a
+                >, it does face some existential risks:
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  There are already several near-perfect substitutes for Cursor
+                  (Windsurf, Github Copilot). Users can easily switch, meaning
+                  Cursor's revenue retention is at risk. I would worry
+                  especially about Github's offering because its parent company
+                  Microsoft also controls VSCode, of which Cursor is a fork.
+                </li>
+                <li>
+                  Because public LLMs are really the core drivers of Cursor's
+                  product value, the barrier to entry for new products is not
+                  high. Cursor might find itself in a red ocean competing with
+                  lots more code generation tools than today.
+                </li>
+                <li>
+                  Cursor appeals to people who are already familiar with the
+                  integrated development environment (IDE) paradigm. But if
+                  text-to-product tools like Lovable and Bolt get good enough,
+                  people will ditch their IDEs along with Cursor.
+                </li>
+                <li>
+                  General-purpose LLM products like ChatGPT and Claude are
+                  increasingly building out their own productivity tools and
+                  integrations with third-party ones, which could obviate the
+                  need for a separate LLM-powered code editor.
+                </li>
+              </ul>
+              <p>That said, I can see the following scenario play out:</p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Cursor continues to be the category leader in generative code
+                  editors, and it continues to spread through word of mouth
+                  among professional software engineers.
+                </li>
+                <li>
+                  At $100M ARR with a price tag of $20/mo, it has about 400k
+                  paying customers. There are about 27M professional software
+                  engineers in the world (<a
+                    href="https://en.wikipedia.org/wiki/Software_engineering_demographics"
+                    class="underline hover:opacity-80"
+                    >Wikipedia</a
+                  >). If Cursor continues to spread quickly, it could hit $1B
+                  ARR with just ~15% market share among professional software
+                  engineers.
+                </li>
+                <li>
+                  Moreover, Cursor's text-based product development could also
+                  attract growth from people who have not been professional
+                  software engineers, which is obviously a much larger market.
+                </li>
+              </ul>
+              <p>
+                All told, that adds up to a huge amount of room for Cursor to
+                run. With a brand that's essentially the ChatGPT for software
+                engineering, I would bet Cursor continues to grow fast. The
+                question is when it hits a wall – I don't think that'll happen
+                for at least another couple years.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
