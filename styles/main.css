@@ -12,7 +12,7 @@
 }
 
 /* Page load animation */
-body.loading {
+body {
   opacity: 0;
 }
 
