@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>The cybernetic teammate | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 21, 2025</div>
+                <h1 class="font-bold">The cybernetic teammate</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                One of our observations at Subtle is that, enabled by LLMs,
+                "individuals will increasingly outperform teams." A
+                <a
+                  href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5188231"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >new paper</a
+                >
+                from HBS, Wharton, and Proctor & Gamble (P&G) tested this idea
+                in practice.
+              </p>
+              <p>
+                Researchers worked with 776 employees at P&G, randomly assigning
+                employees to (a) work with or without AI (specifically, GPT-4)
+                and (b) work alone or with a team.
+              </p>
+              <p>
+                Here's a summary of their findings, which affirm our own
+                hypothesis:
+              </p>
+              <blockquote>
+                Our findings show that
+                <b>AI replicates many of the benefits of human collaboration</b
+                >, acting as a “cybernetic teammate.” Individuals with AI
+                produce solutions at a quality level comparable to two-person
+                teams, indicating that AI can indeed stand in for certain
+                collaborative functions. Digging deeper, the adoption of AI also
+                broadens the user's reach in areas outside their core expertise.
+                Workers without deep product development experience, for
+                example, can leverage AI's suggestions to bridge gaps in
+                knowledge or domain understanding, effectively replicating the
+                knowledge integration typically achieved through human
+                collaboration. This has the potential to diminish functional
+                boundaries, democratizing expertise within teams and
+                organizations. Moreover,
+                <b
+                  >professionals reported more positive emotions and fewer
+                  negative emotions when engaging with AI compared to working
+                  alone</b
+                >, matching the emotional benefits traditionally associated with
+                human teamwork.... Overall, our findings indicate that adopting
+                AI in knowledge work involves more than simply adding another
+                tool. By enhancing performance, bridging functional expertise,
+                and reshaping collaboration patterns, GenAI prompts a rethinking
+                of how organizations structure teams and individual roles.
+              </blockquote>
+              <p>
+                The performance boost is not surprising, but it was intriguing
+                that the researchers explored the emotional aspect of
+                collaborating with AI. Some more specifics on that finding:
+              </p>
+              <blockquote>
+                Finally, we find that AI integration leads to enhanced positive
+                emotional experiences. Figures 7 and 8 present emotional
+                responses across groups, illustrating that participants using AI
+                reported significantly higher levels of positive emotions
+                (excitement, energy, and enthusiasm) and lower levels of
+                negative emotions (anxiety and frustration).
+              </blockquote>
+              <p>
+                Specifically, working with AI gives you a
+                <b><i>stronger</i></b> emotional benefit (in both positive and
+                negative valence) than working with a team.
+              </p>
+              <p>
+                <img
+                  src="public/cybernetic-teammate-figure-7.png"
+                  alt="Cybernetic Teammate Figure 7"
+                />
+              </p>
+              <p>
+                <img
+                  src="public/cybernetic-teammate-figure-8.png"
+                  alt="Cybernetic Teammate Figure 8"
+                />
+              </p>
+              <p>
+                While negative emotions vanished at the same rate across AI
+                collaborators and human collaborators, the remaining gap was in
+                positive emotions, which came from working with both AI and a
+                team.
+              </p>
+              <p>
+                They also found that people working outside their domain of
+                expertise got a significant gain in performance in that area
+                using AI:
+              </p>
+              <blockquote>
+                The results are particularly noteworthy for non-core-job
+                employees. Without AI, non-corejob employees working alone
+                performed relatively poorly. Even when working in teams,
+                noncore-job employees without AI showed only modest improvements
+                in performance. However, when given access to AI, non-core-job
+                employees working alone achieved performance levels comparable
+                to teams with at least one core-job employee. This suggests that
+                AI can effectively substitute for the expertise and guidance
+                typically provided by team members that are familiar with the
+                task at hand. This pattern demonstrates AI's potential to
+                democratize expertise within organizations, extending prior work
+                on individual knowledge workers (e.g., (Brynjolfsson et al.,
+                2023; Dell'Acqua et al., 2023b)). AI allows less experienced
+                employees to achieve performance levels that previously required
+                either direct collaboration or supervision by colleagues with
+                more task-related experience.
+              </blockquote>
+              <p>
+                This is a big reason one-person companies led by generalists
+                will succeed. Historically, firms assembled teams of functional
+                experts led by general(ist) managers. Now, one person companies
+                can be run by generalists who consult AI for on-demand expertise
+                in any functional area.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
