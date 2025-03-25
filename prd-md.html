@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Title | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 24, 2025</div>
+                <h1 class="font-bold">prd.md</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                A common pain point working with code generation tools like
+                Cursor is that with every new chat, the agent needs to scan the
+                code base to get context. The agent acts as though it's never
+                seen this codebase before, even if it wrote every line of it.
+                It's as if every day that an engineer showed up at work, they
+                had to go through new hire orientation, read all the readmes,
+                and digest all the software development processes before
+                committing code.
+              </p>
+              <p>
+                The best way I've found to mitigate this is to include a product
+                requirements doc (PRD) as a markdown file in the repo. This file
+                allows the agent to quickly catch up on what we're building and
+                how.
+              </p>
+              <p>
+                Just like in human collaboration, good documentation matters.
+                The difference is agents are amnesiacs (at least for now).
+              </p>
+              <p>
+                <a
+                  href="https://x.com/PrajwalTomar_/status/1903808363462267286"
+                  class="underline hover:opacity-75"
+                  >Prajwal Tomar on X</a
+                >
+                goes a few steps further, recommending that you also include:
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>App Flow Doc: Descriptions of user stories and flows</li>
+                <li>
+                  Tech Stack Doc: List of technologies used (and perhaps ones to
+                  avoid)
+                </li>
+                <li>
+                  Frontend Guidelines: Fonts, color scheme, icon set, etc.
+                </li>
+                <li>
+                  Backend Structure Doc: db schema, API spec, auth flow, etc.
+                </li>
+                <li>
+                  Implementation Plan: List of steps the agent should take
+                </li>
+              </ul>
+              <p>
+                I don't agree with the last one – the agent should be able to
+                figure that out on its own. And by listing the implemtnation
+                steps you overprescribe what the agent does – perhaps the agent
+                has a better plan. In that case, since LLMs are trained to be so
+                agreeable, they will take the stupider path i.e. yours.
+              </p>
+              <p>
+                And aside from <code>prd.md</code>, I'm not sure the user should
+                be generating these docs. If the user has strong opinions about
+                tech stack, specify those up front when the app is initialized.
+                But you probably just want to ask the agent itself to creat and
+                update this documentation as it goes.
+              </p>
+              <p>
+                If this technique catches on – a <code>prd.md</code> file that
+                governs the agent's behavior – then I foresee a few further
+                implications. From nearer- to longer-term:
+              </p>
+              <ol class="list-decimal ml-4 mb-4">
+                <li>
+                  Product documentation should really live in the codebase. In
+                  my experience it's always instead lived in Google Docs,
+                  Notion, etc. As agents contribute more to codebases, they'll
+                  need direct access to the product specs. What better place
+                  than in the codebase itself?
+                </li>
+                <li>
+                  Bundling product specs with the codebase will invite coding
+                  agents to contribute more to product management. Give agents
+                  access to product usage data and user feedback, and they can
+                  start autonmously opening PRs on the product spec itself.
+                </li>
+                <li>
+                  Taken to its extreme, we'll see the role of humans being (1)
+                  product conception, i.e. conceiving of awesome, novel products
+                  and initializing them and (2) orchestrating product
+                  development agents that ship, observe, deliberate, iterate,
+                  and repeat.
+                </li>
+                <li>
+                  A question is where that orchestration will happen. Linear
+                  today announced that
+                  <a
+                    href="https://x.com/karrisaarinen/status/1904300417460359225"
+                    >agents are coming</a
+                  >
+                  – just assign an issue to an agent and then review their work.
+                  I suspect Github actually might end up being the winner,
+                  because it's the single source of truth for code.
+                </li>
+                <li>
+                  The other opportunity that's interesting is how to make
+                  product usage data and user feedback accessible and optimized
+                  for agents. And developing agents that can intelligently go
+                  from those raw inputs to successful product iterations. I
+                  could see Amplitude or Atlassian going after this.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
