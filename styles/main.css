@@ -33,7 +33,8 @@ blockquote {
   margin-bottom: 1rem !important;
 }
 
-p {
+p,
+h3 {
   padding-bottom: 1rem;
 }
 
