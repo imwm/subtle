@@ -1,0 +1,51 @@
+/* Layout components */
+.page-container {
+  @apply min-h-screen noise bg-dark-deeper transition-colors duration-100 relative;
+}
+
+.content-wrapper {
+  @apply w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start;
+}
+
+.article-container {
+  @apply w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200;
+}
+
+/* Article header components */
+.article-header {
+  @apply flex items-center justify-between gap-4 mb-4;
+}
+
+.article-meta {
+  @apply flex flex-col items-start;
+}
+
+.article-date {
+  @apply text-xs opacity-75 mb-1;
+}
+
+.article-title {
+  @apply font-bold;
+}
+
+.copy-link-button {
+  @apply text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors;
+}
+
+/* Content components */
+.article-content {
+  @apply prose prose-invert;
+}
+
+.article-link {
+  @apply underline hover:opacity-80;
+}
+
+.article-list {
+  @apply list-disc ml-4 mb-4;
+}
+
+/* Twitter embed */
+.twitter-tweet {
+  @apply my-4;
+}

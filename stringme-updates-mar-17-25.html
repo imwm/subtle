@@ -21,42 +21,36 @@
       src="https://plausible.io/js/script.js"
     ></script>
   </head>
-  <body
-    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
-  >
+  <body class="page-container">
     <div id="toast" class="toast"></div>
     <div class="min-h-screen flex flex-col">
       <!-- Include header -->
       <div include-html="components/header.html"></div>
 
-      <div
-        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
-      >
+      <div class="content-wrapper">
         <!-- Article content -->
-        <article
-          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
-        >
+        <article class="article-container">
           <div class="w-full max-w-2xl">
-            <div class="flex items-center justify-between gap-4 mb-4">
-              <div class="flex flex-col items-start">
-                <div class="text-xs opacity-75 mb-1">March 17, 2025</div>
-                <h1 class="font-bold">stringme.dev changelog - 3/17/25</h1>
+            <div class="article-header">
+              <div class="article-meta">
+                <div class="article-date">March 17, 2025</div>
+                <h1 class="article-title">stringme.dev changelog - 3/17/25</h1>
               </div>
               <button
                 onclick="copyToClipboard(window.location.href)"
-                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+                class="copy-link-button"
               >
                 Copy link
               </button>
             </div>
-            <div class="prose prose-invert">
+            <div class="article-content">
               <p>
                 Today Stripe added the ability to copy the text of their docs or
                 view the page as markdown:
               </p>
               <blockquote class="twitter-tweet" data-theme="dark">
                 <p lang="en" dir="ltr">
-                  We’ve added /llms.txt and Markdown to
+                  We've added /llms.txt and Markdown to
                   <a href="https://twitter.com/stripe?ref_src=twsrc%5Etfw"
                     >@stripe</a
                   >
@@ -98,7 +92,7 @@
                 a quick plain text version of
                 <a
                   href="https://vercel.com/guides/how-can-i-use-files-in-serverless-functions"
-                  class="underline hover:opacity-80"
+                  class="article-link"
                   >Vercel docs</a
                 >
                 to paste it into the Cursor agent. It worked pretty well!
@@ -107,7 +101,7 @@
                 Here are a few updates I've made – though I'm currently battling
                 Vercel functions to get those working properly in production:
               </p>
-              <ul class="list-disc ml-4 mb-4">
+              <ul class="article-list">
                 <li>
                   Incorporated Firecrawl as a better way to scrape webpages and
                   get the HTML.
@@ -123,7 +117,7 @@
                 </li>
               </ul>
               <p>The next steps are to:</p>
-              <ul class="list-disc ml-4 mb-4">
+              <ul class="article-list">
                 <li>
                   Fix Vercel functions (they're harder to deal with than I
                   thought) or deploy the back-end to something like Fly.io.
