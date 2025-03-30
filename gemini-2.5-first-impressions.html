@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>
+      Gemini 2.5 excels at refactoring code and higher-level projects | Subtle
+    </title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 28, 2025</div>
+                <h1 class="font-bold">
+                  Gemini 2.5 excels at refactoring code and higher-level
+                  projects
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                On Tuesday, Google
+                <a
+                  href="https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >announced Gemini 2.5</a
+                >, a reasoning model that is optimized for coding and has a 1
+                million token context window.
+              </p>
+              <p>
+                Cursor
+                <a
+                  href="https://x.com/cursor_ai/status/1905798820400615821"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >made it available today</a
+                >, so we decided to give it a shot.
+              </p>
+              <p>
+                We saw that for another Cursor user, Gemini 2.5 was able to
+                solve a problem that Sonnet had gotten stuck on:
+              </p>
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  Gemini 2.5 just solved a problem that Sonnet got stuck on.
+                  It's really good at understanding the bigger picture and
+                  making architectural decisions.
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Ian Nuttall (@iannuttall)
+                <a
+                  href="https://twitter.com/iannuttall/status/1905670712406487225?ref_src=twsrc%5Etfw"
+                  >March 28, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+              <p>
+                <a
+                  href="stringme.dev"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Stringme</a
+                >
+                has had this issue where the local API was essentially recreated
+                to be compatible with vercel functions which have certain
+                idiosyncracies. Sonnet kept struggling with the task of
+                consolidating these files and doing overall codebase cleanup.
+              </p>
+              <p>
+                So I selected Gemini 2.5 (Pro Max) and gave it a basic prompt to
+                this effect.
+              </p>
+              <p>
+                <i
+                  >Side note, I used
+                  <a
+                    href="https://stringme.dev"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >stringme.dev</a
+                  >
+                  to get pastable plain text of the Vercel function docs for the
+                  Cursor agent prompt</i
+                >
+              </p>
+              <p>
+                Gemini 2.5 responded by asking followups, asking me to point it
+                to where to look in the codebase. Once directed, it asked me a
+                few more clarifying and orientational questions before calling
+                any tools.
+              </p>
+              <p>
+                Once it got going, it reached several "Decision Points," where
+                it presented me with several courses of action.
+              </p>
+              <p>
+                I suspect Gemini 2.5's emphasis on table-setting and greater
+                deference to the user reflects Google's general ethic of
+                caution.
+              </p>
+              <p>
+                This specific project involved consolidating a lot of the API
+                functionality to use the more Vercel-specific implementation,
+                which included deleting a lot of files. Based on my experience
+                of Gemini 2.5 being quite cautious and deliberative before
+                taking action, I suspect it's the best model for this kind of
+                refactoring / cleanup project.
+              </p>
+              <p>
+                Gemini 2.5's text generation felt slower than Sonnet (3.7) has
+                in the past (though Gemini may be getting a lot of traffic right
+                now). When Cursor isn't experiencing peak traffic, Sonnet's
+                responses flow super quickly.
+              </p>
+              <p>
+                It's like you want Sonnet (3.7) to be your writer, generating
+                files quickly, and then Gemini (2.5) is your editor or technical
+                architect.
+              </p>
+              <p>
+                Seems like some users of Cline are adopting this kind of
+                functionality:
+              </p>
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  Introducing model switching in Cline. Use different models for
+                  different tasks - Sonnet for quick generation, Gemini for
+                  architecture decisions.
+                  <a href="https://t.co/GgT5AYhSIq"
+                    >pic.twitter.com/GgT5AYhSIq</a
+                  >
+                </p>
+                &mdash; Cline (@cline)
+                <a
+                  href="https://twitter.com/cline/status/1905741191725068611?ref_src=twsrc%5Etfw"
+                  >March 28, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+              <p>
+                Finally, while Cursor always prompts you to start a new chat
+                after a certain number of exchanges, I found that in a very long
+                chat with Gemini 2.5 (Pro Max), it kept going no problem. This
+                may have something to do with its stated 1-million token context
+                window.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
