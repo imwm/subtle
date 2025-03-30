@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Microsoft's security agents | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">March 27, 2025</div>
+                <h1 class="font-bold">Microsoft's security agents</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                I think Microsoft has the right idea with their security agents.
+                This could help the urgent
+                <a href="vibe-code-exploits.html"
+                  >"vibe code exploits" problem</a
+                >. From
+                <a
+                  href="https://www.axios.com/2025/03/24/microsoft-ai-agents-cybersecurity"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Axios</a
+                >:
+              </p>
+              <blockquote>
+                Microsoft said Monday it will soon roll out 11 new AI agents for
+                its security-focused Copilot aimed at offloading some of the
+                most repetitive tasks that bog down cybersecurity teams.
+                <br /><br />
+                <b>Why it matters</b>: Microsoft is the latest major vendor to
+                embed autonomous AI agents directly into its security suite in
+                an effort to reduce burnout for cyber pros and boost efficiency
+                through AI-powered automation.
+              </blockquote>
+              <blockquote>
+                Starting next month, Microsoft will make six of its own new
+                agents and five agents from partner companies available for
+                preview in Security Copilot — which is already integrated into
+                all of Microsoft's security tools.
+                <br /><br />
+                <ul class="list-disc ml-4 mb-4">
+                  <li>
+                    Each agent focuses on a different task: One specifically
+                    combs through potential phishing emails. Another can craft
+                    notification letters to send to different regulators after a
+                    data breach.
+                  </li>
+                  <li>
+                    Customers can configure each agent's level of access and
+                    autonomy, including whether the agent acts under its own
+                    identity (with a unique username and password) or as an
+                    extension of a human account.
+                  </li>
+                  <li>
+                    Each agent also has a map of its thinking so human users can
+                    review their decisions — and even override or correct their
+                    selections.
+                  </li>
+                </ul>
+              </blockquote>
+              <p>
+                This could also pose a threat to code agent startups such as
+                Cursor and Windsurf, as well as text-to-product interfaces like
+                Lovable and Bolt
+              </p>
+              <p>
+                Microsoft has a world class cybersecurity division. If they
+                productize their cybersecurity expertise and bundle that into
+                their coding agent (Github Copilot), then people who are serious
+                about
+                <a href="vibe-code-responsibly.html">vibe coding responsibly</a>
+                will be compelled to switch.
+              </p>
+              <p>
+                This is one specific way in which Cursor, even though it was the
+                fastest startup in history to reach $100M ARR,
+                <a href="is-cursor-a-good-business.html"
+                  >could be under threat</a
+                >
+                as a business.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
