@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Flow State's quarterly R&D post | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 1, 2025</div>
+                <h1 class="font-bold">Flow State's quarterly R&D post</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Our friends over at
+                <a
+                  href="https://flowstate.so"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Flow State</a
+                >
+                put out
+                <a
+                  href="https://www.flowstate.fm/p/flow-state-r-and-d-q1-2025-fd3"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >their quarterly R&D post</a
+                >
+                (for "founding members" only).
+              </p>
+              <p>Here are some of the highlights:</p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>Flow State surpassed 40,000 total subscribers.</li>
+                <li>
+                  Their main revenue growth strategy in 2025 is the
+                  <a
+                    href="sponsor.flowstate.fm"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >sponsor booking page</a
+                  >
+                  that we built for them.
+                </li>
+                <li>
+                  They now use Fourthwall for their
+                  <a
+                    href="shop.flowstate.fm"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >merch</a
+                  >.
+                </li>
+                <li>
+                  In response to some criticisms of Spotify, they're considering
+                  creating an indie streaming service – "Flow State Radio" –
+                  that pays out better.
+                </li>
+              </ul>
+              <p>
+                It's an interesting question what will be valuable post-AI. This
+                recent exchange from Levels was interesting to us:
+              </p>
+              <blockquote class="twitter-tweet mb-4" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  Flow State has been a lowkey daily useful service for many for
+                  years now. The brand is well-loved.<br /><br />There could be
+                  a better visual system. And there's room for more beyond just
+                  an email.<br /><br />But that's an interesting product to
+                  watch for the post-AI future.
+                </p>
+                &mdash; Pieter Levels (@levelsio)
+                <a
+                  href="https://twitter.com/levelsio/status/1904959630087786680?ref_src=twsrc%5Etfw"
+                  >March 31, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Flow State has been a lowkey daily useful service for many for
+                  years now. The brand is well-loved.
+                </li>
+                <li>
+                  There could be a better visual system. And there's room for
+                  more beyond just an email.
+                </li>
+                <li>
+                  But that's an interesting product to watch for the post-AI
+                  future.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
