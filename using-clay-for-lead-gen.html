@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Using Clay for lead gen | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 3, 2025</div>
+                <h1 class="font-bold">Using Clay for lead gen</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                We're doing lead gen for Flow State sponsorships, and
+                <a
+                  href="https://clay.com"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Clay</a
+                >
+                is really good.
+              </p>
+              <p>
+                Earlier this year they raised a
+                <a
+                  href="https://www.clay.com/blog/series-b-expansion"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >"pre-emptive Series B expansion"</a
+                >
+                at a $1.25B valuation. We decided to give it a shot.
+              </p>
+              <p>
+                The "people finder" tool was really intuitive and customizable:
+              </p>
+              <p>
+                <img src="public/clay-screen-1.png" alt="Clay screen 1" />
+              </p>
+              <p>
+                There are two interesting things about Clay. First, and most
+                interestingly, they use various datasources to maximize the
+                chances of getting a working work email. Specifically, they use
+                these seven providers by default:
+              </p>
+              <p>
+                <img src="public/clay-screen-2.png" alt="Clay screen 2" />
+              </p>
+              <p>
+                We'd previously tried using hunter.io and it was good, but Clay
+                is built on top of 100+ datasets, so you get the best of them
+                all. It's a classic example of "<a
+                  href="https://gwern.net/complement"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >commoditizing your complements</a
+                >."
+              </p>
+              <p>
+                Second, they have AI features integrated into the spreadsheet.
+                So you can create a column that uses an LLM and a prompt to fill
+                in its values. For example, you can create a column that
+                searches the web for a company attribute like founding date, or
+                what their latest product announcement was:
+              </p>
+              <p>
+                <img src="public/clay-screen-3.png" alt="Clay screen 3" />
+              </p>
+              <p>
+                They're also pretty generous with their free trial. You can make
+                multiple sheets and export 100 companies or people at a time.
+              </p>
+              <p>
+                They also have a lot of integrations and some built-in messaging
+                functionality, but we have yet to try those out.
+              </p>
+              <p>But yeah. Pretty good product!</p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
