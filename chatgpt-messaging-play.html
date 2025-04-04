@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>ChatGPT should add user-to-user messaging | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 2, 2025</div>
+                <h1 class="font-bold">
+                  ChatGPT should add user-to-user messaging
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Zach Weinberg, who founded Flatiron Health and Curie Bio,
+                floated an interesting idea for OpenAI in a podcast today
+                (1:07:17):
+              </p>
+              <div>
+                <iframe
+                  class="w-full rounded-lg aspect-video mb-4"
+                  src="https://www.youtube.com/embed/gyi6uMftUW0"
+                  title="Zach Weinberg on OpenAI Product Strategy"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+              <p>
+                After a discussion of the risk of competing with Android/iOS's
+                expected free native AI chat, he says:
+              </p>
+              <blockquote>
+                If I were in charge of product at OpenAI, I would be thinking
+                about non-monetary lock-ins. If I'm going to compete with free,
+                I better have some lock-in value that isn't just essentially a
+                high quality search query.... <br /><br />I'm going to kill
+                myself for saying this, but I think it has to be social
+                networking. I think you need some reason that it makes it hard
+                for you to leave OpenAI / ChatGPT, even if something else is
+                cheap or free. And if the tool is utilitarian, which is kind of
+                is today – find something, make an image, do a query... that's
+                switchable, because if you can just do it cheaper over here,
+                people will switch.<br /><br />If I have friends and social and
+                sharing and something native – I actually think I would go after
+                messaging inside of ChatGPT. I think people would message in the
+                way they do inside of Bloomberg Chat. I think you can backdoor
+                an interesting messaging platform there. Then the threat of free
+                from Google and Apple, I'm less concerned about because there's
+                real lock-in.
+              </blockquote>
+              <p>
+                How switching costs work with AI products is an open question.
+                We discussed that in a recent post about
+                <a href="https://subtle.so/what-is-good-ai-revenue.html"
+                  >what is "good" AI revenue</a
+                >.
+              </p>
+              <p>
+                Zach makes a good point though about competing with free: it's
+                hard to do. Google has its own competitive foundational models,
+                and will surely make Gemini (or AI Mode or AI Workbench or
+                DeepMind or another of their 100 user-facing AI brands) a
+                first-class experience on Android. Apple is behind but they will
+                find a way to catch up.
+              </p>
+              <p>
+                Once that happens, ChatGPT Premium suddenly has a good-enough
+                free alternative. The two ways to compete are (1) create an ad
+                business around your free tier, or (2) create non-monetary
+                lock-in in your paid tier (as Zach says).
+              </p>
+              <p>I can see user-to-user messaging working in ChatGPT:</p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  It's already a messaging app – just limited to you and GPT.
+                </li>
+                <li>
+                  GPT-4o's images are shared like crazy on
+                  <i>other</i> networks, such as Twitter – native sharing would
+                  be lower-friction.
+                </li>
+                <li>
+                  You can imagine ways that an LLM embedded in peer-to-peer
+                  chats could be helpful, such as group chat summaries, smart
+                  notifications, and suggested replies.
+                </li>
+              </ul>
+              <p>I asked ChatGPT (4.5) for risks:</p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Moderation could quickly become tricky once human-to-human
+                  conversations happen inside the platform
+                </li>
+                <li>
+                  Privacy implications—right now, users feel their conversations
+                  are relatively private, adding social would shift user
+                  perception
+                </li>
+                <li>
+                  Could dilute the core experience if done badly (users might
+                  feel spammed or distracted)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>

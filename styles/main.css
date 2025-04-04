@@ -1,6 +1,5 @@
 @import "components.css";
 
-/* Noise texture and background - very subtle and performant */
 .noise {
   background-image: url("../public/bg.png");
   background-opacity: 0.1;
@@ -8,7 +7,6 @@
   background-size: 200px 200px, 200px 200px;
 }
 
-/* Page load animation */
 body {
   opacity: 0;
 }
@@ -18,7 +16,6 @@ body.loaded {
   transition: opacity 0.6s ease-in-out;
 }
 
-/* Ensure content doesn't flash before animation starts */
 [include-html] {
   min-height: 1rem;
 }
@@ -35,7 +32,6 @@ h3 {
   padding-bottom: 1rem;
 }
 
-/* Toast notification */
 .toast {
   visibility: hidden;
   min-width: 200px;
