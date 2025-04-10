@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Book rec: The Thinking Machine | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 8, 2025</div>
+                <h1 class="font-bold">
+                  Book rec:
+                  <i
+                    >The Thinking Machine: Jensen Huang, Nvidia, and the World's
+                    Most Coveted Microchip</i
+                  >
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                Highly recommend the new book
+                <a
+                  href="https://www.amazon.com/Thinking-Machine-Jensen-Coveted-Microchip/dp/0593832698"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  ><i>The Thinking Machine</i></a
+                >
+                by Stephen Witt. I learned a lot about Jensen, Nvidia, the
+                history of GPUs, machine learning, and more. Here are a few
+                takeaways:
+              </p>
+            </div>
+            <p>
+              Jensen (and his wife, Lori) almost died in a car accident in 1984,
+              years before he co-founded Nvidia:
+            </p>
+            <blockquote>
+              Jensen hit the transparent layer of black ice that coated the
+              freeway and sent the Supra into an unrecoverable glide. The tires
+              spun without purpose, and the vehicle drifted onto the shoulder
+              before rolling off the road. Jensen and Lori were momentarily
+              inverted. Then the car hit the ground with an awful crunch before
+              banging along to a stop.... The Supra was totaled, and the couple
+              was trapped inside. Lori, wearing her new engagement ring, was
+              mostly unharmed. Jensen was bleeding, and his neck was twisted
+              bad.... When the first responders eventually arrived, they had to
+              cut the couple out of the car. Jensen required stitches in
+              multiple places and had to wear a neck brace for several months
+              thereafter. When I asked him about the incident years later, he
+              mostly expressed regret for the Supra. "Incredible car," he said.
+            </blockquote>
+            <p>
+              Nvidia went public in 1999 at a $500M valuation, but there wasn't
+              a party, or popped champagne. One employee saved an email from the
+              day after the IPO:
+            </p>
+            <blockquote>
+              The TNT2 team needs to do whatever it takes to get over the finish
+              line. They're fighting for every single minute within Dell and
+              Compaq for the motherboard business. S3's Savage 4s are working
+              well on Camino, but we're still struggling. There's no more time.
+              Do what it takes to get it done. We need design wins to take share
+              from ATI and keep S3 down, and take Nvidia to the next level.
+              Remember, there are three priorities: one, two, and three. We're
+              counting on 250,000 units of TNT2 shipments by April to make our
+              Q1. Do that and we've got to cert risk wafers accordingly. Get it
+              done.
+            </blockquote>
+            <p>
+              Nvidia hit some stumbles in the early 2000s, including an
+              accounting scandal, a lost deal with Xbox, and the famous
+              "dustbuster" GeForce FX with a deafening fan. The latter event was
+              one of many occasions for Jensen tearing into employees in large
+              meetings:
+            </p>
+            <blockquote>
+              Huang arranged a meeting in which the product managers presented,
+              to a few hundred people, every decision they had made that led to
+              the fiasco. Huang then screamed at them, near the top of his
+              voice, for nearly an hour. "'Terrifying but cathartic' is how I
+              would describe it," said Sharon Clay, one of the engineers
+              responsible for quality control. Huang's tirades inspired as much
+              guilt as fear, and he often described, in detail, how in letting
+              their customers down, Nvidia employees had let one another's
+              families down as well. ("I think I'm driven as much by guilt as
+              anything else," Huang told me.)
+            </blockquote>
+            <p>
+              Despite his temper, Jensen would rarely fire people. Tenure of
+              Nvidia employees was significantly higher than many other
+              companies in Silicon Valley. Jensen would make personal appeals to
+              even low-ranking employees to keep them at Nvidia.
+            </p>
+            <p>
+              Compute Unified Device Architecture, or CUDA, was a proprietary
+              Nvidia platform that allowed developers to use the GPU, previously
+              built for 3D graphics, for general purpose computing. This is what
+              eventually allowed Nvidia chips to accelerate the field of machine
+              learning. But it was a longshot bet, and led to an activist
+              investor later attempting to force Jensen out as CEO.
+            </p>
+            <p>
+              Eventually, two longshot subfields of computer science proved
+              correct: parallel processing and machine learning. Had either of
+              these not materialized, Nvidia would not be the company it is
+              today.
+            </p>
+            <p>
+              Nvidia's gains in processing speeds across the 2010s and into the
+              2020s really came more from
+              <i>software innovations</i> than hardware advancements:
+            </p>
+            <blockquote>
+              Only a small portion of the performance gains now came from the
+              classic strategy of packing more transistors into the chip—Moore's
+              Law was dead. The rest came from... Nvidia scientists accelerating
+              matrix multiplications with numerical magic tricks. Nvidia
+              engineers taught the GPU new instructions that acted like speed
+              solvers on a Rubik's cube. They replaced the processor's native
+              language with ugly but effective lo-fi data types, akin to
+              switching from calligraphy to shorthand. They trimmed 'dead'
+              synapses from the matrices, essentially deleting unproductive
+              information from the neural net in the manner of the forgetting
+              machine in <i>Eternal Sunshine of the Spotless Mind</i>. Between
+              2012 and 2022, Nvidia achieved a thousand-fold speedup in
+              single-chip AI inference performance, which was far in excess of
+              anything that Moore's Law had ever achieved. A mere 2.5x of that
+              speed-up came from transistors; most of the remaining 400x came
+              from Nvidia's mathematical toolbox.
+            </blockquote>
+            <p>Great book, 10/10 would recommend.</p>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
