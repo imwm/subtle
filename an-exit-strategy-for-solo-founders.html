@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>An exit strategy for solo founders | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 4, 2025</div>
+                <h1 class="font-bold">An exit strategy for solo founders</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              Josh Mohrer was on the Generative Now podcast recently and floated
+              an exit strategy for solo founders (<a
+                href="https://youtu.be/ooHo3I75pOA?si=IjBygpxzNLT9hdq6&t=1880"
+                target="_blank"
+                class="underline hover:opacity-75"
+                >around 31:00</a
+              >).
+              <p>
+                While solo ventures that are making money can become profitable
+                quickly, at some point you may want to sell your business.
+              </p>
+              <p>
+                It might be beacuse you're ready to move on to the next thing.
+                It could also be because you know the project has room to grow,
+                but you don't want to be the person to raise the money, hire the
+                team, build the culture, set up the processes, etc.
+              </p>
+              <p>
+                So it could make sense to sell your profitable, bootstrapped
+                product to a company whose existing team can take it to the next
+                level.
+              </p>
+              <p>
+                I think this is a playbook mid- and late-stage startups should
+                heavily consider for a couple reasons:
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Startups are increasingly stalling out at earlier ARR points
+                  (as Jason Lemkin
+                  <a
+                    href="https://x.com/jasonlk/status/1903522831855673760"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >has noted</a
+                  >). To avoid revenue stall, they'll have to go multi-product
+                  sooner. This means being more acquisitive earlier on.
+                </li>
+                <li>
+                  The widespread availability of code generation tools means
+                  that there will be more software competing with your product.
+                  This will increase pressure for software businesses to
+                  diversify their revenue streams.
+                </li>
+                <li>
+                  I imagine solo founders will be willing to sell their
+                  businesses at valuations lower than historical venture-backed
+                  exits, because they don't have investors to answer to, and
+                  they'll receive the lion's share if not all of the exit
+                  proceeds.
+                </li>
+              </ul>
+              <p>
+                An implication of this is that we may see startups introducing
+                M&A functions earlier and earlier. Maybe that's where all the
+                former VCs will land.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
