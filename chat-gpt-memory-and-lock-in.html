@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>ChatGPT's new memory feature is all about lock-in | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 10, 2025</div>
+                <h1 class="font-bold">
+                  ChatGPT's new memory feature is all about lock-in
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                ChatGPT announced a new version of its "memory" feature today:
+              </p>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">[Tweet content]</p>
+                &mdash; OpenAI (@OpenAI)
+                <a href="https://twitter.com/OpenAI/status/1910378768172212636"
+                  >April 7, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  Previously, ChatGPT occasionally noticed when it should
+                  remember something about the user, such as what their job is
+                  or where they live.
+                </li>
+                <li>
+                  Now, ChatGPT will draw from the user's entire chat history,
+                  not just from the intentionally remembered fact base.
+                </li>
+              </ul>
+
+              <p>
+                (I haven't noticed more relevant responses in the product yet –
+                but let's assume they've achieved what their tweet claims.)
+              </p>
+
+              <p>
+                We've discussed
+                <a
+                  href="/what-is-good-ai-revenue"
+                  class="underline hover:opacity-75"
+                  >switching costs for AI products before</a
+                >, and
+                <a
+                  href="/chatgpt-messaging-play"
+                  class="underline hover:opacity-75"
+                  >for ChatGPT in particular</a
+                >. This change is a major step toward lock-in for ChatGPT users.
+              </p>
+
+              <p>
+                Switching costs often emerge from adding a lot of data to a
+                product. An example in the consumer context is Spotify: the more
+                you use Spotify, the more it learns your musical taste, the
+                better its recommendations are. The cost of switching to a
+                different streaming service would be resetting the quality of
+                music recommendations to essentially zero.
+              </p>
+
+              <p>
+                Similarly with ChatGPT's new approach to memory, the more you
+                interact with ChatGPT, theoretically the better the interactions
+                get. Switching to Claude or Gemini would reset that
+                personalization. (I imagine ChatGPT is not going out of their
+                way to make it easy to port your chat history to another
+                service.)
+              </p>
+
+              <p>
+                But this is even more intense of a switching cost in the
+                enterprise context. If you've been using ChatGPT for work, your
+                chat history will be filled with valuable business data and
+                context, which will make future answers much more valuable.
+              </p>
+
+              <p>
+                This is also why AI products like
+                <a
+                  href="/is-cursor-a-good-business"
+                  class="underline hover:opacity-75"
+                  >Cursor</a
+                >
+                actually do have switching costs (despite what Sam Lessin said
+                recently).
+              </p>
+
+              <p>
+                A friend recently pointed out that Cursor works much better with
+                <a
+                  href="https://docs.cursor.com/context/rules-for-ai"
+                  class="underline hover:opacity-75"
+                  >rule files</a
+                >, which in a business context can enforce style guides, coding
+                standards, test procedures, and more. Building out and
+                maintaining the rulefile creates a meaningful switching cost,
+                akin to the ChatGPT chat history.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
