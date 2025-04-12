@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Product managemement is writing good evals | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 11, 2025</div>
+                <h1 class="font-bold">
+                  Product managemement is writing good evals
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <img src="public/pm-evals-always-was.jpg" class="w-full mb-4" />
+              <p>
+                In a
+                <a
+                  href="https://www.youtube.com/watch?v=IxkvVZua28k&t=877s&ab_channel=Lenny%27sPodcast"
+                  class="underline hover:opacity-80"
+                  >recent talk</a
+                >, OpenAI Chief Product Officer, Kevin Weil, said, "Writing
+                evals, I think, is going to become a core skill for PMs."
+              </p>
+              <p>
+                In a
+                <a
+                  href="https://www.youtube.com/watch?v=scsW6_2SPC4&ab_channel=Lenny%27sPodcast"
+                  class="underline hover:opacity-80"
+                  >followup conversation with Lenny</a
+                >, Weil defines the term (18:50):
+              </p>
+              <blockquote>
+                The easiest way to think about [evals] is almost like a quiz for
+                a model, a test to gauge how well it knows a certain set of
+                subject material, or how good it is at responding to a certain
+                set of questions. So in the same way you take a calculus class
+                and then you have a calculus test that sees if you've learned
+                what you're supposed to learn, you have evals that test how good
+                is the model at creative writing, how good is the model at
+                graduate-level science, how good is the model at competitive
+                coding. So you have these set of evals that basically perform as
+                benchmarks for how smart or capable the model is.
+              </blockquote>
+
+              <p>
+                I first encountered the idea of "eval-driven development" via
+                Eugene Yan's excellent 2023 post,
+                <a
+                  href="https://eugeneyan.com/writing/llm-patterns/"
+                  class="underline hover:opacity-80"
+                  >Patterns for Building LLM-based Systems & Products</a
+                >. He goes into detail on eval methodologies, but my takeaway
+                was about the importance of incorporating evals into the product
+                development process. He excerpts a Hacker News comment that
+                drives the point home:
+              </p>
+
+              <blockquote>
+                How important evals are to the team is a major differentiator
+                between folks rushing out hot garbage and those seriously
+                building products in the space.
+              </blockquote>
+
+              <p>
+                Weil's argument for the importance of evals to PMs isn't just a
+                reflection of models becoming more integral to software
+                experiences; it's also a reflection of the changing nature of
+                the work of product management.
+              </p>
+
+              <p>
+                Increasingly, the implementation of software ideas is being
+                outsourced to LLMs (via products like Cursor and Lovable). The
+                main role of software creators is to envision the product and
+                guide the model to build and iterate on it.
+              </p>
+
+              <p>
+                If you squint, this is what a PM has always done. A good PM
+                writes a product requirements doc, which explains the motivation
+                and goals behind the product, metrics of success, and an outline
+                of how the product will work. This is, as of now, the best way
+                to initialize a project using code generators (see
+                <a href="/prd-md" class="underline hover:opacity-80">prd.md</a>
+                for more).
+              </p>
+
+              <p>
+                So really, writing evals should be an extension of a skill PMs
+                should already have: defining the product and choosing the right
+                indicators of its success.
+              </p>
+
+              <p>
+                More on evals and how PMs should approach them in
+                <a
+                  href="https://www.lennysnewsletter.com/p/beyond-vibe-checks-a-pms-complete"
+                  class="underline hover:opacity-80"
+                  >Lenny's Newsletter</a
+                >
+                (guest post by Aman Khan).
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
