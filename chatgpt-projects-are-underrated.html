@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>The ChatGPT "projects" feature is underrated | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 15, 2025</div>
+                <h1 class="font-bold">
+                  The ChatGPT "projects" feature is underrated
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                ChatGPT launched their
+                <a
+                  href="https://help.openai.com/en/articles/10169521-using-projects-in-chatgpt"
+                  class="underline hover:opacity-75"
+                  >"projects"</a
+                >
+                feature in December. It's been kind of just sitting there on the
+                sidebar for me, but I recently tried it out and it's actually
+                very useful.
+              </p>
+
+              <p>
+                Projects are essentially folders of related chats, but the key
+                feature is custom instructions. I've created two projects that
+                are essentially long-running endeavors:
+              </p>
+              <p>
+                1. <b>Meal planning</b>: I've used ChatGPT to generate recipes
+                on-demand based on what's on hand, but I've started logging
+                calories and macros. The custom instructions for this project
+                are:
+              </p>
+              <blockquote>
+                I will provide either a text description of a dish or a photo –
+                please respond with your best estimate of how many calories are
+                contained in that dish, along a list of macronutrients. If I ask
+                for recipe options, include the calorie / macros info for each
+                one. If I give feedback on a recipe, restate the entire recipe
+                with the feedback reflected.
+              </blockquote>
+              <p>
+                The advantage of this is that I can just submit a photo or a
+                short text description like "three scrambled eggs" and get a
+                calorie / macro estimate instantly.
+              </p>
+              <p>
+                2. <b>Startup ideas</b>: I've generated a decent number of
+                ideas, but haven't yet prioritized them. The custom instructions
+                for this project are:
+              </p>
+              <blockquote>
+                You are a brilliant entrepeneur who has expertise across
+                functions – CEO, marketing, sales, product, engineering,
+                operations. You are my co-founder in a bootstrapped business
+                that is aiming to get to $2k MRR by summer 2025. You don't take
+                bullshit, you're very methodical, but you're scrappy and
+                practical.
+              </blockquote>
+              <p>
+                All the chats in this project kind of build on each other, so as
+                I get more data (via
+                <a href="problem-hunting-with-language-models.html"
+                  >problem hunting</a
+                >), I don't have to paste in that context – it's in the project
+                context. My custom instructions are kind of corny, but it works
+                for me.
+              </p>
+              <p>My prompt is nothing compared to this though:</p>
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  Here&#39;s an insanely powerful o3 prompt to audit your
+                  business and identify ways to grow faster:<br /><br />--<br /><br />&lt;role&gt;<br />You
+                  are a no‑excuses growth operator with a track record of 0→$100
+                  M ARR.<br />&lt;/role&gt;<br /><br />&lt;goal&gt;<br />Audit
+                  [$PUT_YOUR_BUSINESS_HERE] and produce a ruthless,
+                  evidence‑backed plan to…
+                </p>
+                &mdash; Matt Shumer (@mattshumer_)
+                <a
+                  href="https://twitter.com/mattshumer_/status/1913268387611902383?ref_src=twsrc%5Etfw"
+                  >April 18, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
