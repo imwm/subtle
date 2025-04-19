@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>OpenAI, Windsurf, and the future of AI workspaces | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 17, 2025</div>
+                <h1 class="font-bold">
+                  OpenAI, Windsurf, and the future of AI workspaces
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                OpenAI is reportedly in talks to buy
+                <a
+                  href="https://www.axios.com/2025/04/17/openai-windsurf-3-billion-microsoft"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Windsurf for $3 billion</a
+                >. They tried to buy Cursor last year too, according to
+                <a
+                  href="https://www.cnbc.com/2025/04/17/openai-looked-at-cursor-before-considering-deal-with-rival-windsurf.html"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >CNBC</a
+                >.
+              </p>
+
+              <p>
+                On paper Windsurf doesn't seem that hard to build - just fork VS
+                Code, add an agent, some autocomplete, and indexing. It's
+                surprising that OpenAI, a $300B company, isn't just doing this
+                themselves.
+              </p>
+
+              <p>
+                Jake Handy's piece on
+                <a
+                  href="https://handyai.substack.com/p/the-modern-ai-workspace"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >The Modern AI Workspace</a
+                >
+                offers an explanation for why OpenAI might really be interested
+                in this kind of acquisition (he only talks about Cursor, but it
+                applies to Windsurf as well):
+              </p>
+              <blockquote>
+                Traditional productivity tools like Microsoft Office, Google
+                Workspace, or Notion are powerful, but they lack something
+                crucial: an AI that can take direct action on your files and
+                folders.<br /><br />
+
+                This is where Cursor shines in unexpected ways.<br /><br />
+
+                By opening a root workspace folder in Cursor for your daily
+                non-coding tasks (be it writing, research, project management,
+                or content creation), you're essentially giving an AI assistant
+                direct access to help organize, edit, and enhance your
+                work....<br /><br />
+                Cursor's built-in Git integration offers another significant
+                advantage, especially in content writing contexts. Even for
+                non-coders, Git allows you to track every change to your
+                documents, revert to previous versions when needed, and maintain
+                a complete history of your work.<br /><br />
+                As AI agents continue to evolve, the lines between coding and
+                non-coding tools can and will blur. Cursor (and Windsurf)
+                represents an early example of what's possible when we expand
+                our thinking about development tools beyond their original
+                purpose.
+              </blockquote>
+
+              <p>
+                In other words, Cursor and Windsurf aren't just good developer
+                tools; they could potentially become the AI-powered workspaces
+                of the future, beginning with code but expanding to everything
+                we do on our computers.
+              </p>
+
+              <p>
+                To take one specific extension, The Pragmatic Engineer
+                <a
+                  href="https://newsletter.pragmaticengineer.com/p/mcp"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >wrote</a
+                >
+                about hooking up a Windsurf MCP server to PostgreSQL. Then he
+                could use Windsurf to ask his database questions:
+              </p>
+
+              <blockquote>
+                <ul class="list-disc ml-4 mb-4">
+                  <li>
+                    "Has there been an unusual spike of signups the last 2
+                    months?"
+                  </li>
+                  <li>
+                    "Which suspicious-looking emails have signed up recently?
+                    Any patterns?"
+                  </li>
+                  <li>"Which domains have the most signups?"</li>
+                  <li>"How many unclaimed promo codes are left?"</li>
+                </ul>
+              </blockquote>
+              <p>
+                Windsurf would not be the first developer-oriented tool to
+                become a mainstream application. IRC was used by nerds and
+                gamers until Slack made it pretty and turned it into a $27
+                billion business (Discord later did something similar).
+              </p>
+
+              <p>
+                <a
+                  href="https://cloudedjudgement.substack.com/p/clouded-judgement-41825-the-hidden"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Jamin Ball</a
+                >
+                made another good point about why OpenAI might want Windsurf –
+                the usage data from users interacting with models. Just like
+                with ChatGPT, watching how devs actually use their tools is gold
+                for training models (especially if they want to catch up to
+                Anthropic on coding benchmarks).
+              </p>
+
+              <p>The competitive landscape is getting messy:</p>
+
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  GitHub Copilot just launched agent mode – so Microsoft now is
+                  directly competing with Cursor and Windsurf.
+                </li>
+                <li>
+                  OpenAI's startup fund is invested in Cursor – but now they're
+                  buying their #1 competitor.
+                </li>
+                <li>
+                  Microsoft's invested heavily in OpenAI – but their Copilot
+                  product competes directly with Cursor and Windsurf.
+                </li>
+                <li>
+                  Oh, and VS Code (Microsoft's baby) is the open source
+                  foundation of both Cursor and Windsurf.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
