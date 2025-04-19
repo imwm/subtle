@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Tiny teams data roundup | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 16, 2025</div>
+                <h1 class="font-bold">Tiny teams data roundup</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                I was thinking of starting a crowdsourced list of small teams
+                with massive revenue numbers, but many people are already doing
+                it:
+              </p>
+              <p>
+                <a
+                  href="https://tinyteams.xyz/"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >tinyteams.xyz</a
+                >
+                is from
+                <a
+                  href="https://x.com/benln"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Ben Lang</a
+                >
+                (whose newsletter
+                <a
+                  href="http://nextplayso.substack.com/"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Nexy Play</a
+                >
+                is great). It's a sortable / filterable list of small teams with
+                significant ARR, including Cursor, Lovable, and Midjourney.
+              </p>
+              <p>
+                <a
+                  href="https://x.com/IndieHackers/status/1909662175452708927"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >IndieHackers did a twitter thread</a
+                >
+                that lists one-person companies with more than $1M in ARR.
+              </p>
+              <p>
+                Incumbent companies are "<a
+                  href="https://www.axios.com/2025/04/17/managers-korn-ferry-unbossing-costs-tariffs"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >unbossing</a
+                >," i.e. firing managers and flattening their org structure in
+                general, per Axios.
+              </p>
+              <p>
+                Palle Broe, author of the
+                <a
+                  href="https://palle.substack.com/"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Rule of Thumb newsletter</a
+                >, has visualized the efficiency of AI unicorns across several
+                dimension, including revenue per employee:
+              </p>
+              <img
+                src="public/ai-revenue-per-employee.png"
+                alt="AI revenue per employee"
+                class="w-full mb-4"
+              />
+              <p>
+                Finally, data from Carta shows that the rate at which solo
+                founders raise venture funding dropped significantly in 2024:
+              </p>
+              <img
+                src="public/bootstrapped-solo-founder-data.jpeg"
+                alt="Bootstrapped solo founder data"
+                class="w-full mb-4"
+              />
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
