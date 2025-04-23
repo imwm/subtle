@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>DistillJS | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 22, 2025</div>
+                <h1 class="font-bold">DistillJS</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Here's a new thing:
+                <a
+                  href="https://distilljs.com"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  ><b>DistillJS</b></a
+                >.
+              </p>
+              <p>
+                DistillJS allows you to recreate a specific LLM behavior in a
+                Javascript file.
+              </p>
+              <p>
+                I built this because in various projects, I kept having to call
+                LLMs via API for simple tasks, such as summarizing or
+                classifying text. It would be much better if that functionality
+                were part of the application itself: lower latency, no usage
+                charges, and no API keys to manage.
+              </p>
+              <p>
+                I heard o3 was really smart, so I figured I'd assign it the
+                challenge of writing a minified JS file that delivers 80-90% of
+                the functionality of an LLM on a specific task. DistillJS is the
+                result.
+              </p>
+              <p>It works in three steps:</p>
+              <ol class="list-decimal ml-4 mb-4">
+                <li>
+                  <b>Define the task</b>: Write a prompt that describes the task
+                  you want the LLM to perform (e.g. "summarize this text in 2-3
+                  sentences").
+                </li>
+                <li>
+                  <b>Provide examples</b>: Give a few good examples of
+                  input/output pairs (DistillJS can generate the outputs for you
+                  using gpt-4o-mini).
+                </li>
+                <li>
+                  <b>Distill</b>: Ask o3 (or o4-mini) to write a minified JS
+                  function that reproduces similar outputs for a wide variety of
+                  inputs, mutatis mutandis.
+                </li>
+              </ol>
+              <p>
+                I've mainly been testing this on summarization tasks, and the
+                files o3 comes up with work surprisingly well (but aren't
+                perfect). You can try the summarization demo yourself on
+                <a
+                  href="https://distilljs.com"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >distilljs.com</a
+                >
+                by clicking "autofill" on the prompt and "auto-generate" on the
+                examples.
+              </p>
+              <p>
+                There's a possibility DistillJS is a fool's errand, because it's
+                essentially asking a deterministic Javascript file to play in
+                the same league as a machine learning model.
+              </p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  The reason machine learning has become ubiquitous is that it's
+                  proven dramatically more effective than deterministic
+                  programming at producing better results across a wide range of
+                  tasks and inputs.
+                </li>
+              </ul>
+              <p>But I think this project is worth a shot for a few reasons:</p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  It's a pain to call LLM APIs for simple tasks – it's
+                  computationally and financially more expensive. People want a
+                  better solution.
+                </li>
+                <li>
+                  o3 is really smart. o4 will be even smarter. They're full of
+                  surprises.
+                </li>
+                <li>
+                  Even if o3 or o4 can't achieve >90% performance in Javascript,
+                  even 80% or 70% performance would be worth the trade-off in
+                  certain cases.
+                </li>
+              </ul>
+              <p>
+                I heard a quote recently – was it from Sam Altman? – that if you
+                find yourself building a product that's right on the cusp of
+                current model capabilities, that's a good place to be.
+              </p>
+              <p>
+                DistillJS feels like it's on that cusp.
+                <a
+                  href="https://distilljs.com"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Try it out</a
+                >
+                and
+                <a
+                  href="mailto:hello@subtle.so"
+                  class="underline hover:opacity-75"
+                  >email me</a
+                >
+                what you think!
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
