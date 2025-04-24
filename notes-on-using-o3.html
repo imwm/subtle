@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Notes on using o3 | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 23, 2025</div>
+                <h1 class="font-bold">Notes on using o3</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>OpenAI <a href="https://openai.com/index/introducing-o3-and-o4-mini/" target="_blank" class="underline hover:opacity-75">launched</a> their o3 model last week, on April 16. Tyler Cowen <a href="https://marginalrevolution.com/marginalrevolution/2025/04/o3-and-agi-is-april-16th-agi-day.html" target="_blank" class="underline hover:opacity-75">called it</a> AGI:</p>
+              <blockquote>
+                I think it is AGI, seriously.  Try asking it lots of questions, and then ask yourself: just how much smarter was I expecting AGI to be?<br /><br />
+
+                As I've argued in the past, AGI, however you define it, is not much of a social event per se.  It still will take us a long time to use it properly.  I do not expect securities prices to move significantly (that AI is progressing rapidly already is priced in, and I doubt if the market cares about "April 16th" per se).<br /><br />
+
+                Benchmarks, benchmarks, blah blah blah.  Maybe AGI is like porn — I know it when I see it.<br /><br />
+
+                And I've seen it.
+              </blockquote>
+              <p>Whether or not a given model is AGI is a semantic question. It's clear we're in the age of AGI, in that computers are rapidly surpassing humans at many tasks.</p>
+              <p>I wanted to share a few observations about using o3 on a more practical level.</p>
+              <p>I asked it to brainstorm approaches to the project idea that eventually became <a href="/distilljs" class="underline hover:opacity-75">DistillJS</a>. It began with:</p>
+              <blockquote>
+                0. double check the ROI. if you only call the api a few hundred times a month, shipping a local model may not pencil out. bandwidth + user download time + your build effort can outrun token fees.
+              </blockquote>
+              <p>Listing this as suggestion "0" is hilarious. Suggestions 1-5 reflected deep technical knowledge and creative problem-solving, but it began by basically saying it was a dumb idea in the first place.</p>
+              <p>In its suggestions, o3 referenced a few technologies and concepts – e.g. ONNX, LoRA – that I wasn't familiar with. In certain moments I felt like Theodore Twombly during this scene in <i>Her</i>:</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Ku858jn0Qzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p>In general, o3 is pretty verbose. It's like it's proud of its knowledge. It's kind of a showboat.</p>
+              <p>And in fact, even though it generated significant proofs of knowledge, it didn't really engage my curiosity the way a normal back-and-forth with models like GPT-4 did.</p>
+              <p>With GPT-4 and similar models oriented toward back-and-forth, I've gone down many rabbit holes and learned about all kinds of things, like a more productive version of a Wikipedia rabbit hole.</p>
+              <p>With o3, I felt like I was just getting high-quality answers to my questions rather than being engaged.</p>
+              <p>It's like GPT-4 was geared toward dialogue and o3 is geared toward monologue.</p>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
