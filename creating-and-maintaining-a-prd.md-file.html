@@ -58,7 +58,7 @@
               <p>
                 I've previously written about the utility of having a
                 <a href="prd.md" class="underline hover:opacity-75"
-                  >`prd.md` file</a
+                  ><code>prd.md</code></a
                 >
                 in your project repo. It solves the problem of new chats with
                 code agents starting with zero context.
@@ -76,14 +76,14 @@
               </p>
               <p>
                 Once the plan is set, I ask the reasoning model to generate a
-                `prd.md` file that I can then use to initialize the project.
-                Specifically, the file should include relevant details for a
-                coding agent to best execute our plan.
+                <code>prd.md</code> file that I can then use to initialize the
+                project. Specifically, the file should include relevant details
+                for a coding agent to best execute our plan.
               </p>
               <p>
-                You can also generate a `prd.md` file retroactively, after the
-                project is started. In fact, I just generated one for this
-                website. The following prompt was effective:
+                You can also generate a <code>prd.md</code> file retroactively,
+                after the project is started. In fact, I just generated one for
+                this website. The following prompt was effective:
               </p>
               <blockquote>
                 can you review this codebase, which is a static website that is
@@ -106,9 +106,9 @@
               <h2>Maintaining a prd.md file</h2>
               <p>
                 As you work on your project and make changes or add features,
-                you should update the `prd.md` file to reflect the current state
-                of the project. This ensures that the file remains relevant and
-                useful to future coding agents.
+                you should update the <code>prd.md</code> file to reflect the
+                current state of the project. This ensures that the file remains
+                relevant and useful to future coding agents.
               </p>
               <p>
                 I've found the easiest way to do this is to ask a reasoning
@@ -117,11 +117,11 @@
               </p>
               <blockquote>
                 can you review the codebase functionality and compare it to the
-                current prd.md file, and for any significant details from the
-                codebase that are missing from the prd.md file, update that file
-                accordingly? think about context and details that would matter
-                most to coding agents who might work on this project in the
-                future.
+                current <code>prd.md</code> file, and for any significant
+                details from the codebase that are missing from the
+                <code>prd.md</code> file, update that file accordingly? think
+                about context and details that would matter most to coding
+                agents who might work on this project in the future.
               </blockquote>
               <p>
                 I've stopped saying "please" and "thank you" to these models
