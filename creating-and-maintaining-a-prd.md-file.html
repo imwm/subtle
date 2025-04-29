@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Creating and maintaining a prd.md file | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 25, 2025</div>
+                <h1 class="font-bold">
+                  Creating and maintaining a prd.md file
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                I've previously written about the utility of having a
+                <a href="prd.md" class="underline hover:opacity-75"
+                  >`prd.md` file</a
+                >
+                in your project repo. It solves the problem of new chats with
+                code agents starting with zero context.
+              </p>
+              <p>
+                Here are some other tips on creating and utilizing this file.
+              </p>
+              <h2>Creating a prd.md file</h2>
+              <p>
+                When I'm starting a new project, I typically converse with a
+                reasoning model, such as o3 or Gemini 2.5. I start with the
+                general idea and problem I'm trying to solve. The conversation
+                then mainly consists of discussion of various approaches and
+                homing in on a plan.
+              </p>
+              <p>
+                Once the plan is set, I ask the reasoning model to generate a
+                `prd.md` file that I can then use to initialize the project.
+                Specifically, the file should include relevant details for a
+                coding agent to best execute our plan.
+              </p>
+              <p>
+                You can also generate a `prd.md` file retroactively, after the
+                project is started. In fact, I just generated one for this
+                website. The following prompt was effective:
+              </p>
+              <blockquote>
+                can you review this codebase, which is a static website that is
+                a personal blog (subtle.so) built using html, css, and vanilla
+                js, and create a prd.md file that provides a general overview,
+                context, and some design principles for future coding agents who
+                might work on this codebase? it doesn't have to be super
+                verbose, maybe just like 4-5 sections with information useful to
+                LLMs
+              </blockquote>
+              <p>
+                I've found that Gemini 2.5 excels at repo-wide context. I used
+                it for this prompt and you can see the results
+                <a
+                  href="https://github.com/imwm/subtle/blob/main/prd.md"
+                  class="underline hover:opacity-75"
+                  >here</a
+                >.
+              </p>
+              <h2>Maintaining a prd.md file</h2>
+              <p>
+                As you work on your project and make changes or add features,
+                you should update the `prd.md` file to reflect the current state
+                of the project. This ensures that the file remains relevant and
+                useful to future coding agents.
+              </p>
+              <p>
+                I've found the easiest way to do this is to ask a reasoning
+                model to update the file at the end of a coding session. For
+                this, I typically pose the following to Gemini 2.5:
+              </p>
+              <blockquote>
+                can you review the codebase functionality and compare it to the
+                current prd.md file, and for any significant details from the
+                codebase that are missing from the prd.md file, update that file
+                accordingly? think about context and details that would matter
+                most to coding agents who might work on this project in the
+                future.
+              </blockquote>
+              <p>
+                I've stopped saying "please" and "thank you" to these models
+                because apparently that wastes energy 😬
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
