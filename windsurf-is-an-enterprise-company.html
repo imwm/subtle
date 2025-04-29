@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Windsurf is an enterprise company | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 25, 2025</div>
+                <h1 class="font-bold">Windsurf is an enterprise company</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Windsurf CEO Varun Mohan recently appeared on the
+                <a
+                  href="https://www.youtube.com/watch?v=5Z0RCxDZdrE"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Lenny podcast</a
+                >. Highly recommend listening – but one section stood out in
+                particular.
+              </p>
+
+              <p>
+                Lenny asked Varun what distinguishes Windsurf from other code
+                generation companies such as Cursor and Lovable. Varun said:
+              </p>
+
+              <blockquote>
+                On the product side, I think we've invested a lot in making sure
+                codebase understanding for very large codebases is really high
+                quality. That's because of where we started. We worked with some
+                of the world's largest companies like Dell and JPMorgan Chase.
+                Companies like Dell have singular codebases that over a hundred
+                million lines of code. Being able to understand that really
+                quickly to make large-scale changes is something that we spent a
+                lot of time doing. That requires us to build our own models that
+                can consume large chunks of their codebase in parallel across
+                thousands of GPUs and almost rank them to find out what the most
+                important snippets of code are for any question that's asked
+                about the codebase. We've gone out and built out large
+                distributed systems based on our infrastructure background to do
+                that. That's one.<br /><br />
+                The second key piece is we're not only tied to Windsurf....
+                We're pretty focused on supporting IDEs like JetBrains.
+                JetBrains has over 70-80% of Java developers. The reason we
+                don't feel as big a need to almost build a competing product to
+                JetBrains is JetBrains is a very extensible product in a way
+                that VSCode is not. VSCode is not very extensible. For us, our
+                goal here is not just to satisfy a subset of users who can
+                switch to our IDE, but we want to give this agentic experience
+                to every sort of developer out there. If that means there are
+                Java developers who write in JetBrains, that's fine. We work
+                with a lot of large enterprises who have 10,000+ developers
+                where over 50% of those developers are on JetBrains. It's a very
+                large product. By the way, that company is a privately held
+                company that makes hundreds of millions of dollars a year. It's
+                a very large company. That's another key piece. We actually want
+                to meet developers where they are. If they use a different
+                platform, we'll work on that too.<br /><br />
+                Another key piece for enterprises is that we work in a lot of
+                very secure environments. We have FedRAMP for certain clients,
+                which means we can sell to very large government entities. We
+                have a hybrid mode of using the product which means that all the
+                code that is indexed actually lives on the tenant of the user.
+                Code is one of the most important pieces of IP for these
+                companies.<br /><br />
+                So if you were to look at it from a big company perspective,
+                there are many reasons why over the years of just building an
+                enterprise product, we've handled a lot of complexities that
+                large companies want to see.
+              </blockquote>
+
+              <p>
+                This was news to me because I've seen Cursor and Windsurf
+                discussed more or less interchangeably. And it's impressive that
+                Windsurf has gotten so much consumer word of mouth, when it's
+                really an enterprise company.
+              </p>
+
+              <p>
+                In another part of the conversation, Varun talks about how they
+                built out a go-to-market team (GTM) early. In fact, as a company
+                of 150 people, most of their employees (80) are in sales.
+              </p>
+
+              <p>
+                So yeah Windsurf is an enterprise company, which is probably
+                good for their revenue retention. Glean appears to be pursuing a
+                similar market position.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
