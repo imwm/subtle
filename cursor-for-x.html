@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="What happens when intelligence is commoditized? Let's fuckin' find out!"
+    />
+    <title>Cursor for X | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1">April 28, 2025</div>
+                <h1 class="font-bold">Cursor for X</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                "Cursor for X" is a popular framing for new products. If you set
+                a new record for time to $300M ARR, you will get copycats.
+              </p>
+              <p>
+                Just as Cursor is changing the nature of software engineering
+                (and, arguably, product management and design), new AI-native
+                software will change the nature of other job functions.
+              </p>
+
+              <p>
+                So you can probably make a table that looks something like this:
+              </p>
+
+              <table class="w-full border-collapse mb-4">
+                <thead>
+                  <tr>
+                    <th class="border border-gray-600 p-2 text-left">
+                      Function
+                    </th>
+                    <th class="border border-gray-600 p-2 text-left">
+                      Software
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      Software Engineering
+                    </td>
+                    <td class="border border-gray-600 p-2">Cursor</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">Marketing</td>
+                    <td class="border border-gray-600 p-2">??</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">Sales</td>
+                    <td class="border border-gray-600 p-2">??</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">Operations</td>
+                    <td class="border border-gray-600 p-2">??</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">HR</td>
+                    <td class="border border-gray-600 p-2">??</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>
+                There's probably also a notion of "Cursor for CEOs/Founders"
+                which would be an overall tool for running a company. These will
+                especially help
+                <a
+                  href="/tiny-teams-data-roundup"
+                  class="underline hover:opacity-75"
+                  >companies of one and tiny teams</a
+                >.
+              </p>
+
+              <p>
+                Another way to think about opportunities here would be looking
+                at industries. Here's a table of highest-revenue industries from
+                the book
+                <a
+                  href="https://www.amazon.com/Problem-Hunting-Tech-Startup-Textbook/dp/1510777962"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  ><i>Problem Hunting</i></a
+                >:
+              </p>
+
+              <table class="w-full border-collapse mb-4">
+                <thead>
+                  <tr>
+                    <th class="border border-gray-600 p-2 text-left">
+                      Industry (U.S.)
+                    </th>
+                    <th class="border border-gray-600 p-2 text-left">
+                      Revenue (2023)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-600 p-2">Hospitals</td>
+                    <td class="border border-gray-600 p-2">$1.43T</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      Health & Medical Insurance
+                    </td>
+                    <td class="border border-gray-600 p-2">$1.25T</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      Commercial Banking
+                    </td>
+                    <td class="border border-gray-600 p-2">$1.21T</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      Drug, Cosmetic & Toiletry Wholesaling
+                    </td>
+                    <td class="border border-gray-600 p-2">$1.20T</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">New Car Dealers</td>
+                    <td class="border border-gray-600 p-2">$1.12T</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      Life Insurance & Annuities
+                    </td>
+                    <td class="border border-gray-600 p-2">$1.12T</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      Pharmaceuticals Wholesaling
+                    </td>
+                    <td class="border border-gray-600 p-2">$1.10T</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">Public Schools</td>
+                    <td class="border border-gray-600 p-2">$995B</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      E-Commerce & Online Auctions
+                    </td>
+                    <td class="border border-gray-600 p-2">$934B</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-600 p-2">
+                      Gasoline & Petroleum Wholesaling
+                    </td>
+                    <td class="border border-gray-600 p-2">$928B</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>
+                Like, whoever makes "Cursor for Insurance Agents" will mint a
+                unicorn.
+              </p>
+              <p>
+                Here are some examples from recent "Cursor for X" product
+                announcements in the wild:
+              </p>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Aadit Shrivastava (@aaditsh)
+                <a
+                  href="https://twitter.com/aaditsh/status/1915819237895033242?ref_src=twsrc%5Etfw"
+                  >April 18, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Tim Wang (@timwangyc)
+                <a
+                  href="https://twitter.com/timwangyc/status/1911839154083618858?ref_src=twsrc%5Etfw"
+                  >April 10, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Do Owne (@Do_owne)
+                <a
+                  href="https://twitter.com/Do_owne/status/1910781707965620594?ref_src=twsrc%5Etfw"
+                  >April 8, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Advait Paliwal (@advaitpaliwal)
+                <a
+                  href="https://twitter.com/advaitpaliwal/status/1913290027897131084?ref_src=twsrc%5Etfw"
+                  >April 15, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Person of Swag (@personofswag)
+                <a
+                  href="https://twitter.com/personofswag/status/1912182262260699521?ref_src=twsrc%5Etfw"
+                  >April 11, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Sabba (@sab8a)
+                <a
+                  href="https://twitter.com/sab8a/status/1912539660036751528?ref_src=twsrc%5Etfw"
+                  >April 12, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Jason Ng (@jsngr)
+                <a
+                  href="https://twitter.com/jsngr/status/1834078596224127171?ref_src=twsrc%5Etfw"
+                  >March 15, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Kiwi Copple (@kiwicopple)
+                <a
+                  href="https://twitter.com/kiwicopple/status/1863616764942176668?ref_src=twsrc%5Etfw"
+                  >March 25, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/WcbbBnGFxg"
+                    >pic.twitter.com/WcbbBnGFxg</a
+                  >
+                </p>
+                &mdash; Matt Shumer (@mattshumer_)
+                <a
+                  href="https://twitter.com/mattshumer_/status/1895517160354513150?ref_src=twsrc%5Etfw"
+                  >April 5, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
