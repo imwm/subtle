@@ -1,6 +1,9 @@
 // Function to include HTML components
 async function includeHTML() {
   const elements = document.getElementsByTagName("*");
+  let loadedComponents = 0;
+  const totalComponents = elements.length;
+
   for (const el of elements) {
     const file = el.getAttribute("include-html");
     if (file) {
@@ -11,11 +14,14 @@ async function includeHTML() {
         el.removeAttribute("include-html");
       } catch (error) {
         console.error(`Error loading ${file}:`, error);
+        // Remove the include-html attribute even if loading fails
+        el.removeAttribute("include-html");
       }
     }
+    loadedComponents++;
   }
 
-  // After all components are loaded, initialize handlers and remove loading class
+  // Initialize handlers and make page visible regardless of component loading status
   initializeHandlers();
 
   // Update the current year in the footer
@@ -24,6 +30,7 @@ async function includeHTML() {
     yearElement.textContent = new Date().getFullYear();
   }
 
+  // Always make the page visible after a short delay
   setTimeout(() => {
     document.body.classList.remove("loading");
     document.body.classList.add("loaded");
