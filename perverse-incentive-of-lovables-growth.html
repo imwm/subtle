@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An analysis of Lovable's growth strategy, examining how their paywall system creates a perverse incentive and discussing their potential future as a prototyping platform for product teams and agencies."
+    />
+    <title>
+      The perverse incentive that may explain Lovable's growth | Subtle
+    </title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/[article-url].html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://subtle.so/[article-url].html" />
+    <meta
+      property="og:title"
+      content="The perverse incentive that may explain Lovable's growth | Subtle"
+    />
+    <meta
+      property="og:description"
+      content="An analysis of Lovable's growth strategy, examining how their paywall system creates a perverse incentive and discussing their potential future as a prototyping platform for product teams and agencies."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/[article-url].html"
+    />
+    <meta
+      property="twitter:title"
+      content="The perverse incentive that may explain Lovable's growth | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="An analysis of Lovable's growth strategy, examining how their paywall system creates a perverse incentive and discussing their potential future as a prototyping platform for product teams and agencies."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  April 30, 2025
+                </div>
+                <h1 class="font-bold">
+                  The perverse incentive that may explain Lovable's growth
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                <a href="https://lovable.dev/">Lovable</a> is reportedly the
+                fastest growing startup in the world, so I figured I'd give it a
+                shot.
+              </p>
+
+              <p>
+                I've been helping a friend get a film-related mobile app off the
+                ground, so I decided to use Lovable to make a high-fidelity,
+                interactive prototype. I described the app in some detail to
+                ChatGPT and asked it for a concise prompt for Lovable, which it
+                gave me. I plugged it into Lovable, along with a screenshot of a
+                mockup to illustrate the aesthetic.
+              </p>
+
+              <p>
+                The result was pretty good. The aesthetic was matched very
+                closely, the basic navigation was there, and the sample data was
+                rich. There were a couple issues about content not being inside
+                the right container, and the bottom tab bar was inconsistent
+                from screen to screen. These were improved but not totally fixed
+                after a couple followup instructions.
+              </p>
+
+              <p>
+                What I was surprised by was Lovable's extremely aggressive
+                paywall. On the free tier you get five prompts a day. You
+                quickly run into this because Lovable makes basic mistakes when
+                implementing code (see examples above).
+              </p>
+
+              <p>
+                There's actually a perverse incentive at play: if Lovable became
+                excellent at one-shotting users' app concepts, fewer people
+                would hit the usage limits, reducing the growth of their paid
+                tier. I wonder how this is playing out internally...
+              </p>
+
+              <p>
+                The need to reprompt Lovable plus its stingy paywall helped me
+                understand why it's growing so fast. Text-to-product experiences
+                are magical, to be sure, and I imagine Lovable's word of mouth
+                is reasonably strong. But now I better understand why they've
+                been so effective at creating an
+                <a href="https://x.com/antonosika/status/1899572640966447549"
+                  >exponential revenue growth chart</a
+                >.
+              </p>
+
+              <p>
+                I imagine Lovable users churn often. It's fun to describe an app
+                and then see it exist, but how many of these apps are
+                production-ready, or even apps people intend to deploy? Vercel
+                tracks
+                <a href="https://x.com/rauchg/status/1917369030106832897"
+                  ># of deployments</a
+                >. I wonder how many of Lovable's projects are deployed.
+              </p>
+
+              <p>
+                On 20VC, angel investor Fabrice Grinda was asked about whether
+                he worries about missing out on certain hyperscaling AI startups
+                such as Lovable.
+                <a href="https://youtu.be/4ncnpYtJCNQ?si=iNSEIYVhnaHE8dyK&t=421"
+                  >He responded</a
+                >:
+              </p>
+
+              <blockquote>
+                What worries me about the gold rush is there are too many
+                companies doing the exact same thing going after the exact
+                category, and it's unclear who's going to win.... What worries
+                me about the Lovable-type examples is, yeah, they can go from $0
+                to $18M in ARR in like three months, but you can go back in the
+                other direction. I don't know if people remember that AI company
+                where everyone for a month basically changed their profile photo
+                using AI – the name might come back to me. And their MRR went
+                from $250k a month to $30M, and 99% churn a month later they're
+                back to $500k. And they raised at that moment in time. So these
+                things are riskier than people think they are. Do I think that
+                Github... can launch coding tools to compete with the likes of
+                Lovable and Cursor? Yes, absolutely. I don't mind missing the
+                bubbly elements of the bubble. I worry that people are
+                underestimating the orthogonal risk from either OpenAI extending
+                their stack... I feel people are underestimating the risk of
+                zeroes even though something can go from $0 to $100M in ARR very
+                quickly.
+              </blockquote>
+
+              <p>
+                The way that I could see Lovable succeeding is by becoming the
+                prototyping platform of choice for product people (PMs,
+                designers) and agencies.
+              </p>
+
+              <p>
+                The latter is particularly interesting, because there's about to
+                be tremendous downward pricing pressure on agencies as everyone
+                catches on to the utility of tools like Cursor and Lovable.
+              </p>
+
+              <p>
+                <a href="https://x.com/antonosika/status/1915482887618465995"
+                  >Lovable 2.0</a
+                >
+                recently launched and it was all about collaboration. I can see
+                Lovable being the platform on which people collaborate on
+                prototypes. Think about this in the agency context: instead of
+                presenting a bunch of slides to a client, hearing feedback,
+                iterating, and then presenting again, you can just pull up a
+                prototype and live update it together in a single session.
+              </p>
+
+              <p>
+                I did, however, hear from a designer friend that v0 is better. I
+                haven't tried it yet but I already pay for Vercel so that might
+                be my v0 of choice.
+              </p>
+
+              <p>
+                But yeah, somewhat bearish on Lovable after my experience with
+                them, even though they may be the fastest growing startup in the
+                world.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
