@@ -30,6 +30,20 @@ async function includeHTML() {
     yearElement.textContent = new Date().getFullYear();
   }
 
+  // Update the version in the footer
+  fetch("../version.json")
+    .then((res) => res.json())
+    .then((v) => {
+      const versionElement = document.getElementById("version");
+      if (versionElement) {
+        versionElement.textContent =
+          " • v" + v.major + "." + v.minor + "." + v.patch;
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading version:", error);
+    });
+
   // Always make the page visible after a short delay
   setTimeout(() => {
     document.body.classList.remove("loading");
