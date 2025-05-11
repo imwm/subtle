@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="[Add a unique description for this article - 150-160 characters]"
+    />
+    <title>Landing pages are dead | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/[article-url].html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://subtle.so/[article-url].html" />
+    <meta property="og:title" content="Landing pages are dead | Subtle" />
+    <meta
+      property="og:description"
+      content="[Add a unique description for this article - 150-160 characters]"
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/[article-url].html"
+    />
+    <meta property="twitter:title" content="Landing pages are dead | Subtle" />
+    <meta
+      property="twitter:description"
+      content="[Add a unique description for this article - 150-160 characters]"
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  May 7, 2025
+                </div>
+                <h1 class="font-bold">Landing pages are dead</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                The title is slightly provocative, but I wanted to collect a few
+                observations about the psychology of discovering and adopting
+                new products in this new age of software development.
+              </p>
+
+              <p>
+                If I think about the tools I've personally adopted as daily
+                workhorses – ChatGPT, Cursor, Devin – I was not convinced to try
+                them by a landing page. I was convinced to try them by strong
+                word of mouth. The landing page for these products was
+                essentially a formality, one whose principal job was to give me
+                access to the product I already wanted to try.
+              </p>
+
+              <p>
+                I've noticed something similar with other breakthrough AI
+                products: Lovable, Bolt, Replit, Boardy... To drive adoption,
+                the message via word of mouth can't just be "I like this
+                product," but instead, "You have to try it." That magic first
+                experience yields growth.
+              </p>
+
+              <p>
+                Driving word of mouth that specifically says "You have to try
+                it" will be increasingly important for a couple reasons:
+              </p>
+
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  First, the supply of software is growing dramatically. There's
+                  seemingly a hot new AI tool every day. Most people don't want
+                  to try new software daily, or even weekly. Our bar for trying
+                  new software is going up.
+                </li>
+                <li>
+                  Second, vibe coding a landing page is easier than ever. In
+                  fact, text-to-product tools like Lovable and Bolt excel at
+                  creating landing pages, while they're less good at creating
+                  production-grade applications. I think we'll see an explosion
+                  of landing pages with similar designs, selling similar
+                  products with similar taglines (e.g.
+                  <a
+                    href="deckspeed.com"
+                    class="underline hover:opacity-75"
+                    target="_blank"
+                    >"Cursor for slides"</a
+                  >
+                  from the top of Product Hunt). These landing pages
+                  increasingly won't sell, and the sale will instead need to
+                  happen upstream (esp. through word of mouth).
+                </li>
+              </ul>
+
+              <p>
+                There are some exceptions to this. Enterprise software adoption
+                is less driven by word of mouth and more driven by marketing /
+                targeted outbound to executives. Enterprise software landing
+                pages may remain important because, for example, they can cover
+                lots of the questions enterprise buyers ask of their software
+                and convert warm leads.
+              </p>
+
+              <p>
+                But increasingly for most software adoption, the key will be
+                creating a magical product experience that drives your users to
+                say, "You have to try it."
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
