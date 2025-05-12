@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Analysis of Klarna's AI implementation reversal and its implications for enterprise AI adoption, framed through the lens of Amara's Law."
+    />
+    <title>Klarna's semi-reversal and Amara's Law | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://subtle.so/klarna-semi-reversal-amaras-law.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://subtle.so/klarna-semi-reversal-amaras-law.html"
+    />
+    <meta
+      property="og:title"
+      content="Klarna's semi-reversal and Amara's Law | Subtle"
+    />
+    <meta
+      property="og:description"
+      content="Analysis of Klarna's AI implementation reversal and its implications for enterprise AI adoption, framed through the lens of Amara's Law."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/klarna-semi-reversal-amaras-law.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Klarna's semi-reversal and Amara's Law | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="Analysis of Klarna's AI implementation reversal and its implications for enterprise AI adoption, framed through the lens of Amara's Law."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  May 12, 2025
+                </div>
+                <h1 class="font-bold">
+                  Klarna's semi-reversal and Amara's Law
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                In early 2024, Klarna became the poster child of using AI to
+                eliminate jobs. They
+                <a
+                  href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >announced</a
+                >
+                that their OpenAI-powered support bot was handling two-thirds of
+                their support requests, doing the work of roughly 700 human
+                agents. They also said they were going to pause hiring and net
+                reduce headcount, as they prepared for an IPO.
+              </p>
+              <p>
+                Now, they have changed their tune – it's not a complete
+                reversal, as some headlines suggested, but in fact a more
+                nuanced approach than AI > human:
+              </p>
+              <blockquote>
+                Klarna Group Plc's chief executive says his pursuit of
+                cost-cutting in customer service, fueled by advancements in
+                artificial intelligence, has gone too far....
+                <br /><br />Co-founder Siemiatkowski said the firm is piloting a
+                new cohort of employees "in an Uber type of setup" where they
+                can log in and work remotely, with a view to eventually
+                replacing "the few thousand human agents" that Klarna currently
+                outsources.... <br /><br />The pilot has started small, with two
+                of the new breed of customer-service agents live now, but the
+                ambition is to tap into candidates such as students or rural
+                populations. "We also know there are tons of Klarna users that
+                are very passionate about our company and would enjoy working
+                for us," he added.<br /><br />
+                "From a brand perspective, a company perspective," Siemiatkowski
+                said, "I just think it's so critical that you are clear to your
+                customer that there will be always a human if you want."...
+                <br /><br />"As cost unfortunately seems to have been a too
+                predominant evaluation factor when organizing [our support
+                function], what you end up having is lower quality," he said.
+                "Really investing in the quality of the human support is the way
+                of the future for us."
+              </blockquote>
+              <p>
+                This admission comes at a time when
+                <a
+                  href="https://newsroom.ibm.com/2025-05-06-ibm-study-ceos-double-down-on-ai-while-navigating-enterprise-hurdles"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >a recent IBM survey</a
+                >
+                of 2,000 CEOs found that "only 25% of AI initiatives have
+                delivered expected ROI over the last few years, and only 16%
+                have scaled enterprise wide."
+              </p>
+              <p>
+                Now, there may be some factors particular to Klarna. Over on
+                HackerNews, Gergely Orosz
+                <a
+                  href="https://news.ycombinator.com/item?id=43955917"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >floated the theory</a
+                >
+                that last year's announcement was meant to frame Klarna "as an
+                'AI-first tech company' when it goes public, and not a 'buy now
+                pay later loan company' because AI companies have higher
+                valuations even with the same revenue." They might've pushed
+                that strategy past its limit over the last year and discovered
+                terrible results in customer experience surveys.
+              </p>
+              <p>
+                In any case, the megatrend remains true, that LLMs allow
+                computers to do work that humans previously did, which will only
+                accelerate as models and products improve. The demand for
+                knowledge workers will go down as a cheaper, better, faster
+                substitute good – knowledge agents – emerges. This is a
+                capitalistic imperative: companies will be forced – either by
+                their boards, shareholders, or competitors – to adjust their
+                workforce towards digital agents.
+              </p>
+              <p>
+                The takeaway from Klarna's situation and the study above isn't
+                that LLMs have no role to play in organizational efficiency. The
+                takeaway is that effective enterprise adoption of LLMs should be
+                done carefully and responsibly, and despite the hype, it will
+                take years for this transformation to yield significant results.
+              </p>
+              <p>
+                <a
+                  href="https://www.computer.org/publications/tech-news/trends/amaras-law-and-tech-future"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >Amara's Law</a
+                >
+                says, "We tend to overestimate the effect of a technology in the
+                short run and underestimate the effect in the long run." The
+                data points above are examples of overestimating the effect of a
+                technology in the short run. Let's not commit the second half of
+                the fallacy by over-extrapolating them.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
