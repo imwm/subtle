@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Subtle</title>
+    <meta
+      name="description"
+      content="Tasteful product management, AI consulting, and software development."
+    />
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <style>
+      .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .loaded .fade-in {
+        opacity: 1;
+      }
+      /* Basic Carousel Styles */
+      .carousel {
+        position: relative;
+        overflow: hidden;
+      }
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+      .carousel-prev,
+      .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .carousel-prev {
+        left: 10px;
+      }
+      .carousel-next {
+        right: 10px;
+      }
+      /* For showing a partially filled star */
+      .partial-star {
+        display: inline-block; /* Ensures clip-path applies correctly */
+        clip-path: inset(
+          0 10% 0 0
+        ); /* Clips 10% from the right, showing 90% of the star */
+      }
+    </style>
+  </head>
+  <body
+    class="w-full min-h-screen noise bg-dark-deeper transition-colors duration-50 relative text-dark-text"
+  >
+    <div class="w-full min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div class="w-full" include-html="components/header.html"></div>
+
+      <main
+        class="w-full max-w-2xl mx-auto flex-1 flex flex-col items-center justify-start p-6 sm:border-x border-gray-600 border-dashed"
+      >
+        <!-- Hero Section -->
+        <section class="fade-in text-left w-full">
+          <h1 class="font-bold text-lg mb-2">Subtle Services</h1>
+          <p>
+            We help companies realize their product vision. Our services range
+            from expert consulting to agile zero-to-one development.
+          </p>
+          <div class="flex items-center space-x-2">
+            <a
+              href="mailto:hi@subtle.so"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 hover:bg-gray-800 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+            >
+              Reach Out
+            </a>
+            <span class="text-gray-400">or</span>
+            <a
+              href="https://calendar.app.google/8RyPTy73tsZS6aQj8"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 hover:bg-gray-800 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+            >
+              Book Time
+            </a>
+          </div>
+        </section>
+
+        <!-- Quick Hits / Accolades -->
+        <section class="w-full my-6 fade-in" style="transition-delay: 0.2s">
+          <h3 class="font-bold text-left text-lg">Quick highlights</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
+            >
+              <h3 class="font-bold text-gray-200 pb-0">$0 → $18M</h3>
+              <p class="text-gray-400 text-sm pb-0">ARR growth</p>
+              <p class="text-gray-500 text-sm pb-0">Axios HQ</p>
+            </div>
+            <div
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
+            >
+              <h3 class="font-bold text-gray-200 pb-0">30M MAUs</h3>
+              <p class="text-gray-400 text-sm pb-0">Scale managed</p>
+              <p class="text-gray-500 text-sm pb-0">Mic.com</p>
+            </div>
+            <div
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
+            >
+              <h3 class="font-bold text-gray-200 pb-0">
+                ★★★★<span class="partial-star">★</span>
+              </h3>
+              <p class="text-gray-400 text-sm pb-0">4.9/5 rating</p>
+              <p class="text-gray-500 text-sm pb-0">Axios App</p>
+            </div>
+            <div
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
+            >
+              <h3
+                class="font-bold text-gray-200 pb-0"
+                style="font-size: 1.75rem; line-height: 2rem"
+              >
+                
+              </h3>
+              <p class="text-gray-400 text-sm pb-0">WWDC spotlight</p>
+              <p class="text-gray-500 text-sm pb-0">Mic App</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Offered -->
+        <section class="w-full pb-4 fade-in" style="transition-delay: 0.4s">
+          <h2 class="font-bold text-left mb-2 text-lg">Services Offered</h2>
+          <div>
+            <h3 class="mb-0 pb-0">
+              <strong>Software Development:</strong> Polished v1 delivered in 6
+              weeks for $6k
+            </h3>
+            <ul class="list-disc ml-4 mb-4 text-gray-400">
+              <li>Co-prototyping with Lovable</li>
+              <li>Co-development with Cursor and Github</li>
+              <li>Free updates and support for 2 weeks after launch</li>
+            </ul>
+
+            <h3 class="mb-0 pb-0">
+              <strong>Product Coaching:</strong> Biweekly sessions with ad hoc
+              availability for $1k/mo
+            </h3>
+            <ul class="list-disc ml-4 mb-4 text-gray-400">
+              <li>Two personalized 1:1 sessions/month</li>
+              <li>Async support for ad-hoc questions/reviews</li>
+              <li>
+                Advice and insights from 12+ years in product leadership roles
+              </li>
+            </ul>
+
+            <h3 class="mb-0 pb-0">
+              <strong>Product Consulting:</strong> Hourly advice on product
+              management and more for $300/hr
+            </h3>
+            <ul class="list-disc ml-4 mb-4 text-gray-400">
+              <li>
+                Immediate tactical advice on product, operations, AI tooling,
+                and more
+              </li>
+              <li>Flexible schedule and async availability</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- What We've Worked On -->
+        <section class="w-full fade-in" style="transition-delay: 0.6s">
+          <h2 class="font-bold text-left mb-2 text-lg">What We've Worked On</h2>
+
+          <div class="mb-4">
+            <h3 class="font-semibold text-left">In Progress</h3>
+            <ul class="list-disc ml-4 mb-4 rounded-md shadow-sm text-gray-400">
+              <li>
+                <a
+                  href="https://distilljs.com"
+                  class="inline-flex items-center text-gray-200"
+                  ><span class="hover:underline">DistillJS </span
+                  ><span
+                    class="inline-flex items-center ml-1 mr-0.5 px-2 py-0.5 rounded text-[10px] font-medium bg-blue-900/50 text-blue-200"
+                    >ALPHA</span
+                  ></a
+                >: Challenge o3 to approximate specific LLM functionality in
+                minified Javascript.
+              </li>
+              <li>
+                <a
+                  href="https://flowstate.fm"
+                  class="text-gray-200 hover:underline"
+                  >Flow State</a
+                >: Daily instrumental music newsletter with 41k+ subscribers.
+              </li>
+              <li>
+                <a
+                  href="https://subtle.so"
+                  class="text-gray-200 hover:underline"
+                  >Subtle</a
+                >: You're lookin' at it!
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-left">Past Products</h3>
+            <div>
+              <!-- Product Card 1 -->
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
+                <div class="w-full mb-4">
+                  <img src="public/axios-hq.png" class="w-full rounded-xl" />
+                </div>
+                <h4 class="font-semibold">Axios HQ (2021–)</h4>
+                <p class="text-gray-400">Company: Axios HQ</p>
+                <ul class="list-disc ml-4 mb-4 text-gray-400">
+                  <li>$0 to $18M ARR in 4 years</li>
+                  <li>~90% CSAT</li>
+                  <li>Early OpenAI partner</li>
+                </ul>
+                <a
+                  href="https://www.wsj.com/articles/axioss-software-business-raises-cash-to-fund-ai-expansion-91dc27cc"
+                  class="text-gray-400 hover:text-gray-300 pb-0"
+                  target="_blank"
+                  >Learn more</a
+                >
+              </div>
+
+              <!-- Product Card 2 -->
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
+                <div class="w-full mb-4">
+                  <img src="public/axios-app.png" class="w-full rounded-xl" />
+                </div>
+                <h4 class="font-semibold">Axios Mobile App (2020-2024)</h4>
+                <p class="text-gray-400">Company: Axios Media</p>
+                <ul class="list-disc ml-4 mb-4 text-gray-400">
+                  <li>150k downloads in first 3 months</li>
+                  <li>4.9/5 rating on iOS App Store</li>
+                  <li>2-3M monthly pageviews</li>
+                  <li>Featured by Apple in 100+ countries</li>
+                </ul>
+                <a
+                  href="https://www.axios.com/2020/04/16/axios-app-download-iphone-android"
+                  class="text-gray-400 hover:text-gray-300 pb-0"
+                  target="_blank"
+                  >Learn more</a
+                >
+              </div>
+
+              <!-- Product Card 3 -->
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
+                <div class="w-full mb-4">
+                  <img
+                    src="public/mic-channels.jpg"
+                    class="w-full rounded-xl"
+                  />
+                </div>
+                <h4 class="font-semibold">Mic.com 2.0 (2017-2019)</h4>
+                <p class="text-gray-400">Company: Mic Network</p>
+                <ul class="list-disc ml-4 mb-4 text-gray-400">
+                  <li>~20 million monthly users</li>
+                  <li>Ran from-scratch rebuild of mic.com in 8 weeks</li>
+                  <li>~40% gain in first contentful paint speed</li>
+                  <li>Grew display inventory 50% while protecting UX</li>
+                </ul>
+                <a
+                  href="https://www.wsj.com/articles/mic-is-rolling-out-nine-new-digital-content-brands-1490890532"
+                  class="text-gray-400 hover:text-gray-300 pb-0"
+                  target="_blank"
+                  >Learn more</a
+                >
+              </div>
+
+              <!-- Product Card 4 -->
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
+                <div class="w-full mb-4">
+                  <img
+                    src="public/mic-app-apple.png"
+                    class="w-full rounded-xl"
+                  />
+                </div>
+                <h4 class="font-semibold">Mic App (2016-2017)</h4>
+                <p class="text-gray-400">Company: Mic Network</p>
+                <ul class="list-disc ml-4 mb-4 text-gray-400">
+                  <li>Concept app for notification-only experience</li>
+                  <li>Featured by Apple at WWDC 2017</li>
+                </ul>
+                <a
+                  href="https://developer.apple.com/videos/play/wwdc2017/817/"
+                  class="text-gray-400 hover:text-gray-300 pb-0"
+                  target="_blank"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- multiple mobile screen playing card img 
+         
+        <div class="flex flex-row gap-3">
+          <div
+            class="flex-1 aspect-[9/16] bg-gray-900/70 rounded-md mb-4"
+          ></div>
+          <div
+            class="flex-1 aspect-[9/16] bg-gray-900/70 rounded-md mb-4"
+          ></div>
+          <div
+            class="flex-1 aspect-[9/16] bg-gray-900/70 rounded-md mb-4"
+          ></div>
+        </div>
+        -->
+
+        <!-- Final CTA -->
+        <section
+          class="w-full text-center py-4 fade-in"
+          style="transition-delay: 0.8s"
+        >
+          <p class="text-gray-400">
+            We help companies realize their product vision.
+          </p>
+          <div class="flex items-center justify-center space-x-2">
+            <a
+              href="mailto:hi@subtle.so"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+            >
+              Reach Out
+            </a>
+            <span class="text-gray-400">or</span>
+            <a
+              href="https://calendar.app.google/8RyPTy73tsZS6aQj8"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+            >
+              Book Time
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Include footer -->
+      <div class="w-full" include-html="components/footer.html"></div>
+    </div>
+
+    <script src="scripts/components.js"></script>
+    <!-- To load header/footer -->
+    <script src="services.js"></script>
+    <script>
+      // Initialize components loader
+      includeHTML();
+
+      // Fade-in effect
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+    </script>
+  </body>
+</html>
