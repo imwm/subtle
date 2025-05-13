@@ -55,33 +55,30 @@
     </style>
   </head>
   <body
-    class="w-full min-h-screen noise bg-dark-deeper transition-colors duration-50 relative text-gray-800 dark:text-dark-text"
+    class="w-full min-h-screen noise bg-dark-deeper transition-colors duration-50 relative text-dark-text"
   >
     <div class="w-full min-h-screen flex flex-col">
       <!-- Include header -->
       <div class="w-full" include-html="components/header.html"></div>
 
       <main
-        class="w-full max-w-2xl mx-auto flex-1 flex flex-col items-center justify-start px-4 py-4 sm:border-x border-gray-600 border-dashed"
+        class="w-full max-w-2xl mx-auto flex-1 flex flex-col items-center justify-start p-6 sm:border-x border-gray-600 border-dashed"
       >
         <!-- Hero Section -->
-        <section class="py-4 fade-in text-left w-full">
-          <h1 class="font-bold mb-4">Subtle Services</h1>
-          <p class="mb-4">
-            Better software development for less, and product management
-            coaching/consulting.
-          </p>
+        <section class="fade-in text-left w-full">
+          <h1 class="font-bold text-lg mb-2">Subtle Services</h1>
+          <p>TK</p>
           <div class="flex items-center space-x-4">
             <a
-              href="#"
-              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+              href="mailto:hi@subtle.so"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Reach Out
             </a>
-            <span class="text-gray-500 dark:text-gray-400 mx-4">or</span>
+            <span class="text-gray-400 mx-1">or</span>
             <a
-              href="#"
-              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+              href="https://calendar.app.google/8RyPTy73tsZS6aQj8"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Book Time
             </a>
@@ -89,182 +86,119 @@
         </section>
 
         <!-- Quick Hits / Accolades -->
-        <section class="w-full py-4 fade-in" style="transition-delay: 0.2s">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <section class="w-full my-6 fade-in" style="transition-delay: 0.2s">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div
-              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
-              <p class="text-gray-500 dark:text-gray-400 mt-4">
-                Revenue generated
-              </p>
+              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
+              <p class="text-gray-400 text-sm pb-0">Users reached</p>
             </div>
             <div
-              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
-              <p class="text-gray-500 dark:text-gray-400 mt-4">
-                Successful exits
-              </p>
+              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
+              <p class="text-gray-400 text-sm pb-0">Successful exits</p>
             </div>
             <div
-              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
-              <p class="text-gray-500 dark:text-gray-400 mt-4">
-                User satisfaction
-              </p>
+              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
+              <p class="text-gray-400 text-sm pb-0">User satisfaction</p>
             </div>
             <div
-              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+              class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
-              <p class="text-gray-500 dark:text-gray-400 mt-4">
-                Industry awards
-              </p>
+              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
+              <p class="text-gray-400 text-sm pb-0">Industry awards</p>
             </div>
           </div>
         </section>
 
         <!-- Services Offered -->
-        <section class="w-full py-4 fade-in" style="transition-delay: 0.4s">
-          <h2 class="font-bold mb-4 text-left">Services Offered</h2>
-          <div class="space-y-4">
-            <div
-              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm"
-            >
-              <h3 class="font-semibold mb-4">Software Development</h3>
-              <p class="text-gray-400 dark:text-gray-300 font-semibold mb-4">
-                $6k, 6-week MVP
-              </p>
-              <ul
-                class="list-disc list-inside space-y-4 text-gray-500 dark:text-gray-400"
-              >
-                <li>Co-prototyping (Lovable)</li>
-                <li>Development (Cursor + GitHub)</li>
-                <li>Client retains full code ownership</li>
-                <li>Optional ongoing hourly support</li>
-              </ul>
-            </div>
-            <div
-              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm"
-            >
-              <h3 class="font-semibold mb-4">Coaching Engagement</h3>
-              <p class="text-gray-400 dark:text-gray-300 font-semibold mb-4">
-                $1k/month
-              </p>
-              <ul
-                class="list-disc list-inside space-y-4 text-gray-500 dark:text-gray-400"
-              >
-                <li>Two personalized 1:1 sessions/month</li>
-                <li>Async support available</li>
-                <li>Product management & AI advisory</li>
-              </ul>
-            </div>
-            <div
-              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm"
-            >
-              <h3 class="font-semibold mb-4">Hourly Consulting</h3>
-              <p class="text-gray-400 dark:text-gray-300 font-semibold mb-4">
-                $300/hour
-              </p>
-              <ul
-                class="list-disc list-inside space-y-4 text-gray-500 dark:text-gray-400"
-              >
-                <li>
-                  Immediate tactical advice on product, operations, AI tooling
-                </li>
-              </ul>
-            </div>
+        <section class="w-full pb-4 fade-in" style="transition-delay: 0.4s">
+          <h2 class="font-bold text-left mb-4 text-lg">Services Offered</h2>
+          <div>
+            <h3 class="mb-0 pb-0">
+              <strong>Software Development:</strong> Polished v1 delivered in 6
+              weeks for $6k
+            </h3>
+            <ul class="list-disc ml-4 mb-4 text-gray-400">
+              <li>Co-prototyping with Lovable</li>
+              <li>Co-development with Cursor and Github</li>
+              <li>Free updates and support for 2 weeks after launch</li>
+            </ul>
+
+            <h3 class="mb-0 pb-0">
+              <strong>Product Coaching:</strong> Biweekly sessions with ad hoc
+              availability for $1k/mo
+            </h3>
+            <ul class="list-disc ml-4 mb-4 text-gray-400">
+              <li>Two personalized 1:1 sessions/month</li>
+              <li>Async support for ad-hoc questions/reviews</li>
+              <li>
+                Advice and insights from 12+ years in product leadership roles
+              </li>
+            </ul>
+
+            <h3 class="mb-0 pb-0">
+              <strong>Product Consulting:</strong> Hourly advice on product
+              management and more for $300/hr
+            </h3>
+            <ul class="list-disc ml-4 mb-4 text-gray-400">
+              <li>
+                Immediate tactical advice on product, operations, AI tooling,
+                and more
+              </li>
+              <li>Flexible schedule and async availability</li>
+            </ul>
           </div>
         </section>
 
         <!-- What We've Worked On -->
-        <section class="w-full py-4 fade-in" style="transition-delay: 0.6s">
-          <h2 class="font-bold mb-4 text-left">What We've Worked On</h2>
+        <section class="w-full fade-in" style="transition-delay: 0.6s">
+          <h2 class="font-bold text-left mb-4 text-lg">What We've Worked On</h2>
 
           <div class="mb-4">
-            <h3 class="font-semibold mb-4 text-left">Current Products</h3>
-            <ul
-              class="list-disc list-inside space-y-4 bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-gray-500 dark:text-gray-400"
-            >
+            <h3 class="font-semibold text-left">Current Products</h3>
+            <ul class="list-disc ml-4 mb-4 rounded-md shadow-sm text-gray-400">
               <li>
                 <a
-                  href="#"
-                  class="text-gray-300 dark:text-gray-200 hover:underline"
-                  >[Product Name]</a
-                >
-                — TK concise description
+                  href="https://distilljs.com"
+                  class="text-gray-200 hover:underline"
+                  >DistillJS</a
+                >: Challenge o3 to approximate specific LLM functionality in
+                minified Javascript
               </li>
               <li>
                 <a
-                  href="#"
-                  class="text-gray-300 dark:text-gray-200 hover:underline"
-                  >[Product Name]</a
-                >
-                — TK concise description
+                  href="https://flowstate.fm"
+                  class="text-gray-200 hover:underline"
+                  >Flow State</a
+                >: Daily instrumental music newsletter with 41k+ subscribers
               </li>
               <li>
                 <a
-                  href="#"
-                  class="text-gray-300 dark:text-gray-200 hover:underline"
-                  >[Product Name]</a
-                >
-                — TK concise description
+                  href="https://subtle.so"
+                  class="text-gray-200 hover:underline"
+                  >Subtle</a
+                >: You're lookin' at it!
               </li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-semibold mb-4 text-left">Past Products</h3>
-            <div class="space-y-4">
+            <div>
               <!-- Product Card 1 -->
-              <div
-                class="bg-gray-800/50 dark:bg-gray-800/80 rounded-md shadow-sm p-4"
-              >
-                <div
-                  class="w-full h-32 bg-gray-900/60 dark:bg-gray-900/70 rounded-sm mb-4"
-                ></div>
-                <h4 class="font-semibold mb-4">Product Name 1</h4>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">Company: TK</p>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">
+              <div class="bg-gray-800/80 rounded-md shadow-sm p-4 mb-4">
+                <div class="w-full h-32 bg-gray-900/70 rounded-sm"></div>
+                <h4 class="font-semibold">Product Name 1</h4>
+                <p class="text-gray-400">Company: TK</p>
+                <p class="text-gray-400">
                   Achievements: Scaled to TK users; exited/acquired by TK
                 </p>
-                <p class="text-gray-500 dark:text-gray-400">
-                  Key Learnings: TK key takeaway
-                </p>
-              </div>
-              <!-- Product Card 2 -->
-              <div
-                class="bg-gray-800/50 dark:bg-gray-800/80 rounded-md shadow-sm p-4"
-              >
-                <div
-                  class="w-full h-32 bg-gray-900/60 dark:bg-gray-900/70 rounded-sm mb-4"
-                ></div>
-                <h4 class="font-semibold mb-4">Product Name 2</h4>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">Company: TK</p>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">
-                  Achievements: Scaled to TK users; exited/acquired by TK
-                </p>
-                <p class="text-gray-500 dark:text-gray-400">
-                  Key Learnings: TK key takeaway
-                </p>
-              </div>
-              <!-- Product Card 3 -->
-              <div
-                class="bg-gray-800/50 dark:bg-gray-800/80 rounded-md shadow-sm p-4"
-              >
-                <div
-                  class="w-full h-32 bg-gray-900/60 dark:bg-gray-900/70 rounded-sm mb-4"
-                ></div>
-                <h4 class="font-semibold mb-4">Product Name 3</h4>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">Company: TK</p>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">
-                  Achievements: Scaled to TK users; exited/acquired by TK
-                </p>
-                <p class="text-gray-500 dark:text-gray-400">
-                  Key Learnings: TK key takeaway
-                </p>
+                <p class="text-gray-400">Key Learnings: TK key takeaway</p>
               </div>
             </div>
           </div>
@@ -277,15 +211,15 @@
         >
           <div class="flex items-center justify-center space-x-4">
             <a
-              href="#"
-              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+              href="mailto:hi@subtle.so"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Reach Out
             </a>
-            <span class="text-gray-500 dark:text-gray-400 mx-4">or</span>
+            <span class="text-gray-400 mx-1">or</span>
             <a
-              href="#"
-              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+              href="https://calendar.app.google/8RyPTy73tsZS6aQj8"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Book Time
             </a>
