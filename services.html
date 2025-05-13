@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Subtle</title>
+    <meta
+      name="description"
+      content="Tasteful product management, AI consulting, and software development."
+    />
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <style>
+      .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .loaded .fade-in {
+        opacity: 1;
+      }
+      /* Basic Carousel Styles */
+      .carousel {
+        position: relative;
+        overflow: hidden;
+      }
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+      .carousel-prev,
+      .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .carousel-prev {
+        left: 10px;
+      }
+      .carousel-next {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body
+    class="w-full min-h-screen noise bg-dark-deeper transition-colors duration-50 relative text-gray-800 dark:text-dark-text"
+  >
+    <div class="w-full min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div class="w-full" include-html="components/header.html"></div>
+
+      <main
+        class="w-full max-w-2xl mx-auto flex-1 flex flex-col items-center justify-start px-4 py-4 sm:border-x border-gray-600 border-dashed"
+      >
+        <!-- Hero Section -->
+        <section class="py-4 fade-in text-left w-full">
+          <h1 class="font-bold mb-4">Subtle Services</h1>
+          <p class="mb-4">
+            Better software development for less, and product management
+            coaching/consulting.
+          </p>
+          <div class="flex items-center space-x-4">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+            >
+              Reach Out
+            </a>
+            <span class="text-gray-500 dark:text-gray-400 mx-4">or</span>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+            >
+              Book Time
+            </a>
+          </div>
+        </section>
+
+        <!-- Quick Hits / Accolades -->
+        <section class="w-full py-4 fade-in" style="transition-delay: 0.2s">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+            >
+              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
+              <p class="text-gray-500 dark:text-gray-400 mt-4">
+                Revenue generated
+              </p>
+            </div>
+            <div
+              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+            >
+              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
+              <p class="text-gray-500 dark:text-gray-400 mt-4">
+                Successful exits
+              </p>
+            </div>
+            <div
+              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+            >
+              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
+              <p class="text-gray-500 dark:text-gray-400 mt-4">
+                User satisfaction
+              </p>
+            </div>
+            <div
+              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-center"
+            >
+              <p class="font-bold text-gray-300 dark:text-gray-200">TK</p>
+              <p class="text-gray-500 dark:text-gray-400 mt-4">
+                Industry awards
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Offered -->
+        <section class="w-full py-4 fade-in" style="transition-delay: 0.4s">
+          <h2 class="font-bold mb-4 text-left">Services Offered</h2>
+          <div class="space-y-4">
+            <div
+              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm"
+            >
+              <h3 class="font-semibold mb-4">Software Development</h3>
+              <p class="text-gray-400 dark:text-gray-300 font-semibold mb-4">
+                $6k, 6-week MVP
+              </p>
+              <ul
+                class="list-disc list-inside space-y-4 text-gray-500 dark:text-gray-400"
+              >
+                <li>Co-prototyping (Lovable)</li>
+                <li>Development (Cursor + GitHub)</li>
+                <li>Client retains full code ownership</li>
+                <li>Optional ongoing hourly support</li>
+              </ul>
+            </div>
+            <div
+              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm"
+            >
+              <h3 class="font-semibold mb-4">Coaching Engagement</h3>
+              <p class="text-gray-400 dark:text-gray-300 font-semibold mb-4">
+                $1k/month
+              </p>
+              <ul
+                class="list-disc list-inside space-y-4 text-gray-500 dark:text-gray-400"
+              >
+                <li>Two personalized 1:1 sessions/month</li>
+                <li>Async support available</li>
+                <li>Product management & AI advisory</li>
+              </ul>
+            </div>
+            <div
+              class="bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm"
+            >
+              <h3 class="font-semibold mb-4">Hourly Consulting</h3>
+              <p class="text-gray-400 dark:text-gray-300 font-semibold mb-4">
+                $300/hour
+              </p>
+              <ul
+                class="list-disc list-inside space-y-4 text-gray-500 dark:text-gray-400"
+              >
+                <li>
+                  Immediate tactical advice on product, operations, AI tooling
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- What We've Worked On -->
+        <section class="w-full py-4 fade-in" style="transition-delay: 0.6s">
+          <h2 class="font-bold mb-4 text-left">What We've Worked On</h2>
+
+          <div class="mb-4">
+            <h3 class="font-semibold mb-4 text-left">Current Products</h3>
+            <ul
+              class="list-disc list-inside space-y-4 bg-gray-800/50 dark:bg-gray-800/80 p-4 rounded-md shadow-sm text-gray-500 dark:text-gray-400"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 dark:text-gray-200 hover:underline"
+                  >[Product Name]</a
+                >
+                — TK concise description
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 dark:text-gray-200 hover:underline"
+                  >[Product Name]</a
+                >
+                — TK concise description
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 dark:text-gray-200 hover:underline"
+                  >[Product Name]</a
+                >
+                — TK concise description
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-4 text-left">Past Products</h3>
+            <div class="space-y-4">
+              <!-- Product Card 1 -->
+              <div
+                class="bg-gray-800/50 dark:bg-gray-800/80 rounded-md shadow-sm p-4"
+              >
+                <div
+                  class="w-full h-32 bg-gray-900/60 dark:bg-gray-900/70 rounded-sm mb-4"
+                ></div>
+                <h4 class="font-semibold mb-4">Product Name 1</h4>
+                <p class="text-gray-500 dark:text-gray-400 mb-4">Company: TK</p>
+                <p class="text-gray-500 dark:text-gray-400 mb-4">
+                  Achievements: Scaled to TK users; exited/acquired by TK
+                </p>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Key Learnings: TK key takeaway
+                </p>
+              </div>
+              <!-- Product Card 2 -->
+              <div
+                class="bg-gray-800/50 dark:bg-gray-800/80 rounded-md shadow-sm p-4"
+              >
+                <div
+                  class="w-full h-32 bg-gray-900/60 dark:bg-gray-900/70 rounded-sm mb-4"
+                ></div>
+                <h4 class="font-semibold mb-4">Product Name 2</h4>
+                <p class="text-gray-500 dark:text-gray-400 mb-4">Company: TK</p>
+                <p class="text-gray-500 dark:text-gray-400 mb-4">
+                  Achievements: Scaled to TK users; exited/acquired by TK
+                </p>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Key Learnings: TK key takeaway
+                </p>
+              </div>
+              <!-- Product Card 3 -->
+              <div
+                class="bg-gray-800/50 dark:bg-gray-800/80 rounded-md shadow-sm p-4"
+              >
+                <div
+                  class="w-full h-32 bg-gray-900/60 dark:bg-gray-900/70 rounded-sm mb-4"
+                ></div>
+                <h4 class="font-semibold mb-4">Product Name 3</h4>
+                <p class="text-gray-500 dark:text-gray-400 mb-4">Company: TK</p>
+                <p class="text-gray-500 dark:text-gray-400 mb-4">
+                  Achievements: Scaled to TK users; exited/acquired by TK
+                </p>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Key Learnings: TK key takeaway
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section
+          class="w-full text-center py-4 fade-in"
+          style="transition-delay: 0.8s"
+        >
+          <div class="flex items-center justify-center space-x-4">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+            >
+              Reach Out
+            </a>
+            <span class="text-gray-500 dark:text-gray-400 mx-4">or</span>
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white border border-gray-500 hover:border-gray-400 font-semibold p-4 rounded-md transition-colors duration-300"
+            >
+              Book Time
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Include footer -->
+      <div class="w-full" include-html="components/footer.html"></div>
+    </div>
+
+    <script src="scripts/components.js"></script>
+    <!-- To load header/footer -->
+    <script src="services.js"></script>
+    <script>
+      // Initialize components loader
+      includeHTML();
+
+      // Fade-in effect
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+    </script>
+  </body>
+</html>
