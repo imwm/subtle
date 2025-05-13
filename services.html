@@ -52,6 +52,13 @@
       .carousel-next {
         right: 10px;
       }
+      /* For showing a partially filled star */
+      .partial-star {
+        display: inline-block; /* Ensures clip-path applies correctly */
+        clip-path: inset(
+          0 10% 0 0
+        ); /* Clips 10% from the right, showing 90% of the star */
+      }
     </style>
   </head>
   <body
@@ -67,18 +74,21 @@
         <!-- Hero Section -->
         <section class="fade-in text-left w-full">
           <h1 class="font-bold text-lg mb-2">Subtle Services</h1>
-          <p>TK</p>
-          <div class="flex items-center space-x-4">
+          <p>
+            We help companies realize their product vision. Our services range
+            from expert consulting to agile zero-to-one development.
+          </p>
+          <div class="flex items-center space-x-2">
             <a
               href="mailto:hi@subtle.so"
-              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 hover:bg-gray-800 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Reach Out
             </a>
-            <span class="text-gray-400 mx-1">or</span>
+            <span class="text-gray-400">or</span>
             <a
               href="https://calendar.app.google/8RyPTy73tsZS6aQj8"
-              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 hover:bg-gray-800 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Book Time
             </a>
@@ -87,30 +97,42 @@
 
         <!-- Quick Hits / Accolades -->
         <section class="w-full my-6 fade-in" style="transition-delay: 0.2s">
+          <h3 class="font-bold text-left text-lg">Quick highlights</h3>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div
               class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
-              <p class="text-gray-400 text-sm pb-0">Users reached</p>
+              <h3 class="font-bold text-gray-200 pb-0">$0 → $18M</h3>
+              <p class="text-gray-400 text-sm pb-0">ARR growth</p>
+              <p class="text-gray-500 text-sm pb-0">Axios HQ</p>
             </div>
             <div
               class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
-              <p class="text-gray-400 text-sm pb-0">Successful exits</p>
+              <h3 class="font-bold text-gray-200 pb-0">30M MAUs</h3>
+              <p class="text-gray-400 text-sm pb-0">Scale managed</p>
+              <p class="text-gray-500 text-sm pb-0">Mic.com</p>
             </div>
             <div
               class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
-              <p class="text-gray-400 text-sm pb-0">User satisfaction</p>
+              <h3 class="font-bold text-gray-200 pb-0">
+                ★★★★<span class="partial-star">★</span>
+              </h3>
+              <p class="text-gray-400 text-sm pb-0">4.9/5 rating</p>
+              <p class="text-gray-500 text-sm pb-0">Axios App</p>
             </div>
             <div
               class="bg-gray-800/80 p-4 rounded-md shadow-sm text-center flex flex-col items-center justify-center"
             >
-              <h3 class="font-bold text-gray-200 pb-0">TK</h3>
-              <p class="text-gray-400 text-sm pb-0">Industry awards</p>
+              <h3
+                class="font-bold text-gray-200 pb-0"
+                style="font-size: 1.75rem; line-height: 2rem"
+              >
+                
+              </h3>
+              <p class="text-gray-400 text-sm pb-0">WWDC spotlight</p>
+              <p class="text-gray-500 text-sm pb-0">Mic App</p>
             </div>
           </div>
         </section>
@@ -160,26 +182,26 @@
           <h2 class="font-bold text-left mb-2 text-lg">What We've Worked On</h2>
 
           <div class="mb-4">
-            <h3 class="font-semibold text-left">Current Products</h3>
+            <h3 class="font-semibold text-left">In Progress</h3>
             <ul class="list-disc ml-4 mb-4 rounded-md shadow-sm text-gray-400">
               <li>
                 <a
                   href="https://distilljs.com"
-                  class="text-gray-200 hover:underline"
-                  >DistillJS
-                  <span
-                    class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-blue-900/50 text-blue-200"
+                  class="inline-flex items-center text-gray-200"
+                  ><span class="hover:underline">DistillJS </span
+                  ><span
+                    class="inline-flex items-center ml-1 mr-0.5 px-2 py-0.5 rounded text-[10px] font-medium bg-blue-900/50 text-blue-200"
                     >ALPHA</span
                   ></a
                 >: Challenge o3 to approximate specific LLM functionality in
-                minified Javascript
+                minified Javascript.
               </li>
               <li>
                 <a
                   href="https://flowstate.fm"
                   class="text-gray-200 hover:underline"
                   >Flow State</a
-                >: Daily instrumental music newsletter with 41k+ subscribers
+                >: Daily instrumental music newsletter with 41k+ subscribers.
               </li>
               <li>
                 <a
@@ -195,7 +217,7 @@
             <h3 class="font-semibold text-left">Past Products</h3>
             <div>
               <!-- Product Card 1 -->
-              <div class="bg-gray-800/80 rounded-md shadow-sm p-6 mb-4">
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
                 <div class="w-full mb-4">
                   <img src="public/axios-hq.png" class="w-full rounded-xl" />
                 </div>
@@ -215,7 +237,7 @@
               </div>
 
               <!-- Product Card 2 -->
-              <div class="bg-gray-800/80 rounded-md shadow-sm p-6 mb-4">
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
                 <div class="w-full mb-4">
                   <img src="public/axios-app.png" class="w-full rounded-xl" />
                 </div>
@@ -236,7 +258,7 @@
               </div>
 
               <!-- Product Card 3 -->
-              <div class="bg-gray-800/80 rounded-md shadow-sm p-6 mb-4">
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
                 <div class="w-full mb-4">
                   <img
                     src="public/mic-channels.jpg"
@@ -260,7 +282,7 @@
               </div>
 
               <!-- Product Card 4 -->
-              <div class="bg-gray-800/80 rounded-md shadow-sm p-6 mb-4">
+              <div class="bg-gray-800/80 rounded-xl shadow-sm p-6 mb-4">
                 <div class="w-full mb-4">
                   <img
                     src="public/mic-app-apple.png"
@@ -304,14 +326,17 @@
           class="w-full text-center py-4 fade-in"
           style="transition-delay: 0.8s"
         >
-          <div class="flex items-center justify-center space-x-4">
+          <p class="text-gray-400">
+            We help companies realize their product vision.
+          </p>
+          <div class="flex items-center justify-center space-x-2">
             <a
               href="mailto:hi@subtle.so"
               class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Reach Out
             </a>
-            <span class="text-gray-400 mx-1">or</span>
+            <span class="text-gray-400">or</span>
             <a
               href="https://calendar.app.google/8RyPTy73tsZS6aQj8"
               class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
