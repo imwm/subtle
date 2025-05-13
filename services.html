@@ -138,42 +138,48 @@
         </section>
 
         <!-- Services Offered -->
-        <section class="w-full pb-4 fade-in" style="transition-delay: 0.4s">
+        <section class="w-full pb-8 fade-in" style="transition-delay: 0.4s">
           <h2 class="font-bold text-left mb-2 text-lg">Services Offered</h2>
           <div>
-            <h3 class="mb-0 pb-0">
-              <strong>Software Development:</strong> Polished v1 delivered in 6
-              weeks for $6k
-            </h3>
-            <ul class="list-disc ml-4 mb-4 text-gray-400">
-              <li>Co-prototyping with Lovable</li>
-              <li>Co-development with Cursor and Github</li>
-              <li>Free updates and support for 2 weeks after launch</li>
-            </ul>
+            <details class="mb-4">
+              <summary class="cursor-pointer hover:text-white">
+                <span class="font-semibold">Software Development:</span>
+                Polished v1 delivered in 6 weeks for $6k
+              </summary>
+              <ul class="list-disc ml-4 mt-2 text-gray-400">
+                <li>Co-prototyping with Lovable</li>
+                <li>Co-development with Cursor and Github</li>
+                <li>Free updates and support for 2 weeks after launch</li>
+              </ul>
+            </details>
 
-            <h3 class="mb-0 pb-0">
-              <strong>Product Coaching:</strong> Biweekly sessions with ad hoc
-              availability for $1k/mo
-            </h3>
-            <ul class="list-disc ml-4 mb-4 text-gray-400">
-              <li>Two personalized 1:1 sessions/month</li>
-              <li>Async support for ad-hoc questions/reviews</li>
-              <li>
-                Advice and insights from 12+ years in product leadership roles
-              </li>
-            </ul>
+            <details class="mb-4">
+              <summary class="cursor-pointer hover:text-white">
+                <span class="font-semibold">Product Coaching:</span> Biweekly
+                sessions with ad hoc availability for $1k/mo
+              </summary>
+              <ul class="list-disc ml-4 mt-2 text-gray-400">
+                <li>Two personalized 1:1 sessions/month</li>
+                <li>Async support for ad-hoc questions/reviews</li>
+                <li>
+                  Advice and insights from 12+ years in product leadership roles
+                </li>
+              </ul>
+            </details>
 
-            <h3 class="mb-0 pb-0">
-              <strong>Product Consulting:</strong> Hourly advice on product
-              management and more for $300/hr
-            </h3>
-            <ul class="list-disc ml-4 mb-4 text-gray-400">
-              <li>
-                Immediate tactical advice on product, operations, AI tooling,
-                and more
-              </li>
-              <li>Flexible schedule and async availability</li>
-            </ul>
+            <details>
+              <summary class="cursor-pointer hover:text-white">
+                <span class="font-semibold">Product Consulting:</span> Hourly
+                advice on product management and more for $300/hr
+              </summary>
+              <ul class="list-disc ml-4 mt-2 text-gray-400">
+                <li>
+                  Immediate tactical advice on product, operations, AI tooling,
+                  and more
+                </li>
+                <li>Flexible schedule and async availability</li>
+              </ul>
+            </details>
           </div>
         </section>
 
@@ -341,14 +347,14 @@
           <div class="flex items-center justify-center space-x-2">
             <a
               href="mailto:hi@subtle.so"
-              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 hover:bg-gray-800 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Reach Out
             </a>
             <span class="text-gray-400">or</span>
             <a
               href="https://calendar.app.google/8RyPTy73tsZS6aQj8"
-              class="text-sm text-white border border-gray-400 hover:border-gray-300 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
+              class="text-sm text-white border border-gray-400 hover:border-gray-300 hover:bg-gray-800 font-semibold px-2 py-1.5 rounded-md transition-colors duration-300"
             >
               Book Time
             </a>
@@ -362,7 +368,6 @@
 
     <script src="scripts/components.js"></script>
     <!-- To load header/footer -->
-    <script src="services.js"></script>
     <script>
       // Initialize components loader
       includeHTML();
