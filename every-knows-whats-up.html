@@ -61,6 +61,15 @@
       data-domain="subtle.so"
       src="https://plausible.io/js/script.js"
     ></script>
+    <style>
+      a {
+        text-decoration: underline;
+        transition: opacity 0.2s;
+      }
+      a:hover {
+        opacity: 0.75;
+      }
+    </style>
   </head>
   <body
     class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
@@ -104,6 +113,9 @@
                 This week they published
                 <a
                   href="https://every.to/p/how-we-built-a-7-figure-ai-consulting-business-in-less-than-a-yea"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline hover:opacity-75"
                   >a post</a
                 >
                 about how they built a 7-figure AI consulting business in the
@@ -179,9 +191,11 @@
                 They do not have time to figure out how to reinvent their
                 personal working style, much of which has been honed and
                 habituated over years or decades. Hiring a consultancy like
-                Every (or <a href="/services.html">us</a>) creates the space in
-                which to do this with guidance from experts (insofar as there
-                are experts in this nascent field).
+                Every (or
+                <a href="/services.html" class="underline hover:opacity-75"
+                  >us</a
+                >) creates the space in which to do this with guidance from
+                experts (insofar as there are experts in this nascent field).
               </p>
             </div>
           </div>
