@@ -22,10 +22,10 @@ body.loaded {
 
 blockquote {
   padding-left: 1rem;
-  border-left: 2px solid #6b7280;
-  color: #a4b1bb;
+  border-left: 2px solid rgba(192, 199, 189, 0.75);
   opacity: 0.75;
   margin-bottom: 1rem !important;
+  border-radius: 0.15rem;
 }
 
 p,
