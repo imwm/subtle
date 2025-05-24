@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="[Add a unique description for this article - 150-160 characters]"
+    />
+    <title>2k tokens per second | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/[article-url].html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://subtle.so/[article-url].html" />
+    <meta property="og:title" content="2k tokens per second | Subtle" />
+    <meta
+      property="og:description"
+      content="[Add a unique description for this article - 150-160 characters]"
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/[article-url].html"
+    />
+    <meta property="twitter:title" content="2k tokens per second | Subtle" />
+    <meta
+      property="twitter:description"
+      content="[Add a unique description for this article - 150-160 characters]"
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  May 21, 2025
+                </div>
+                <h1 class="font-bold">2k tokens per second</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                I'm still catching up on the panoply of releases and demos
+                announced at Google I/O this week. This demo of a coding agent
+                producing 2,000 tokens per second caught my eye and hasn't
+                gotten as much attention as I think it deserves:
+              </p>
+
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">
+                  <a
+                    href="https://twitter.com/bodonoghue85/status/1924930186858135632"
+                    >View tweet</a
+                  >
+                </p>
+                &mdash; Brian O'Donoghue (@bodonoghue85)
+                <a
+                  href="https://twitter.com/bodonoghue85/status/1924930186858135632"
+                  >May 21, 2025</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+
+              <p>
+                Not only is this technologically impressive; it has significant
+                implications for the user experience around generative app
+                experiences, aka vibe coding.
+              </p>
+
+              <p>
+                Using a text-to-product app today like Replit or Lovable feels
+                magical, but it often includes long wait times. For example, I
+                demoed Lovable the other day to family members and had to wait a
+                minute or more for Lovable to produce a working prototype in the
+                browser. If Lovable were to incorporate Google's Gemini
+                Diffusion model, the working prototype might appear in seconds.
+              </p>
+
+              <p>
+                This will make first-time user experiences of text-to-product
+                apps even more magical, but it should also change how vibe
+                coding works.
+              </p>
+
+              <p>
+                If major changes to a codebase can be instant, we can allow
+                users to iterate many more times on core aspects of product
+                functionality. This means an overall better experience of vibe
+                coding (instant feedback) and, ultimately, superior products.
+              </p>
+
+              <p>
+                The author above also notes that the diffusion approach supports
+                better "non-causal reasoning" within the generation, which
+                should improve the overall output. That means larger changes
+                while vibe coding will be less likely to break existing
+                functionality.
+              </p>
+
+              <p>
+                So overall, this diffusion approach should be a major accelerant
+                to vibe coders and vibe coding platforms.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
