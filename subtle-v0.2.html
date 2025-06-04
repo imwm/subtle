@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reflections on Subtle's journey: adjusting posting frequency, focusing on original products, and introducing new services. Insights on content strategy and future direction."
+    />
+    <title>
+      Subtle Software v0.2: Reflections, posting cadence, time to build, and
+      services | Subtle
+    </title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/subtle-software-v0.2.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://subtle.so/subtle-software-v0.2.html"
+    />
+    <meta
+      property="og:title"
+      content="Subtle Software v0.2: Reflections, posting cadence, time to build, and services | Subtle"
+    />
+    <meta
+      property="og:description"
+      content="Reflections on Subtle's journey: adjusting posting frequency, focusing on original products, and introducing new services. Insights on content strategy and future direction."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/subtle-software-v0.2.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Subtle Software v0.2: Reflections, posting cadence, time to build, and services | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="Reflections on Subtle's journey: adjusting posting frequency, focusing on original products, and introducing new services. Insights on content strategy and future direction."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  June 4, 2025
+                </div>
+                <h1 class="font-bold">
+                  Subtle Software v0.2: Reflections, posting cadence, time to
+                  build, and services
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                I took a couple weeks while traveling to reflect on Subtle so
+                far. Here are the reflections and changes going forward.
+              </p>
+
+              <p><b>1. Cadence will be 2-3 posts per week</b></p>
+              <p>
+                Since early March I've been posting daily. That was a helpful
+                forcing function to make progress daily in the beginning. But
+                some days it resulted in a rushed post or simple aggregation. I
+                probably won't have something significant to post more than two
+                or three times per week.
+              </p>
+
+              <p>
+                Moreover, looking at the analytics (shout out
+                <a
+                  href="https://plausible.io"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >plausible.io</a
+                >), there's been a power law in the readership of posts. Of the
+                47 posts I've published so far, only three have gotten more than
+                100 views. Those top three posts are:
+              </p>
+
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  <a
+                    href="openai-windsurf-and-the-future-of-ai-workspaces.html"
+                    class="underline hover:opacity-75"
+                  >
+                    OpenAI, Windsurf, and the future of work</a
+                  >
+                  (2.7k pageviews)
+                </li>
+                <li>
+                  <a
+                    href="perverse-incentive-of-lovables-growth.html"
+                    class="underline hover:opacity-75"
+                  >
+                    The perverse incentive behind Lovable's growth</a
+                  >
+                  (679 pageviews)
+                </li>
+                <li>
+                  <a
+                    href="subtle-approach-to-newsletter-sponsorships.html"
+                    class="underline hover:opacity-75"
+                  >
+                    A subtle approach to newsletter sponsorships</a
+                  >
+                  (160 pageviews)
+                </li>
+              </ul>
+
+              <p>
+                There are diminishing returns to posting more. By posting a
+                couple of times per week, I'll take bigger swings and give
+                myself more time to make progress on original products. Which
+                leads me to...
+              </p>
+
+              <p><b>2. Posts will focus more on original products</b></p>
+              <p>
+                Most posts so far have offered commentary on LLM products. These
+                were fun to write, especially as I immersed myself more in these
+                tools which are truly changing knowledge work.
+              </p>
+              <p>
+                But
+                <a
+                  href="every-knows-whats-up.html"
+                  class="underline hover:opacity-75"
+                  >as the company Every observed</a
+                >, the best way to build credibility is to build original
+                products. I'll be spending more of my time using the tools I'm
+                now familiar with (esp. Cursor) to ship more products, explain
+                the rationale behind them, and share learnings from the build
+                process.
+              </p>
+
+              <p>
+                So expect more of an editorial focus on what I'm building rather
+                than what's happening in the industry.
+              </p>
+
+              <p><b>3. Subtle Software & Subtle Services</b></p>
+              <p>
+                To make it clear that this website is about software, I've
+                updated the website title to be Subtle Software.
+              </p>
+
+              <p>
+                There's also now a services offering (more
+                <a href="services.html" class="underline hover:opacity-75"
+                  >here</a
+                >). I didn't set out to offer consulting or agency services.
+                They spontaneously appeared to me in a very compelling manner:
+                introductions via my network to great people working on
+                interesting missions and compelling products.
+              </p>
+
+              <p>
+                I'll be spending part of my time advising/coaching startups
+                mainly on product management. I'll also be testing my hypothesis
+                that the work of software agencies / dev shops can be achieved
+                for 10% of the price by a motivated, resourceful individual
+                (namely, me).
+              </p>
+
+              <p>
+                I'll also occasionally post here about certain concepts that
+                recur in my services engagements.
+              </p>
+              <p>
+                As always, send feedback to
+                <a href="mailto:hi@subtle.so" class="underline hover:opacity-75"
+                  >hi@subtle.so</a
+                >. Thanks for reading!
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
