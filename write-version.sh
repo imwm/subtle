@@ -15,3 +15,6 @@ PATCH=$(jq '.patch' $VERSION_FILE)
 
 # write version.txt
 echo "v$MAJOR.$MINOR.$PATCH" > version.txt
+
+# print new version
+echo "New version: v$MAJOR.$MINOR.$PATCH"
