@@ -37,7 +37,7 @@ async function includeHTML() {
       const versionElement = document.getElementById("version");
       if (versionElement) {
         versionElement.textContent =
-          " • v" + v.major + "." + v.minor + "." + v.patch;
+          "v" + v.major + "." + v.minor + "." + v.patch;
       }
     })
     .catch((error) => {
