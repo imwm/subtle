@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn how to automate your solo business with crawl jobs and AI-powered autoblogging. From cron jobs to GPT-4 content generation for data subscription products."
+    />
+    <title>Adventures in automation | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://subtle.so/adventures-in-automation.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://subtle.so/adventures-in-automation.html"
+    />
+    <meta property="og:title" content="Adventures in automation | Subtle" />
+    <meta
+      property="og:description"
+      content="Learn how to automate your solo business with crawl jobs and AI-powered autoblogging. From cron jobs to GPT-4 content generation for data subscription products."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/adventures-in-automation.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Adventures in automation | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="Learn how to automate your solo business with crawl jobs and AI-powered autoblogging. From cron jobs to GPT-4 content generation for data subscription products."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  June 27, 2025
+                </div>
+                <h1 class="font-bold">Adventures in automation</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Automation is especially important for solo businesses since
+                it's just you. Here's some automation I set up for my new data
+                subscription product.
+              </p>
+
+              <p><b>Crawl jobs</b></p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  My crawl is a basic axios request with occasional assistance
+                  from cloudscraper. There are some evasive maneuvers like user
+                  agent randomization and jitter. I grab some values from a JSON
+                  object that's available on the target webpage.
+                </li>
+                <li>
+                  I've been running these crawls locally on a VPN (Virtual
+                  Private Network). I needed a VPS (Virtual Private Server) that
+                  would be able to run them daily without running into 403
+                  errors (forbidden access responses). I picked Digital Ocean
+                  (well my cofounder ChatGPT did), because it met that criterion
+                  and it's cheap (around $8/mo).
+                </li>
+                <li>
+                  I set up cron jobs (scheduled automated tasks) to run the
+                  various crawl functions at various odd hours over the course
+                  of the day.
+                </li>
+                <li>That's it, pretty straightforward.</li>
+              </ul>
+
+              <p><b>Autoblog (this is cooler)</b></p>
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  My dataset is updated every day, and there are some meaningful
+                  changes within a week period. I want to identify these changes
+                  and write them up in a digest for me and my customers. I
+                  wanted to see if I could use an LLM (Large Language Model) to
+                  do this automatically.
+                </li>
+                <li>
+                  I set up a "signal generation" function that looks at the data
+                  over the past week and returns a list of significant changes
+                  along certain dimensions.
+                </li>
+                <li>
+                  Then I pass this list of significant changes by dimension to
+                  an LLM. Specifically, I'm using OpenAI's GPT-4.1 because it
+                  has a large context window (1M tokens), price ($8/M output
+                  tokens), and reputation for writing ability.
+                </li>
+                <li>
+                  I include a pretty extensive prompt that tells the model the
+                  output I'm looking for. It's one table-setting sentence, about
+                  a dozen bullet points about how to write, and then a
+                  structured list of signals.
+                </li>
+                <li>
+                  The response comes back in markdown format, and then it's
+                  saved to Supabase in a blog_posts table along with a title and
+                  published timestamp. There's a new "Blog" page in the
+                  application that lists these posts in reverse chronological
+                  order.
+                </li>
+                <li>
+                  I also have the blog post emailed directly to customers once
+                  it's generated. This is a bit risky, but having generated many
+                  test blog posts and the fact that the prompt is highly
+                  specific, I don't think there's a huge amount of risk. The
+                  worst thing that could happen is that there's an error which
+                  gets emailed out, but I actually have a check request to an
+                  LLM before the email goes out that signs off on the email that
+                  it's suitable to send to customers (otherwise, I get an email
+                  notifying me that there was a rejected send and what the body
+                  was).
+                </li>
+                <li>
+                  Once I verified that this was all working correctly, I set up
+                  another cronjob in Digital Ocean that runs this function
+                  weekly on Friday mornings.
+                </li>
+              </ul>
+
+              <p>
+                I suspect that the autoblog idea might have a broader market.
+                I'm going to be testing the waters to see if this could be a
+                product in itself. (I registered the domain
+                <a
+                  href="https://autoblog.dev"
+                  class="underline hover:opacity-75"
+                  >autoblog.dev</a
+                >.)
+              </p>
+
+              <p>
+                My pipe dream is that I can automate marketing. Once the product
+                is public, it would be amazing if the product autonomously
+                attracted new leaders and optimized their conversion. Something
+                like this:
+              </p>
+
+              <ul class="list-disc ml-4 mb-4">
+                <li>
+                  I describe my ICP (Ideal Customer Profile) and the profile of
+                  existing customers who have found value in my product and what
+                  their use case(s) are.
+                </li>
+                <li>
+                  This product goes out every day and finds a batch of those
+                  people, and sends them sample content based on the autoblog
+                  posts. (This would be better than some of the existing auto
+                  SDR (Sales Development Representative) solutions because it
+                  would actually be interesting / original content rather than a
+                  generic marketing pitch for a product.) Maybe this product
+                  would sit on top of
+                  <a href="https://clay.com" class="underline hover:opacity-75"
+                    >Clay</a
+                  >.
+                </li>
+                <li>
+                  Then, those people are directed to the landing page where they
+                  can directly convert to a paying customer. Or they can reply
+                  to the email and get a hold of me, or book a meeting directly.
+                </li>
+              </ul>
+
+              <p>
+                This post was not generated by an LLM, by the way. I wrote it
+                the old fashioned way.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
