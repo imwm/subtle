@@ -109,12 +109,11 @@
                   object that's available on the target webpage.
                 </li>
                 <li>
-                  I've been running these crawls locally on a VPN (Virtual
-                  Private Network). I needed a VPS (Virtual Private Server) that
-                  would be able to run them daily without running into 403
-                  errors (forbidden access responses). I picked Digital Ocean
+                  I've been running these crawls locally on a VPN. I needed a
+                  virtual private server (VPS) that would be able to run them
+                  daily without running into 403 errors. I picked Digital Ocean
                   (well my cofounder ChatGPT did), because it met that criterion
-                  and it's cheap (around $8/mo).
+                  and it's cheap at around $8/mo.
                 </li>
                 <li>
                   I set up cron jobs (scheduled automated tasks) to run the
@@ -141,8 +140,9 @@
                 <li>
                   Then I pass this list of significant changes by dimension to
                   an LLM. Specifically, I'm using OpenAI's GPT-4.1 because it
-                  has a large context window (1M tokens), affordable price ($8/M
-                  output tokens), and good reputation for writing ability.
+                  has a large context window (1M tokens), affordable price
+                  ($8/1M output tokens), and good reputation for writing
+                  ability.
                 </li>
                 <li>
                   I include a pretty extensive prompt that tells the model the
@@ -165,9 +165,9 @@
                   The worst thing that could happen is that there's an error
                   which gets emailed out, but I actually have a check request to
                   an LLM before the email goes out that signs off on the email
-                  that it's suitable to send to customers (otherwise, I get an
+                  that it's suitable to send to customers. Otherwise, I get an
                   email notifying me that there was a rejected send and what the
-                  body was).
+                  body was.
                 </li>
                 <li>
                   Once I verified that this was all working correctly, I set up
@@ -179,7 +179,7 @@
               <p>
                 I suspect that the autoblog idea might have a broader market.
                 I'm going to be testing the waters to see if this could be a
-                product in itself. (I registered the domain autoblog.dev.)
+                product in itself. I registered the domain autoblog.dev.
               </p>
 
               <p>
@@ -191,26 +191,26 @@
 
               <ul class="list-disc ml-4 mb-4">
                 <li>
-                  I describe my ICP (Ideal Customer Profile) and the profile of
-                  existing customers who have found value in my product and what
-                  their use case(s) are.
+                  I describe the profile of existing customers who have found
+                  value in my product and what their use case(s) are.
                 </li>
                 <li>
                   This product goes out every day and finds a batch of those
                   people, and sends them sample content based on the autoblog
-                  posts. (This would be better than some of the existing auto
-                  SDR (Sales Development Representative) solutions because it
+                  posts. This would be better than some of the existing
+                  automated sales development representatives (SDRs) because it
                   would actually be interesting / original content rather than a
-                  generic marketing pitch for a product.) Maybe this product
+                  generic marketing pitch for a product. Maybe this product
                   would sit on top of
                   <a href="https://clay.com" class="underline hover:opacity-75"
                     >Clay</a
-                  >.
+                  >, though I don't think they have an API yet.
                 </li>
                 <li>
                   Then, those people are directed to the landing page where they
                   can directly convert to a paying customer. Or they can reply
-                  to the email and get a hold of me, or book a meeting directly.
+                  to the email and get a hold of me, or book a meeting directly
+                  with me.
                 </li>
               </ul>
 
