@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lessons learned about pricing software: design around price, why B2B is easier, and how to price under the corporate approval bar for easier sales."
+    />
+    <title>Notes on pricing software | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://subtle.so/notes-on-pricing-software.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://subtle.so/notes-on-pricing-software.html"
+    />
+    <meta property="og:title" content="Notes on pricing software | Subtle" />
+    <meta
+      property="og:description"
+      content="Lessons learned about pricing software: design around price, why B2B is easier, and how to price under the corporate approval bar for easier sales."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/notes-on-pricing-software.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Notes on pricing software | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="Lessons learned about pricing software: design around price, why B2B is easier, and how to price under the corporate approval bar for easier sales."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  July 16, 2025
+                </div>
+                <h1 class="font-bold">Notes on pricing software</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Pricing was, unexpectedly, one of the most interesting topics I
+                worked on at my last startup. Here are some things I've learned:
+              </p>
+
+              <p><b>1. Design the product around the price</b></p>
+              <p>
+                This comes from Madhavan Ramanujam's book
+                <i>Monetizing Innovation</i>. The idea is to do price discovery
+                before anything else, and then use the price as a parameter for
+                the scope of the product.
+              </p>
+              <p>From the book:</p>
+              <blockquote>
+                "Price is more than just a dollar figure; it is an indication of
+                what the customer wants—and how much they want it. It is the
+                single most critical factor in determining whether a product
+                makes money, yet it is an afterthought, a last-minute
+                consideration made after a product is developed. It is so much
+                of an afterthought that companies frequently call us [his
+                pricing consultancy] and say, 'We built a product—oops, now we
+                need your help in pricing it.'... The most successful product
+                innovators we know start by determining what the customer values
+                and what they are willing to pay, and then they design the
+                products around these inputs and have a clear monetization
+                strategy that they follow through with." (pp. 8-9)
+              </blockquote>
+
+              <p><b>2. Sell to businesses</b></p>
+              <p>
+                Building consumer products (i.e., products sold to individuals
+                generally outside their work) can be fun, but the main obstacle
+                is that the average person doesn't have a lot of disposable
+                income to spend on software. This is why so many consumer
+                products are free and then monetize via ads. The tricky thing
+                with this is that monetizing via ads typically requires scale –
+                think Meta or Google – so you need your consumer product to go
+                viral. That's really tough to do, like capturing lightning in a
+                bottle.
+              </p>
+              <p>
+                On the other hand, building B2B products (i.e.,
+                business-to-business) can be easier because companies not only
+                have larger budgets in general, but also budget already
+                allocated to software subscriptions specifically. Asking a
+                consumer to pay $200/mo for something is a huge ask, whereas
+                many businesses wouldn't bat an eye.
+              </p>
+              <p>
+                As a solo builder, I've considered building for this persona
+                (aka my persona) but have held off because (1) they are almost
+                as price sensitive as consumers, and (2) their DIY mindset
+                encourages them to build rather than buy software solutions.
+              </p>
+
+              <p><b>3. Price your B2B product under the "approval bar"</b></p>
+              <p>
+                At my last startup, we found that most employees with a company
+                card didn't need to get approval for purchases under $5k/yr.
+              </p>
+              <p>
+                Patrick McKenzie found something similar in his experience
+                selling to enterprises:
+              </p>
+              <blockquote>
+                "Because the whole [procurement] rigamarole costs several
+                hundred dollars in employee salary to approve any PO, most
+                internal Purchasing Departments have a few enumerated
+                exceptions. One is an upper limit on expenses a worker or
+                low-level manager can approve on their own authority without
+                ceremony, generally by putting them on a corporate credit card.
+                This limit is customarily $500 or $1,000. The greatest hack the
+                software industry came up with in the last twenty years is
+                monthly billing, because it lets you sell a four-figure product
+                for $499 a month, evading the internal purchasing controls which
+                hamper your users from getting their work done. This is why
+                substantially every SaaS business should have a plan priced
+                between $250 and $499 a month, because corporate employees will
+                expense it on the card. It is not their money so it doesn't
+                matter whether it is $99, $250, or $4,999 a month, as all those
+                figures are literally rounding error to this customer, which is
+                why they don't bother controlling for purchases that small.
+                Accordingly, you should price to the high end of that range."
+              </blockquote>
+
+              <p><b>What I'm doing</b></p>
+              <p>
+                My subscription data product is now entering a private beta. On
+                the second day of building it, I had friendly price discovery
+                calls with a few people who represented my target customer. From
+                those conversations, I realized (1) companies that were
+                strategically interested in the data I'd organized would pay for
+                it, and (2) a price point of around $250/mo would be reasonable.
+              </p>
+              <p>
+                Since it's just me building it, and my costs are low (excluding
+                my time, maybe $50/mo), I took that to mean that I could run a
+                private beta with around a dozen customers and be off to a
+                decent start. This meant that I could do things that didn't
+                scale, e.g., manually running crawls until recently and offering
+                to partner closely with private beta customers to build out the
+                platform.
+              </p>
+              <p>
+                Eventually, I'll probably raise this price to around $400/mo or
+                $4,000/yr to stay under that $5k/yr approval bar. But we'll find
+                out when we do price validation before general availability.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
