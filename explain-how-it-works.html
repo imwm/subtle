@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Why I share detailed technical explanations of my products, despite advice to keep them secret. Building trust through transparency."
+    />
+    <title>Explain how it works | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/explain-how-it-works.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://subtle.so/explain-how-it-works.html"
+    />
+    <meta property="og:title" content="Explain how it works | Subtle" />
+    <meta
+      property="og:description"
+      content="Why I share detailed technical explanations of my products, despite advice to keep them secret. Building trust through transparency."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/explain-how-it-works.html"
+    />
+    <meta property="twitter:title" content="Explain how it works | Subtle" />
+    <meta
+      property="twitter:description"
+      content="Why I share detailed technical explanations of my products, despite advice to keep them secret. Building trust through transparency."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  September 16, 2025
+                </div>
+                <h1 class="font-bold">Explain how it works</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Typically, when I write a blog post here about a new product, I
+                go into detail on how the product works. Examples include
+                <a href="/agentic-equities" class="text-accent hover:underline"
+                  >Agentic Equities</a
+                >
+                and
+                <a href="/distilljs" class="text-accent hover:underline"
+                  >DistillJS</a
+                >.
+              </p>
+              <p>
+                At various points, I've received advice not to share that level
+                of detail because people could copy the project. I haven't
+                followed this advice for a few reasons:
+              </p>
+              <p>
+                First, these are the blog posts I would want to read. If I'm
+                intrigued by a new product, I want to know how it works. My
+                approach is to write the post I'd want to read.
+              </p>
+              <p>
+                Second, I'd like for a product of mine to be successful not
+                because its inner workings were kept secret, but because it
+                solved a real problem and developed a genuine moat. Just as
+                "security through obscurity" is not worth relying on,
+                defensibility through obscurity is not a good long-term
+                strategy.
+              </p>
+              <p>
+                Third, many of the companies I admire don't hold back on
+                technical details. Even Apple—perhaps the best consumer
+                marketing company in the world—includes detailed tech specs in
+                their product announcements. Here is one from their launch event
+                last week:
+              </p>
+              <p>
+                <img
+                  src="public/a19pro.png"
+                  class="mix-blend-lighten"
+                  alt="A19 Pro"
+                />
+              </p>
+              <p>
+                Apple obviously patents many things and doesn't publicly reveal
+                IP around deep technological breakthroughs, but their
+                willingness to explain how features like heart rate monitoring
+                and sonic acoustics work says something. Revealing information
+                about how a product works builds trust with customers and peers.
+              </p>
+              <p>
+                Finally, in this new age of AI-powered software development, the
+                shelf life of a given product configuration is dramatically
+                shorter than before. Product-market fit is now more ephemeral
+                than ever. A great software builder in this era won't be defined
+                by a single implementation, but by the ability to continuously
+                generate and implement value-intensive ideas. Whatever the cost
+                of revealing a given point-in-time configuration was before, it
+                is diminishing over time.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
