@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Why I choose clean round prices over psychological pricing tricks like $9.99. A look at how pricing affects brand perception and customer trust."
+    />
+    <title>Why I use round prices | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/round-prices.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://subtle.so/round-prices.html" />
+    <meta property="og:title" content="Why I use round prices | Subtle" />
+    <meta
+      property="og:description"
+      content="Why I choose clean round prices over psychological pricing tricks like $9.99. A look at how pricing affects brand perception and customer trust."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/round-prices.html"
+    />
+    <meta property="twitter:title" content="Why I use round prices | Subtle" />
+    <meta
+      property="twitter:description"
+      content="Why I choose clean round prices over psychological pricing tricks like $9.99. A look at how pricing affects brand perception and customer trust."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  October 20, 2025
+                </div>
+                <h1 class="font-bold">Why I use round prices</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                I set up a new pricing scheme for a data platform launching
+                within days (more soon). Pricing is a
+                <a
+                  href="/notes-on-pricing-software"
+                  class="underline hover:opacity-75"
+                  >particular interest of mine</a
+                >. I was thinking about what prices to list on the landing page.
+                I considered doing a price that ended in a nine because lots of
+                companies do that and it may improve conversion rates. But I
+                decided against it in favor of round prices. Here's my thinking.
+              </p>
+              <p>
+                The product experience isn't just the software experience. It's
+                every interaction with your company: the URL, the name, how you
+                heard about it, what the landing page looks like, what the
+                prices are – everything.
+              </p>
+              <p>
+                As a customer, seeing a clean $10 price tag on a product makes
+                me feel treated better than seeing $9.99. The latter whiffs of
+                manipulation, exploiting a psychological hack to increase
+                conversion. Companies that show clean product prices win brand
+                points with me.
+              </p>
+              <p>
+                Linear is one of the most beloved products in software
+                development today. They offer simple, clean prices on their
+                <a
+                  href="https://linear.app/pricing"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >pricing page</a
+                >:
+              </p>
+              <p>
+                <img
+                  src="public/linear-pricing.png"
+                  class="mix-blend-lighten"
+                  alt="Linear pricing"
+                />
+              </p>
+              <p>
+                Cursor is also a beloved product, but their rollout of new
+                pricing in the spring was opaque and arguably exploitative. A
+                backlash ensued. Cursor apologized, but it may have cost them
+                market share to Claude Code, Codex, and GitHub Copilot.
+              </p>
+              <p>
+                As a side note, I recently learned that the 99¢ price strategy
+                didn't emerge as a conversion hack, but instead as a way to
+                prevent employee embezzlement, beginning in the late 19th
+                century. From
+                <a
+                  href="https://x.com/pitdesi/status/1980350762376130810"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Sheel Mohnot on X</a
+                >:
+              </p>
+              <blockquote class="border-l-4 border-gray-600 pl-4">
+                Every time a clerk rang up a sale, the drawer opened and the
+                bell chimed. That sound told the owner money was (or wasn't)
+                going into the till. Merchants discovered that if they priced
+                items at 49¢ or 99¢, the clerk had to open the drawer to make
+                change, forcing the bell to ring and the sale to be recorded.
+                Around this time in the late 1800s, prices began ending this
+                way.
+              </blockquote>
+              <p>
+                Marketing psychology caught onto the price perception benefits
+                of the 99¢ strategy decades later.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
