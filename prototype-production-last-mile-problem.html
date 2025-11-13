@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI makes prototyping easy, but the leap to scalable, monetizable software is hard. What the last mile from prototype to production still takes."
+    />
+    <title>The Prototype → Production Last Mile Problem | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://subtle.so/prototype-production-last-mile-problem.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://subtle.so/prototype-production-last-mile-problem.html"
+    />
+    <meta
+      property="og:title"
+      content="The Prototype → Production Last Mile Problem | Subtle"
+    />
+    <meta
+      property="og:description"
+      content="AI makes prototyping easy, but the leap to scalable, monetizable software is hard. What the last mile from prototype to production still takes."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/prototype-production-last-mile-problem.html"
+    />
+    <meta
+      property="twitter:title"
+      content="The Prototype → Production Last Mile Problem | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="AI makes prototyping easy, but the leap to scalable, monetizable software is hard. What the last mile from prototype to production still takes."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  November 13, 2025
+                </div>
+                <h1 class="font-bold">
+                  The Prototype → Production Last Mile Problem
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Daniel posed a thoughtful question
+                <a
+                  href="https://x.com/0xDaniiel/status/1985679497786769853"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >on X</a
+                >
+                recently:
+              </p>
+              <blockquote>
+                If AI makes development easier and faster, why aren’t devs
+                building more side projects?
+              </blockquote>
+              <p>
+                More software is being created today than a year ago, as seen in
+                the usage and revenue numbers from AI-powered tools like Lovable
+                and Replit. I’ve heard countless stories of people using these
+                tools to build simple apps for specific personal tasks.
+              </p>
+              <p>
+                What I haven't seen is Cambrian explosion of new,
+                production-grade software that’s ready to scale. Why is that?
+              </p>
+              <p>
+                The first answer to Daniel’s question is that most people are
+                not entrepreneurial. The median employee clocks in and out,
+                collects a paycheck, and spends their free time with family, on
+                hobbies, or relaxing. Only a small minority voluntarily take on
+                side gigs, let alone build novel software products for a public
+                audience.
+              </p>
+              <p>
+                Second, there’s a "last mile" problem between building a
+                prototype and shipping a production-grade application. It’s now
+                trivial to create a working prototype. Rohan from Cursor shared
+                an example
+                <a
+                  href="https://x.com/TheRohanVarma/status/1988854744022966747"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >on X</a
+                >:
+              </p>
+              <blockquote>
+                During an enterprise demo today, Composer built the scaffolding
+                for an e-commerce app in 5 seconds.<br /><br />
+                The entire auditorium couldn’t help but start laughing.
+              </blockquote>
+              <p>
+                The hard part remains setting up all the things that turn a
+                prototype into a production-grade application: scalable
+                databases, seamless authentication, payment processing,
+                subscription management, account settings, product
+                instrumentation, customer support, and so on.
+              </p>
+              <p>
+                There are services that make these steps easier, but in a
+                post-AI world, these tasks become the new chokepoints, rather
+                than building the core product itself. I suspect we'll see
+                companies like Lovable and Replit work to automate these aspects
+                of software entrepreneurship. They want to have users with apps
+                in production making revenue, because such users are far
+                stickier than hobbyists.
+              </p>
+              <p>
+                While building a soon-to-be-announced data platform, I’ve
+                learned a lot about these aspects of software overhead. I plan
+                to write a markdown file to help agents bake standard SaaS best
+                practices into future prototypes automatically. Hopefully, this
+                will help reduce the duration of the last mile from prototype to
+                production.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
