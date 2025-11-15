@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cursor's Composer-1 model is my favorite release of 2025. It's dramatically faster than frontier models while matching their quality, changing how I think about specialized AI models."
+    />
+    <title>Composer-1 is the model of the year | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://www.subtle.so/composer-1-model-of-the-year.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.subtle.so/composer-1-model-of-the-year.html"
+    />
+    <meta
+      property="og:title"
+      content="Composer-1 is the model of the year | Subtle"
+    />
+    <meta
+      property="og:description"
+      content="Cursor's Composer-1 model is my favorite release of 2025. It's dramatically faster than frontier models while matching their quality, changing how I think about specialized AI models."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.subtle.so/composer-1-model-of-the-year.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Composer-1 is the model of the year | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="Cursor's Composer-1 model is my favorite release of 2025. It's dramatically faster than frontier models while matching their quality, changing how I think about specialized AI models."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  November 14, 2025
+                </div>
+                <h1 class="font-bold">Composer-1 is the model of the year</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Cursor’s Composer-1 model is my favorite model release of the
+                year. It’s dramatically changed my development workflow—and it
+                changed my mind about specialized models.
+              </p>
+              <p>
+                The benchmarks that Composer-1
+                <a
+                  href="https://cursor.com/blog/composer"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >published upon release</a
+                >
+                focused on intelligence and speed:
+              </p>
+              <img
+                src="./public/cursor-composer-benchmarks.png"
+                class="mb-4 mix-blend-lighten"
+                alt="Composer-1 benchmarks"
+              />
+              <p>
+                In other words, Composer-1’s output is roughly as good as the
+                frontier models (say, GPT-5 or Claude Sonnet 4.5), but it
+                generates that output significantly faster.
+              </p>
+              <p>
+                After switching from GPT-5 to Composer-1 in Cursor, I
+                immediately noticed a marked speed improvement. Composer-1 felt
+                about 4x faster than GPT-5. Previously, I’d expect to wait
+                around 30 seconds for GPT-5 to complete significant changes to a
+                repository, whereas Composer-1 rarely took more than 7 or 8
+                seconds.
+              </p>
+              <p>
+                This is obviously a better user experience—but I noticed other
+                effects of using a dramatically faster coding agent:
+              </p>
+              <ol class="list-decimal ml-4 mb-4">
+                <li>
+                  <strong
+                    >I’m more willing to make the marginal change to a
+                    codebase.</strong
+                  >
+                  Since the time cost of any given change is lower, I’m likelier
+                  to make more changes. This means sending the extra prompt to
+                  give a feature a final_final_v4_final round of polish.
+                </li>
+                <li>
+                  <strong
+                    >I’m more likely to stay in flow while building a
+                    feature.</strong
+                  >
+                  Previously, I might check email or do something else while
+                  waiting for the Cursor agent—causing a context switch and
+                  losing momentum. Now, there’s almost no time to do anything
+                  else, and it’s fascinating to watch the model work blazingly
+                  fast.
+                </li>
+                <li>
+                  <strong
+                    >The context window in the agent chat tends to fill up more
+                    quickly.</strong
+                  >
+                  I’m making more changes over a longer, focused session with
+                  the agent (with a smaller context window). Composer-1’s
+                  context window is 200k tokens, which isn’t bad, but GPT-5’s
+                  was 400k tokens and other models offer 1M token windows. This
+                  sometimes forces me to restart a chat deep into a
+                  conversation, requiring the agent to get back up to speed on
+                  the state of the codebase.
+                </li>
+              </ol>
+              <p>
+                Composer-1 appears to be a hit with Cursor users, as it’s now
+                the fastest-growing model on the platform (<a
+                  href="https://x.com/cursor_ai/status/1988702166295670858"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >via X</a
+                >):
+              </p>
+              <img
+                src="./public/cursor-models-nov-25.png"
+                class="mb-4 mix-blend-lighten"
+                alt="Cursor Model Growth Nov 2025"
+              />
+              <p>
+                The success of Composer-1 changed my mind about startups
+                developing their own specialized models.
+              </p>
+              <p>
+                I had heard investors and founders predict that startups would
+                begin building specialized models and use them instead of the
+                general-purpose LLMs from companies like OpenAI and Anthropic.
+              </p>
+              <p>
+                I wasn’t so sure about this, because (a) training an effective
+                model that can rival the performance of a frontier model
+                typically requires a huge amount of upfront capital expenditure;
+                (b) that capital outlay isn’t a one-time expense, since frontier
+                models keep getting significantly better; (c) frontier models
+                are just an API call away, so startups can focus on product
+                differentiation and growth.
+              </p>
+              <p>
+                However, there are several reasons a startup might train its own
+                specialized model:
+              </p>
+              <ol class="list-decimal ml-4 mb-4">
+                <li>
+                  <strong>Margins.</strong> Frontier models are not cheap at
+                  scale. Many popular AI startups are deeply unprofitable due to
+                  model provider costs. If an AI application startup can run its
+                  own in-house models, it will significantly improve operating
+                  margins.
+                </li>
+                <li>
+                  <strong>Performance.</strong> Frontier models are trained to
+                  be good at as many things as possible—a jack of all trades,
+                  master of none. Composer-1 shows that specialized models can
+                  outperform frontier models in specific application
+                  environments.
+                </li>
+              </ol>
+              <p>
+                In
+                <a
+                  href="https://www.youtube.com/watch?v=md8D8eNj5JM"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >his recent talk at Anyscale</a
+                >, Sasha Rush detailed how Cursor trained Composer-1 “through
+                the production Cursor product.” Some slides that illustrate
+                this:
+              </p>
+              <img
+                src="./public/training-with-cursor.png"
+                class="mb-4 invert mix-blend-lighten"
+                alt="Composer-1 training with Cursor"
+              />
+              <img
+                src="./public/cursor-agent-rl.png"
+                class="mb-4 invert mix-blend-lighten"
+                alt="Cursor agent RL training"
+              />
+              <p>
+                An implication of this approach—application-specific model
+                training—is that the in-house model is a "power user" of the
+                application's tools, making it more effective than frontier
+                models:
+              </p>
+              <img
+                src="./public/cursor-sem-search.png"
+                class="mb-4 invert mix-blend-lighten"
+                alt="Composer-1 semantic search"
+              />
+              <p>
+                The caveat to my new enthusiasm for specialized models is that
+                they’re still expensive as hell. Cursor had raised almost a
+                billion dollars before releasing Composer-1, and
+                <a
+                  href="https://www.cnbc.com/2025/11/13/cursor-ai-startup-funding-round-valuation.html"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >they just raised $2.3B more</a
+                >. I don’t know how much they spent training Composer-1, but I
+                bet Composer-2 will cost even more.
+              </p>
+              <p>
+                If more well-capitalized startups follow Cursor’s lead and
+                deploy their own specialized models, I’ll be curious to see how
+                that affects the API businesses of Anthropic and OpenAI.
+              </p>
+              <p>So yeah, Composer-1 is my model of the year.</p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
