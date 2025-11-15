@@ -2,397 +2,421 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.subtle.so/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/2k-tokens-per-second.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/adventures-in-automation.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/agency-taste-and-new-creative-tools.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/agentic-equities.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/an-exit-strategy-for-solo-founders.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/asking-people-for-money.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/book-rec-the-thinking-machine.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/chat-gpt-memory-and-lock-in.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/chatgpt-messaging-play.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/chatgpt-projects-are-underrated.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/commoditized-intelligence-ephemeral-workers.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.subtle.so/composer-1-model-of-the-year.html</loc>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/creating-and-maintaining-a-prd.md-file.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/cursor-for-x.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/distilljs.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/emergence-of-software-creator.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/every-knows-whats-up.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.subtle.so/explain-how-it-works.html</loc>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/flow-state-r-and-d-1q25.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/gemini-2.5-first-impressions.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/how-its-made-stringme.dev.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/how-to-get-startup-ideas-in-2025.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/if-were-all-gonna-eat-someone-has-to-sell.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/interpretation-openai-buying-windsurf.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/is-cursor-a-good-business.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/jony-ive-spirituality-of-design.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/klarna-semi-reversal-amaras-law.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/landing-pages-are-dead.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/managing-agents-is-not-managing-people.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/massive-dislocation-of-american-knowledge-work.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/microsofts-security-agents.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/new-creative-tools-and-taste.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/notes-on-pricing-software.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/notes-on-using-o3.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/openai-windsurf-and-the-future-of-ai-workspaces.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/perverse-incentive-of-lovables-growth.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/post-llm-sales-and-marketing.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.subtle.so/prototype-production-last-mile-problem.html</loc>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/prd-md.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/problem-hunting-with-language-models.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/product-management-is-writing-good-evals.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/product-market-fit-is-more-transient-than-ever.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/replit-could-win-vibe-coding-market.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/revenue-per-employee.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.subtle.so/round-prices.html</loc>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/sahil-lavingia-future-of-work-experiments.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/services.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/simon-willison-on-using-llms.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/software-agency-pricing-collapse.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/solo-team-reward-function.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/some-interesting-new-products-mar-10-25.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/start-here.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/strengths-and-weaknesses-of-subscription-data-products.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/stringme.dev.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/stringme.dev-updates-mar-13-25.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/stringme-updates-mar-17-25.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/subtle-approach-to-newsletter-sponsorships.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/subtle-v0.2.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/sunsetting-stringme.dev.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/the-collisons-are-great-writers.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/the-cybernetic-teammate.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/the-shopify-ai-memo-is-obviously-the-future.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/the-vibe-coded-landing-page.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/tiny-teams-data-roundup.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/using-clay-for-lead-gen.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/vibe-code-exploits.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/vibe-code-responsibly.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/what-is-good-ai-revenue.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.subtle.so/windsurf-is-an-enterprise-company.html</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
