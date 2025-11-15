@@ -75,32 +75,68 @@ if (!window.emailFormInitialized) {
         }, 50); // Reduced from 200ms to 50ms for more immediate feedback
 
         try {
-          const response = await fetch(
-            "https://formsubmit.co/ajax/hi@subtle.so",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
-              body: JSON.stringify({
-                email: email,
-              }),
-            }
-          );
+          // Try AJAX endpoint first (was working before, emails were being sent)
+          // Even if CORS error appears in console, the request may still succeed server-side
+          const response = await fetch("https://formsubmit.co/ajax/hi@subtle.so", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+            }),
+          });
 
-          // Only handle error case since success is already shown
           if (!response.ok) {
             throw new Error("Submission failed");
           }
         } catch (error) {
-          // Show error message if the request fails
-          messageEl.textContent = "Something went wrong. Please try again.";
-          messageEl.classList.remove("text-green-600", "dark:text-green-400");
-          messageEl.classList.add("text-red-500");
+          // If fetch fails (likely due to CORS), try iframe fallback
+          // FormSubmit may still process the request even with CORS error
+          try {
+            const iframe = document.createElement("iframe");
+            iframe.name = "hiddenFrame_" + Date.now();
+            iframe.style.display = "none";
+            document.body.appendChild(iframe);
 
-          // Don't collapse the form if there's an error
-          clearTimeout(collapseTimeout);
+            const tempForm = document.createElement("form");
+            tempForm.method = "POST";
+            tempForm.action = "https://formsubmit.co/hi@subtle.so";
+            tempForm.target = iframe.name;
+            tempForm.style.display = "none";
+            tempForm.enctype = "application/x-www-form-urlencoded";
+
+            const emailInput = document.createElement("input");
+            emailInput.type = "hidden";
+            emailInput.name = "email";
+            emailInput.value = email;
+
+            const nextInput = document.createElement("input");
+            nextInput.type = "hidden";
+            nextInput.name = "_next";
+            nextInput.value = window.location.href;
+
+            tempForm.appendChild(emailInput);
+            tempForm.appendChild(nextInput);
+            document.body.appendChild(tempForm);
+            tempForm.submit();
+
+            setTimeout(() => {
+              if (document.body.contains(tempForm)) {
+                document.body.removeChild(tempForm);
+              }
+              if (document.body.contains(iframe)) {
+                document.body.removeChild(iframe);
+              }
+            }, 2000);
+          } catch (fallbackError) {
+            // If both methods fail, show error
+            messageEl.textContent = "Something went wrong. Please try again.";
+            messageEl.classList.remove("text-green-600", "dark:text-green-400");
+            messageEl.classList.add("text-red-500");
+            clearTimeout(collapseTimeout);
+          }
         } finally {
           spinner.classList.add("hidden");
         }
@@ -180,32 +216,68 @@ if (!window.emailFormInitialized) {
         }, 50); // Reduced from 200ms to 50ms for more immediate feedback
 
         try {
-          const response = await fetch(
-            "https://formsubmit.co/ajax/hi@subtle.so",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
-              body: JSON.stringify({
-                email: email,
-              }),
-            }
-          );
+          // Try AJAX endpoint first (was working before, emails were being sent)
+          // Even if CORS error appears in console, the request may still succeed server-side
+          const response = await fetch("https://formsubmit.co/ajax/hi@subtle.so", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+            }),
+          });
 
-          // Only handle error case since success is already shown
           if (!response.ok) {
             throw new Error("Submission failed");
           }
         } catch (error) {
-          // Show error message if the request fails
-          messageEl.textContent = "Something went wrong. Please try again.";
-          messageEl.classList.remove("text-green-600", "dark:text-green-400");
-          messageEl.classList.add("text-red-500");
+          // If fetch fails (likely due to CORS), try iframe fallback
+          // FormSubmit may still process the request even with CORS error
+          try {
+            const iframe = document.createElement("iframe");
+            iframe.name = "hiddenFrame_" + Date.now();
+            iframe.style.display = "none";
+            document.body.appendChild(iframe);
 
-          // Don't collapse the form if there's an error
-          clearTimeout(collapseTimeout);
+            const tempForm = document.createElement("form");
+            tempForm.method = "POST";
+            tempForm.action = "https://formsubmit.co/hi@subtle.so";
+            tempForm.target = iframe.name;
+            tempForm.style.display = "none";
+            tempForm.enctype = "application/x-www-form-urlencoded";
+
+            const emailInput = document.createElement("input");
+            emailInput.type = "hidden";
+            emailInput.name = "email";
+            emailInput.value = email;
+
+            const nextInput = document.createElement("input");
+            nextInput.type = "hidden";
+            nextInput.name = "_next";
+            nextInput.value = window.location.href;
+
+            tempForm.appendChild(emailInput);
+            tempForm.appendChild(nextInput);
+            document.body.appendChild(tempForm);
+            tempForm.submit();
+
+            setTimeout(() => {
+              if (document.body.contains(tempForm)) {
+                document.body.removeChild(tempForm);
+              }
+              if (document.body.contains(iframe)) {
+                document.body.removeChild(iframe);
+              }
+            }, 2000);
+          } catch (fallbackError) {
+            // If both methods fail, show error
+            messageEl.textContent = "Something went wrong. Please try again.";
+            messageEl.classList.remove("text-green-600", "dark:text-green-400");
+            messageEl.classList.add("text-red-500");
+            clearTimeout(collapseTimeout);
+          }
         } finally {
           spinner.classList.add("hidden");
         }
