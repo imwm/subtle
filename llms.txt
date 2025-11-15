@@ -1,0 +1,41 @@
+# Subtle - llms.txt
+
+## About
+Subtle explores the future of work when intelligence is commoditized, software supply grows, and individuals outperform teams. This is a blog covering insights on AI, LLMs, modern development, and the changing landscape of knowledge work.
+
+## Site Information
+- URL: https://www.subtle.so/
+- Description: Subtle explores the future of work when intelligence is commoditized, software supply grows, and individuals outperform teams. Read our insights on AI, LLMs, and modern development.
+- Sitemap: https://www.subtle.so/sitemap.xml
+
+## Key Pages
+- Homepage: https://www.subtle.so/
+- Start Here: https://www.subtle.so/start-here.html
+- Services: https://www.subtle.so/services.html
+
+## Topics Covered
+- AI and LLM development
+- Software development and tooling
+- Future of work and knowledge work
+- Product management and product-market fit
+- Startup ideas and entrepreneurship
+- Pricing and business models
+- AI agents and automation
+- Creative tools and design
+- Developer tools (Cursor, Windsurf, etc.)
+
+## Recent Posts (as of 2025)
+- Composer-1 is the model of the year
+- Agentic equities
+- Prototype production last mile problem
+- Flow state R&D
+- Gemini 2.5 first impressions
+- Notes on using O3
+- And many more...
+
+## Structure
+This site is a static HTML blog with individual posts as HTML files. Each post is self-contained and includes metadata for SEO and social sharing.
+
+## Contact
+For comments, issues, or contributions, see the repository at the source code location.
+
