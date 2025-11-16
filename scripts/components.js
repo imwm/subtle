@@ -49,6 +49,9 @@ async function includeHTML() {
     document.body.classList.remove("loading");
     document.body.classList.add("loaded");
   }, 100);
+
+  // Trigger custom event for logo initialization
+  window.dispatchEvent(new CustomEvent('componentsLoaded'));
 }
 
 // Function to collapse the intro box
