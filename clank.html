@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Send an email to yo@clank.email and get an LLM response back. Bring LLM functionality directly into your email threads."
+    />
+    <title>New project: clank.email | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/clank.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://subtle.so/clank.html" />
+    <meta property="og:title" content="New project: clank.email | Subtle" />
+    <meta
+      property="og:description"
+      content="Send an email to yo@clank.email and get an LLM response back. Bring LLM functionality directly into your email threads."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://subtle.so/clank.html" />
+    <meta
+      property="twitter:title"
+      content="New project: clank.email | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="Send an email to yo@clank.email and get an LLM response back. Bring LLM functionality directly into your email threads."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="scripts/logo3d.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  November 19, 2025
+                </div>
+                <h1 class="font-bold">New project: clank.email</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <!-- Content goes here -->
+              <p>
+                Here's a new thing from me:
+                <a
+                  href="https://www.clank.email"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                >
+                  clank.email</a
+                >.
+              </p>
+              <p>
+                This lets you send an email to an address
+                (<strong>yo@clank.email</strong>) and get an LLM response back.
+              </p>
+              <p>
+                There have been a number of times when I received an email that
+                I wanted to process with an LLM for various reasons. For
+                example, I once sent myself a preview of a newsletter draft and
+                wanted an LLM to check it for mistakes. Another time, I opened a
+                very long thread I hadn't been keeping up with and needed a
+                quick summary. It's somewhat cumbersome to expand the entire
+                thread, copy the contents, paste them into ChatGPT, get a
+                response, and then bring it back to the email. Clank is designed
+                to make LLMs accessible directly in-thread.
+              </p>
+              <p>
+                I imagine there are many other use cases for bringing LLM
+                functionality into email threads, which is why I built this with
+                a reasonably generous free tier (the first 5 emails are free).
+                Based on early usage, forwarding emails seems to be the most
+                common workflow.
+              </p>
+              <p>
+                I set up basic paid plans: $6/month for up to 200 responses, and
+                $30/month for effectively unlimited responses. I plan to expand
+                the unlimited tier to allow custom instructions, multiple
+                originating email addresses, and access to better models. For
+                now, these plans exist (1) to test demand and (2) to impose
+                usage caps, since OpenAI responses aren't cheap at scale.
+              </p>
+              <p>
+                This project was made possible by
+                <a
+                  href="https://resend.com/blog/inbound-emails"
+                  target="_blank"
+                  class="underline hover:opacity-75"
+                  >Resend</a
+                >'s new Inbound feature, which allows you to listen for webhook
+                events triggered by emails sent to your domain. I've had a
+                really good experience with Resend and was waiting for this
+                feature to build out my idea.
+              </p>
+              <p>
+                I'm using <strong>GPT-5-mini</strong> to generate responses to
+                emails, which is fast and affordable.
+              </p>
+              <p>
+                We'll see if this goes anywhere! It was a fun project to build.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
