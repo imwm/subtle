@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Subtle</title>
+    <meta
+      name="description"
+      content="The page you're looking for doesn't exist. Return to Subtle Software."
+    />
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://www.subtle.so/404.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.subtle.so/404.html" />
+    <meta property="og:title" content="404 - Page Not Found | Subtle" />
+    <meta
+      property="og:description"
+      content="The page you're looking for doesn't exist. Return to Subtle Software."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.subtle.so/404.html" />
+    <meta property="twitter:title" content="404 - Page Not Found | Subtle" />
+    <meta
+      property="twitter:description"
+      content="The page you're looking for doesn't exist. Return to Subtle Software."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+    <script
+      src="https://analytics.ahrefs.com/analytics.js"
+      data-key="qtMHDxgEuRwX38MR/NT49g"
+      async
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="scripts/logo3d.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="w-full min-h-screen noise bg-dark-deeper transition-colors duration-50 relative"
+  >
+    <div class="w-full min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div class="w-full" include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl sm:border-x border-gray-600 border-dashed mx-auto flex-1 flex flex-col"
+      >
+        <!-- 404 Content -->
+        <div
+          class="w-full flex-1 border-t border-b border-gray-600 border-dashed text-gray-800 dark:text-dark-text p-6 flex items-center justify-center"
+        >
+          <div class="w-full max-w-2xl text-center">
+            <pre
+              class="text-xs sm:text-sm font-mono text-gray-600 dark:text-gray-400 mb-6 whitespace-pre overflow-x-auto select-none opacity-75"
+            >
+██╗  ██╗ ██████╗ ██╗  ██╗
+██║  ██║██╔═████╗██║  ██║
+███████║██║██╔██║███████║
+╚════██║████╔╝██║╚════██║
+     ██║╚██████╔╝     ██║
+     ╚═╝ ╚═════╝      ╚═╝
+            </pre>
+            <h2 class="text-2xl font-bold mb-4">Page Not Found</h2>
+            <p class="text-lg mb-6 opacity-75">
+              The page you're looking for doesn't exist or has been moved.
+            </p>
+            <a
+              href="/"
+              class="inline-block px-6 py-3 bg-gray-800 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors cursor-pointer"
+            >
+              Return to Homepage
+            </a>
+          </div>
+        </div>
+
+        <!-- Include intro box -->
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+
+    <script src="/scripts/emailForm.js"></script>
+  </body>
+</html>
