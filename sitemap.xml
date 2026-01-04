@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.subtle.so/2025-in-review.html</loc>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.subtle.so/2k-tokens-per-second.html</loc>
     <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -63,6 +69,12 @@
   <url>
     <loc>https://www.subtle.so/chatgpt-projects-are-underrated.html</loc>
     <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.subtle.so/clank.html</loc>
+    <lastmod>2026-01-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -321,6 +333,12 @@
   <url>
     <loc>https://www.subtle.so/strengths-and-weaknesses-of-subscription-data-products.html</loc>
     <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.subtle.so/substats.html</loc>
+    <lastmod>2026-01-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
