@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A review of Subtle Software projects in 2025, reflections on building with Cursor and LLMs, and plans for scaling B2B products in 2026."
+    />
+    <title>2025 in review | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://subtle.so/2025-in-review.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://subtle.so/2025-in-review.html" />
+    <meta property="og:title" content="2025 in review | Subtle" />
+    <meta
+      property="og:description"
+      content="A review of Subtle Software projects in 2025, reflections on building with Cursor and LLMs, and plans for scaling B2B products in 2026."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://subtle.so/2025-in-review.html"
+    />
+    <meta property="twitter:title" content="2025 in review | Subtle" />
+    <meta
+      property="twitter:description"
+      content="A review of Subtle Software projects in 2025, reflections on building with Cursor and LLMs, and plans for scaling B2B products in 2026."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="scripts/logo3d.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  January 3, 2026
+                </div>
+                <h1 class="font-bold">2025 in review</h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                Here's a summary of Subtle Software projects across 2025 as well
+                as some reflections heading into 2026.
+              </p>
+              <table
+                class="w-full text-sm border border-gray-700/50 rounded-lg overflow-hidden"
+              >
+                <thead>
+                  <tr class="border-b border-gray-700/50 bg-gray-800/30">
+                    <th
+                      class="text-left px-3 py-2 font-semibold border-l border-gray-700/50"
+                    >
+                      Project
+                    </th>
+                    <th class="text-left px-3 py-2 font-semibold">Status</th>
+                    <th
+                      class="text-left px-3 py-2 font-semibold border-r border-gray-700/50"
+                    >
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://subtle.so"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >Subtle Software</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                        >GA</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      This blog. 5.2k unique visitors and 7.8k pageviews to
+                      date.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      Stringme
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-gray-500/20 text-gray-400 border border-gray-500/30"
+                        >Retired</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      This converted any webpage into a text file for use with
+                      LLMs. I redirected this to Firecrawl's solution.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://distilljs.com"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >DistillJS</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-gray-500/20 text-gray-400 border border-gray-500/30"
+                        >Retired</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      This project challenged then-novel reasoning models to
+                      approximate LLM behavior into a deterministic Javascript
+                      function. This actually worked reasonably well for some
+                      tasks including summarization and sentiment analysis. I
+                      expect in the long-run LLMs will become cheap and
+                      ubiquitous (i.e. on-device), so this project only solves a
+                      temporary problem and not super well.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://sponsor.flowstate.fm"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >Bookdate</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                        >Beta</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      I built this project to host a sponsorship booking page
+                      for the Flow State newsletter. There's a waitlist link
+                      which has gotten a few signups. This could help creators
+                      drive sponsorship revenue and take a small cut; but
+                      Substack appears to be launching an ad network of its own
+                      in 2026.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://substats.io"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >Substats</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                        >GA</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      This is a data-as-a-service (DaaS) product for media
+                      companies, PR/ad agencies, and more to gain visibility
+                      into thousands of top Substacks. This garnered a half
+                      dozen customers in beta and is now officially in GA (more
+                      below).
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      LGTMBot
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                        >Alpha</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      I built a Chrome extension that scans the current webpage
+                      and navigates across various paths, finding visual and
+                      functional bugs using OpenAI's computer vision API. This
+                      is working OK but doesn't totally solve my bottleneck
+                      around functional QA. I'll continue iterating on this
+                      until either it cuts down my manual QA labor or Cursor
+                      delivers a solution themselves (which seems somewhat
+                      imminent).
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://agenticequities.com"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >Agentic Equities</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                        >Beta</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      This project tracks ChatGPT sentiment around stocks in the
+                      S&P 500. The premise is that retail traders are
+                      increasingly asking ChatGPT for what stocks to pick,
+                      meaning this index could be an indicator of near-term
+                      retail activity. This was covered in Bloomberg and
+                      attracted about 10k visitors. I've paused the ratings
+                      since they cost me about $100/week to update and am
+                      figuring out next steps to revive it profitably.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://income.wtf"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >income.wtf</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                        >Alpha</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      This is a project that helps creators who monetize across
+                      platforms visualize their income. Many creators have no
+                      easy way to understand what their run-rate is across their
+                      various income streams. This project synthesizes their
+                      revenue data across Stripe, Patreon, and YouTube to show
+                      their annual run rate and revenue trends over time.
+                    </td>
+                  </tr>
+                  <tr class="border-b border-gray-700/30">
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://store.flowstate.fm"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >Flow State Store</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                        >GA</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      The Flow State Store is powered by FourthWall (which I
+                      highly recommend), but their built-in storefronts offer
+                      only limited customization. I wanted a cooler,
+                      SSENSE-style look and also link out to third-party
+                      products with affiliate links. I built a new Flow State
+                      storefront using the FourthWall API.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-3 py-2 font-medium border-l border-gray-700/30"
+                    >
+                      <a
+                        href="https://clank.email"
+                        class="underline hover:opacity-75"
+                        target="_blank"
+                        >Clank</a
+                      >
+                    </td>
+                    <td class="px-3 py-2">
+                      <span
+                        class="px-2 py-0.5 text-xs rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                        >GA</span
+                      >
+                    </td>
+                    <td
+                      class="px-3 py-2 text-gray-400 border-r border-gray-700/30"
+                    >
+                      On several occasions I've wanted to ask an LLM about an
+                      email thread, such as digesting a long thread and
+                      suggesting a response or giving me feedback on a
+                      newsletter preview. I set up a simple email address
+                      (yo@clank.email) so that you can get an LLM response
+                      directly from your email inbox. The first five emails are
+                      free, then plans are $6/mo for 200 emails/mo and $30/mo
+                      for effectively unlimited emails/mo.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="mt-4">
+                Here are some reflections on these projects and on the Subtle
+                Software project overall after nearly a year in operation.
+              </p>
+              <p><b>"The new way to build software"</b></p>
+              <p>
+                This is Cursor's tagline. The premise of Subtle Software is that
+                LLMs are changing how software gets built, such that individuals
+                and
+                <a
+                  href="tiny-teams-data-roundup.html"
+                  class="underline hover:opacity-75"
+                  >tiny teams</a
+                >
+                can build software businesses that previously required hundreds
+                of people.
+              </p>
+              <p>
+                I started using Cursor in March at the start of the Subtle
+                Software project. I started by building relatively simple apps
+                (this blog, simple dev utilities) and over time graduated to
+                building fully featured SaaS apps (Substats, Clank). According
+                to Cursor's
+                <a
+                  href="https://cursor.com/2025"
+                  class="underline hover:opacity-75"
+                  target="_blank"
+                  >2025 recap</a
+                >, I used 1,409,535,919 tokens over the course of 2025.
+              </p>
+              <p>
+                Over this same period, Cursor itself became significantly more
+                powerful. They added Bugbot and Cloud Agents, and shipped their
+                own powerful coding model,
+                <a
+                  href="composer-1-model-of-the-year.html"
+                  class="underline hover:opacity-75"
+                  >Composer-1</a
+                >. This followed significant improvements across model
+                providers, and in fact my go-to model switched about six times
+                over 2025:
+              </p>
+              <img
+                src="public/cursor-model-usage-2025.png"
+                class="mb-4 rounded blend-lighten"
+              />
+              <p>
+                Heading into 2026, I plan to continue to use Cursor as my daily
+                driver for coding and expect many more significant improvements
+                in the product in 2026. The main area I'd hope Cursor invests in
+                is functional QA, which has been probably the most painstaking
+                bottleneck in my own software development workflow.
+              </p>
+              <p><b>Targeting businesses</b></p>
+              <p>
+                Over the course of the year my product focus shifted from small
+                utilities geared toward independent developers (my own profile)
+                to software subscriptions for companies. Once I made that shift,
+                I started pulling in more revenue.
+              </p>
+              <p>
+                Specifically, Substats is the most promising software product
+                heading into 2026. It gathers rich time-series data on top
+                Substacks, giving companies a vivid picture of the increasingly
+                important Substack ecosystem. More and more companies across
+                media writ large need to understand this ecosystem, and Substats
+                is the best way to accomplish that.
+              </p>
+              <p>
+                The main skill I need to develop in growing these B2B products
+                is outbound sales. As Ken Griffin said,
+                <a
+                  href="if-were-all-gonna-eat-someone-has-to-sell.html"
+                  class="underline hover:opacity-75"
+                  >"If we're all gonna eat, someone has to sell."</a
+                >
+              </p>
+              <p>
+                The customers I converted to Substats were all cold outreach to
+                people in my network. I tried a bunch of AI tools for scaled
+                outreach but none really seemed to work. I think I overthought
+                sales & marketing. My cofounder ChatGPT and I discussed doing
+                basic cold outreach to promising contacts from a dedicated email
+                address at a scale of 10-15 handwritten emails per day. That's
+                totally doable and doesn't require any fancy tooling. Since
+                Substats pricing starts at $250/mo, I don't need a huge volume
+                of customers to reach a significant ARR number. We'll see how it
+                goes.
+              </p>
+              <p><b>Plans for 2026</b></p>
+              <p>
+                The first goal for 2026 is to scale the Substats customer base.
+                It achieved product-market with several customers during the
+                closed beta, who said it's an invaluable data source at a price
+                that's much more reasonable than similar "social monitoring"
+                products. Just need to hustle to reach and convert additional
+                customers. Fortunately the product appeals to companies across
+                several industries (digital media, PR/advertising, talent
+                agencies, and investment firms).
+              </p>
+              <p>
+                The second goal is to continue building business-oriented
+                software products that are differentiated both on functionality
+                and price. Clank is an interesting example. It lets you email an
+                LLM, bringing the functionality of frontier models into your
+                email threads. Compared to last year, I'm starting 2026 with the
+                ability to use Cursor to generate production-grade B2B SaaS
+                products. The bottleneck is no longer execution but finding the
+                right idea.
+              </p>
+              <p>
+                The stretch goal is to explore and monetize an AI powered
+                investment product. So far, I've explored ChatGPT sentiment
+                around public stocks in the form of
+                <a
+                  href="agentic-equities.html"
+                  class="underline hover:opacity-75"
+                  >Agentic Equities</a
+                >, which was featured in Bloomberg and attracted about 10k
+                visitors and signups from folks from JPMorgan and Rothschild.
+                Aside from exploring the impact of LLM recs on equities trading,
+                there are also some very interesting opportunities around agents
+                and prediction markets.
+              </p>
+              <p>
+                Finally, in 2025 I consulted with a few companies whose teams
+                and products were interesting. Specifically, I like working with
+                teams who are embracing the "new way to build software" so that
+                I can navigate this new world with other smart people. I'm
+                interested in consulting with teams (and possibly joining a
+                company) that's fully committed to this new mode of software
+                development. Everyone else will be left behind.
+              </p>
+              <p>Thanks for reading! Much more to come in 2026.</p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
