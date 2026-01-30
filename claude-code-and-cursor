@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Despite Claude Code's appeal, I'm sticking with Cursor. Price is the main reason to switch, but Cursor's IDE interface, model-agnosticism, and bugbot make it worth the extra cost."
+    />
+    <title>Despite the Claude Code hype, I still use Cursor | Subtle</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://www.subtle.so/claude-code-and-cursor.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://www.subtle.so/claude-code-and-cursor.html"
+    />
+    <meta
+      property="og:title"
+      content="Despite the Claude Code hype, I still use Cursor | Subtle"
+    />
+    <meta
+      property="og:description"
+      content="Despite Claude Code's appeal, I'm sticking with Cursor. Price is the main reason to switch, but Cursor's IDE interface, model-agnosticism, and bugbot make it worth the extra cost."
+    />
+    <meta
+      property="og:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.subtle.so/claude-code-and-cursor.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Despite the Claude Code hype, I still use Cursor | Subtle"
+    />
+    <meta
+      property="twitter:description"
+      content="Despite Claude Code's appeal, I'm sticking with Cursor. Price is the main reason to switch, but Cursor's IDE interface, model-agnosticism, and bugbot make it worth the extra cost."
+    />
+    <meta
+      property="twitter:image"
+      content="https://subtle.so/public/subtle-tree.jpg"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="styles/tailwind.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/keyboard-shortcuts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="scripts/logo3d.js"></script>
+    <script
+      defer
+      data-domain="subtle.so"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
+  <body
+    class="min-h-screen noise bg-dark-deeper transition-colors duration-100 relative"
+  >
+    <div id="toast" class="toast"></div>
+    <div class="min-h-screen flex flex-col">
+      <!-- Include header -->
+      <div include-html="components/header.html"></div>
+
+      <div
+        class="w-full max-w-2xl mx-auto sm:border-x border-gray-600 border-dashed flex-1 flex flex-col items-center justify-start"
+      >
+        <!-- Article content -->
+        <article
+          class="w-full border-b border-gray-600 border-dashed p-6 pb-2 text-dark-text transition-colors duration-200"
+        >
+          <div class="w-full max-w-2xl pb-2">
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <div class="flex flex-col items-start">
+                <div class="text-xs opacity-75 mb-1 select-none">
+                  January 30, 2026
+                </div>
+                <h1 class="font-bold">
+                  Despite the Claude Code hype, I still use Cursor
+                </h1>
+              </div>
+              <button
+                onclick="copyToClipboard(window.location.href)"
+                class="text-sm px-2 py-1 rounded-lg bg-dark-surface border border-gray-600 hover:border-gray-400 transition-colors select-none"
+              >
+                Copy link
+              </button>
+            </div>
+            <div class="prose prose-invert">
+              <p>
+                I've been a DAU of Cursor since last March and continue to be.
+                Claude Code is very hyped. After trying it out, I think the
+                appeal of Claude Code comes down to these four factors:
+              </p>
+              <ol class="list-decimal ml-4 mb-4">
+                <li>
+                  Opus 4.5 is an insanely good model for coding and knowledge
+                  work generally.
+                </li>
+                <li>
+                  Claude's pricing is relatively generous. Precise token limits
+                  by plan are hard to determine, but if you use hundreds of
+                  millions of Opus 4.5 tokens per month, the Claude Max 20x plan
+                  is the cheapest way to consume them.
+                </li>
+                <li>
+                  The terminal UI makes you feel like a 1337 h4x0r, even though
+                  it's essentially a chat interface. This is an underrated
+                  aspect of the appeal and buzz in my opinion (see
+                  <a
+                    href="https://x.com/jarrodwatts/status/2008304491750359150"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >this tweet</a
+                  >).
+                </li>
+                <li>
+                  Claude skills and plugins are apparently useful though I admit
+                  I haven't perused those libraries yet.
+                </li>
+              </ol>
+              <p>
+                I've been using Cursor as my daily driver for almost a year now,
+                and I don't plan to switch to Claude Code, at least not yet.
+                Here's my thinking, starting by addressing the above reasons one
+                by one:
+              </p>
+              <ol class="list-decimal ml-4 mb-4">
+                <li><strong>Opus 4.5:</strong> You can use it in Cursor.</li>
+                <li>
+                  <strong>Price:</strong> This is the best reason to switch from
+                  Cursor to Claude Code. I'm at about 700M Opus 4.5 tokens
+                  consumed in my current billing period. Google AI Mode
+                  estimates I'd save $200-400 per month. That's a real point in
+                  favor of switching to Claude Code.
+                </li>
+                <li>
+                  <strong>Terminal UI:</strong> Doesn't matter to me. If it did,
+                  <a
+                    href="https://cursor.com/cli"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >Cursor CLI</a
+                  >
+                  exists now too.
+                </li>
+                <li>
+                  <strong>You can now use</strong> (<a
+                    href="https://cursor.com/docs/context/skills"
+                    target="_blank"
+                    class="underline hover:opacity-75"
+                    >Claude skills in Cursor</a
+                  >).
+                </li>
+              </ol>
+              <p>
+                So price is really the main reason I'd switch. But Cursor has a
+                number of advantages to me over Claude Code.
+              </p>
+              <ol class="list-decimal ml-4 mb-4">
+                <li>
+                  <strong>IDE interface:</strong> I tend to make changes to
+                  front-end files because I have opinions (right or wrong) about
+                  details of the UI. I also like being able to review files in a
+                  familiar IDE environment to see what's going on or look at
+                  diffs.
+                </li>
+                <li>
+                  <strong>Model-agnosticism:</strong> Cursor gives you access to
+                  Anthropic's models (Opus 4.5 is the main one I use these
+                  days), but also everyone else's models. I use Composer-1 for
+                  straightforward implementation tasks because it's usually
+                  faster. I'm interested in trying out Codex-5.2 because
+                  apparently it's the best at debugging. New powerful models
+                  come out from different companies every few months – I like
+                  the model optionality that Cursor provides.
+                </li>
+                <li>
+                  <strong>Bugbot:</strong> I'm a huge fan of bugbot, which has
+                  saved me on numerous occasions. It now has an "autofix" mode,
+                  which can commit fixes directly to a branch after identifying
+                  them. So good.
+                </li>
+                <li>
+                  <strong>Switching cost:</strong> I've already configured
+                  Cursor. I've set up integrations, MCP connections, rules,
+                  extensions... Yes, I can set all this stuff up in Claude Code,
+                  and yes it's pure laziness to not want to do so, but I still
+                  don't want to do it.
+                </li>
+                <li>
+                  <strong>Cloud agents:</strong> These exist in Claude Code too,
+                  I think, but I like being able to kick off a Cursor cloud
+                  agent from Linear or from my phone and get a good PR.
+                </li>
+              </ol>
+              <p>
+                I'm probably paying a few hundred dollars every month for these
+                benefits of Cursor over Claude Code. But to me it's worth it.
+              </p>
+            </div>
+          </div>
+        </article>
+        <div include-html="components/intro-box.html"></div>
+      </div>
+      <div include-html="components/footer.html"></div>
+    </div>
+  </body>
+</html>
